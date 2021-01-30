@@ -282,7 +282,7 @@ get_header();
           $i = 0;
 					$args = array(
 					'numberposts'	=> -1,
-					'posts_per_page'=> -1,
+					'posts_per_page'=> 10,
 					'post_type'		=> 'depoimentos',
 					);
 					$the_query = new WP_Query( $args );
@@ -376,112 +376,50 @@ get_header();
             <h2 class="ui-title-main">Perguntas frequentes</h2>
           </div>
           <div class="ui-accordion accordion" id="accordionFaq">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading1">
-                <button class="accordion-button text-start" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                  O que está incluído no curso on-line?
-                </button>
-              </h2>
-              <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
-                data-bs-parent="#accordionFaq">
-                <div class="accordion-body">
-                  <p>
-                    O curso que você adquirir dá acesso a todas as videoaulas do respectivo curso. Você pode
-                    assistir até 3 vezes a aula que quiser, na ordem que preferir, no período de 06 meses a partir da
-                    data da compra. Pode acessar de qualquer dispositivo conectado à internet, desde que atenda às
-                    necessidades técnicas do player de vídeo e escolher a resolução de imagem que melhor atenda a sua
-                    tela e a sua conexão.
-                  </p>
+            <?php 
+              $i = 0;
+              $args = array(
+              'numberposts'	=> -1,
+              'posts_per_page'=> 10,
+              'post_type'		=> 'faq',
+              'orderby' => 'date',
+              'order'     => 'ASC',
+              );
+              $the_query = new WP_Query( $args );
+            ?>
+            <div class="carousel-inner">
+              <?php 
+                $i = 0;
+                if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); 
+              ?>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-<?php echo $i; ?>">
+                  <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse-<?php echo $i; ?>" aria-expanded="true"
+                    aria-controls="collapse-<?php echo $i; ?>">
+                    <?php the_field('question'); ?>
+                  </button>
+                </h2>
+                <div id="collapse-<?php echo $i; ?>" class="accordion-collapse collapse"
+                  aria-labelledby="heading-<?php echo $i; ?>" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body">
+                    <p>
+                      <?php the_field('answer'); ?>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading2">
-                <button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                  O pagamento é seguro?
-                </button>
-              </h2>
-              <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
-                data-bs-parent="#accordionFaq">
-                <div class="accordion-body">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente laudantium at iusto rem natus
-                  nam,
-                  a maiores quis libero suscipit, velit sunt repellat, maxime labore sequi adipisci eligendi tempore
-                  voluptas.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente laudantium at iusto rem natus
-                  nam,
-                  a maiores quis libero suscipit, velit sunt repellat, maxime labore sequi adipisci eligendi tempore
-                  voluptas.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading3">
-                <button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                  Como funcionam as aulas AO VIVO?
-                </button>
-              </h2>
-              <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
-                data-bs-parent="#accordionFaq">
-                <div class="accordion-body">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet quia dolor libero voluptatem et
-                  magni
-                  tempora architecto voluptate natus blanditiis totam doloribus officia, ipsa debitis quibusdam quis
-                  earum sequi. Tempora!
-
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente laudantium at iusto rem natus
-                  nam,
-                  a maiores quis libero suscipit, velit sunt repellat, maxime labore sequi adipisci eligendi tempore
-                  voluptas.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading4">
-                <button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                  Como posso esclarecer minhas dúvidas?
-                </button>
-              </h2>
-              <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
-                data-bs-parent="#accordionFaq">
-                <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                  collapse
-                  plugin adds the appropriate classes that we use to style each element. These classes control the
-                  overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
-                  this
-                  with custom CSS or overriding our default variables. It's also worth noting that just about any
-                  HTML
-                  can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading5">
-                <button class="accordion-button collapsed text-start" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                  Como posso estudar?
-                </button>
-              </h2>
-              <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
-                data-bs-parent="#accordionFaq">
-                <div class="accordion-body">
-                  O curso que você adquirir dá acesso a todas as videoaulas do respectivo curso. Você pode assistir
-                  até 3 vezes a aula que quiser, na ordem que preferir, no período de 06 meses a partir da data da
-                  compra.
-                  Pode acessar de qualquer dispositivo conectado à internet, desde que atenda às necessidades
-                  técnicas
-                  do player de vídeo e escolher a resolução de imagem que melhor atenda a sua tela e a sua conexão.
-                </div>
-              </div>
+              <?php 
+                  $i++;
+                  endwhile; 
+                  endif;
+                  wp_reset_query();
+                ?>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 </main><!-- #main -->

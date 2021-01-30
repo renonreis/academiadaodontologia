@@ -52,7 +52,6 @@ if ( ! function_exists( 'academiadaodontologia_setup' ) ) :
 			array(
 				'menu-principal' => esc_html__( 'Menu Principal', 'academiadaodontologia' ),
 				'menu-mobile-1' => esc_html__( 'Menu Mobile 1', 'academiadaodontologia' ),
-				'menu-mobile-2' => esc_html__( 'Menu Mobile 2', 'academiadaodontologia' ),
 				'menu-footer-1' => esc_html__( 'Menu Footer 1', 'academiadaodontologia' ),
 				'menu-footer-2' => esc_html__( 'Menu Footer 2', 'academiadaodontologia' ),
 			)
@@ -207,6 +206,20 @@ function custom_post_type() {
 					'labels'      => array(
 							'name'          => __( 'Depoimentos', 'textdomain' ),
 							'singular_name' => __( 'Depoimento', 'textdomain' ),
+					),
+					'exclude_from_search' => true,
+					'has_archive' => false,
+					'menu_position'	=> 40,
+					'public'      => true,
+					'publicly_queryable'  => false,
+					'show_in_nav_menus' => false,
+			)
+	);
+	register_post_type('faq',
+			array(
+					'labels'      => array(
+							'name'          => __( 'FAQs', 'textdomain' ),
+							'singular_name' => __( 'FAQs', 'textdomain' ),
 					),
 					'exclude_from_search' => true,
 					'has_archive' => false,

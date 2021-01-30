@@ -182,6 +182,17 @@ get_header();
         </div>
       </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <?php           
+          $args = array(
+          'numberposts'	=> -1,
+          'posts_per_page'=> 4,
+          'post_type'		=> 'cursos',
+          'orderby' => 'date',
+          'order'     => 'DESC',
+          );
+          $the_query = new WP_Query( $args );          
+          if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); 
+        ?>
         <div class="col">
           <div class="card card-course  card-course_is-new"
             style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background-course-1.jpg);">
@@ -200,72 +211,17 @@ get_header();
               </div>
             </a>
           </div> <!-- // card-curso -->
-        </div><!-- //col -->
-        <div class="col">
-          <div class=" card card-course"
-            style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background-course-2.jpg);">
-            <a class="card-course_all_height" href="#">
-              <div class="card-course-content">
-                <img class="img-thumbnai"
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/square-person-2.png"
-                  alt="Nome alternativo">
-                <h3>Jéssica Barussel</h3>
-                <div class="line"></div>
-                <p>Endodontia mecanizada em dentes decíduos</p>
-                <span class="time">
-                  <i class="far fa-clock"></i>
-                  18h/aula
-                </span>
-              </div>
-            </a>
-          </div> <!-- // card-curso -->
-        </div><!-- //col -->
-        <div class="col">
-          <div class="card card-course  card-course_is-new"
-            style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background-course-1.jpg);">
-            <a class="card-course_all_height" href="#">
-              <div class="card-course-content">
-
-                <img class="img-thumbnai"
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/square-person.png"
-                  alt="Nome alternativo">
-                <h3>Juliana Andriani</h3>
-                <div class="line"></div>
-                <p>Impacção do primeiro molar permanente</p>
-                <span class="time">
-                  <i class="far fa-clock"></i>
-                  18h/aula
-                </span>
-              </div>
-            </a>
-          </div> <!-- // card-curso -->
-        </div><!-- //col -->
-
-        <div class="col">
-          <div class=" card card-course"
-            style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background-course-2.jpg);">
-            <a class="card-course_all_height" href="#">
-              <div class="card-course-content">
-                <img class="img-thumbnai" src="
-                <?php echo get_template_directory_uri(); ?>/assets/images/square-person-2.png" alt="Nome alternativo">
-                <h3>Jéssica Barussel</h3>
-                <div class="line"></div>
-                <p>Endodontia mecanizada em dentes decíduos</p>
-                <span class="time">
-                  <i class="far fa-clock"></i>
-                  18h/aula
-                </span>
-              </div>
-            </a>
-          </div> <!-- // card-curso -->
-        </div><!-- //col -->
-      </div>
-      <div class="row text-center">
-        <div class="col">
-          <a href="#" class="btn btn-md btn-outline-light py-3 px-4 mt-4 text-uppercase fw-600 border-2"> Ver todos
-            os cursos</a>
         </div>
+        <?php endwhile; endif; wp_reset_query(); ?>
       </div>
+    </div>
+    <div class="row text-center">
+      <div class="col">
+        <a href="#" class="btn btn-md btn-outline-light py-3 px-4 mt-4 text-uppercase fw-600 border-2">
+          Ver todos os cursos
+        </a>
+      </div>
+    </div>
   </section>
   <section class="py-5 my-5">
     <div class="container">
@@ -294,18 +250,10 @@ get_header();
             <?php while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); ?>
             <li data-bs-target="#carouselTestimonial" data-bs-slide-to="<?php echo $i;?>"
               class="<?php if($i == 0) echo 'active';?>"></li>
-            <?php 
-              $i++; 
-              endwhile;
-              endif; 
-            ?>
+            <?php $i++; endwhile; endif; ?>
           </ol>
           <div class="carousel-inner">
-            <?php 
-              $i = 0;
-              if( $the_query->have_posts() ): 
-            ?>
-            <?php while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); ?>
+            <?php $i = 0; if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); ?>
             <div class="carousel-item <?php if($i == 0) echo 'active';?>">
               <div class="row justify-content-center align-items-center align-content-center m-auto">
                 <div class="col-12 col-lg-auto justify-content-center">
@@ -314,10 +262,7 @@ get_header();
                   </div>
                 </div>
                 <div class="col">
-                  <?php 
-                    $testimonials = get_field('testimonial_info');
-                    if( $testimonials ):
-                  ?>
+                  <?php $testimonials = get_field('testimonial_info'); if( $testimonials ): ?>
                   <figure class="ms-md-5">
                     <blockquote class="blockquote">
                       <p><?php echo esc_html( $testimonials['testimonial_text'] ); ?></p>
@@ -335,10 +280,7 @@ get_header();
                 </div>
               </div>
             </div>
-            <?php 
-              $i++;
-              endwhile; 
-            ?>
+            <?php $i++; endwhile; ?>
             <a class="carousel-control-prev" href="#carouselTestimonial" role="button" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
@@ -347,10 +289,7 @@ get_header();
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </a>
-            <?php 
-              endif;
-              wp_reset_query();
-            ?>
+            <?php endif; wp_reset_query(); ?>
           </div>
         </div>
       </div>
@@ -386,40 +325,29 @@ get_header();
               'order'     => 'ASC',
               );
               $the_query = new WP_Query( $args );
+              if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); 
             ?>
-            <div class="carousel-inner">
-              <?php 
-                $i = 0;
-                if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); 
-              ?>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="heading-<?php echo $i; ?>">
-                  <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse-<?php echo $i; ?>" aria-expanded="true"
-                    aria-controls="collapse-<?php echo $i; ?>">
-                    <?php the_field('question'); ?>
-                  </button>
-                </h2>
-                <div id="collapse-<?php echo $i; ?>" class="accordion-collapse collapse"
-                  aria-labelledby="heading-<?php echo $i; ?>" data-bs-parent="#accordionFaq">
-                  <div class="accordion-body">
-                    <p>
-                      <?php the_field('answer'); ?>
-                    </p>
-                  </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-<?php echo $i; ?>">
+                <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse-<?php echo $i; ?>" aria-expanded="true"
+                  aria-controls="collapse-<?php echo $i; ?>">
+                  <?php the_field('question'); ?>
+                </button>
+              </h2>
+              <div id="collapse-<?php echo $i; ?>" class="accordion-collapse collapse"
+                aria-labelledby="heading-<?php echo $i; ?>" data-bs-parent="#accordionFaq">
+                <div class="accordion-body">
+                  <p>
+                    <?php the_field('answer'); ?>
+                  </p>
                 </div>
               </div>
-              <?php 
-                  $i++;
-                  endwhile; 
-                  endif;
-                  wp_reset_query();
-                ?>
             </div>
+            <?php $i++; endwhile; endif; wp_reset_query(); ?>
           </div>
         </div>
       </div>
-    </div>
     </div>
   </section>
 </main><!-- #main -->

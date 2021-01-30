@@ -202,32 +202,46 @@ add_filter('wp_nav_menu', '_namespace_modify_menuclass');
 
 function custom_post_type() {
 	register_post_type('depoimentos',
-			array(
-					'labels'      => array(
-							'name'          => __( 'Depoimentos', 'textdomain' ),
-							'singular_name' => __( 'Depoimento', 'textdomain' ),
-					),
-					'exclude_from_search' => true,
-					'has_archive' => false,
-					'menu_position'	=> 40,
-					'public'      => true,
-					'publicly_queryable'  => false,
-					'show_in_nav_menus' => false,
-			)
+		array(
+				'labels'      => array(
+						'name'          => __( 'Depoimentos', 'textdomain' ),
+						'singular_name' => __( 'Depoimento', 'textdomain' ),
+				),
+				'exclude_from_search' => true,
+				'has_archive' => false,
+				'menu_icon' => 'dashicons-testimonial',
+				'menu_position'	=> 40,					
+				'public'      => true,
+				'publicly_queryable'  => false,
+				'show_in_nav_menus' => false,
+		)
 	);
 	register_post_type('faq',
-			array(
-					'labels'      => array(
-							'name'          => __( 'FAQs', 'textdomain' ),
-							'singular_name' => __( 'FAQs', 'textdomain' ),
-					),
-					'exclude_from_search' => true,
-					'has_archive' => false,
-					'menu_position'	=> 40,
-					'public'      => true,
-					'publicly_queryable'  => false,
-					'show_in_nav_menus' => false,
-			)
+		array(
+				'labels'      => array(
+						'name'          => __( 'FAQs', 'textdomain' ),
+						'singular_name' => __( 'FAQs', 'textdomain' ),
+				),
+				'exclude_from_search' => true,
+				'has_archive' => false,
+				'menu_icon' => 'dashicons-megaphone',
+				'menu_position'	=> 40,
+				'public'      => true,
+				'publicly_queryable'  => false,
+				'show_in_nav_menus' => false,
+		)
+	);
+	register_post_type('cursos',
+		array(
+				'labels'      => array(
+						'name'          => __( 'Cursos', 'textdomain' ),
+						'singular_name' => __( 'Cursos', 'textdomain' ),
+				),
+				'has_archive' => false,
+				'menu_icon' => 'dashicons-category',
+				'menu_position'	=> 50,
+				'public'      => true,
+		)
 	);
 }
 add_action('init', 'custom_post_type');

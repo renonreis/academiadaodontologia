@@ -50,7 +50,9 @@ if ( ! function_exists( 'academiadaodontologia_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'academiadaodontologia' ),
+				'menu-principal' => esc_html__( 'Menu Principal', 'academiadaodontologia' ),
+				'menu-mobile-1' => esc_html__( 'Menu Mobile 1', 'academiadaodontologia' ),
+				'menu-mobile-2' => esc_html__( 'Menu Mobile 2', 'academiadaodontologia' ),
 			)
 		);
 
@@ -100,7 +102,7 @@ if ( ! function_exists( 'academiadaodontologia_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
-	}
+	}	
 endif;
 add_action( 'after_setup_theme', 'academiadaodontologia_setup' );
 
@@ -141,9 +143,14 @@ add_action( 'widgets_init', 'academiadaodontologia_widgets_init' );
  */
 function academiadaodontologia_scripts() {
 	wp_enqueue_style( 'academiadaodontologia-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'academiadaodontologia-theme-style', get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION );
 	wp_style_add_data( 'academiadaodontologia-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'academiadaodontologia-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'fontawesome', 'https://kit.fontawesome.com/5a495db39b.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'masonry-layout', 'https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'academiadaodontologia-js', get_template_directory_uri() . '/assets/js/index.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -178,3 +185,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/* Add custom classes to list item "li" */
+function _namespace_menu_item_class( $classes, $item ) {       
+	$classes[] = "nav-item col-6 col-xl-auto"; // you can add multiple classes here
+	return $classes;
+} 
+add_filter( 'nav_menu_css_class' , '_namespace_menu_item_class' , 10, 2 );
+
+/* Add custom class to link in menu */
+function _namespace_modify_menuclass($ulclass) {
+	return preg_replace('/<a /', '<a class="nav-link"', $ulclass);
+}
+add_filter('wp_nav_menu', '_namespace_modify_menuclass');

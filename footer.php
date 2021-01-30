@@ -14,28 +14,28 @@
 <footer class="text-white py-3 px-4">
   <div class="container pb-4 pt-5 py-md-6">
     <div class="row justify-content-md-between">
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-12 col-sm-6 col-lg-3 has_menu-footer">
         <?php
 					wp_nav_menu(
 						array(
-							'theme_location' 		=> 'menu-mobile-1',
-							'container'			 		=> 'div',
-							'container_class'   => '',
-							'menu_class'		 		=> 'nav flex-column fw-bold text-white',
-							'menu_id'       		=> 'primary-menu',
+							'theme_location' 		=> 'menu-footer-1',
+							'container'			 		=> 'container',
+							'container_class'   => 'container_class',
+							'menu_class'		 		=> 'menu_class',
+							'menu_id'       		=> 'menu-footer-1',
 						)
 					);
 				?>
       </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-12 col-sm-6  col-lg-3 has_menu-footer">
         <?php
 					wp_nav_menu(
 						array(
-							'theme_location' 		=> 'menu-mobile-2',
+							'theme_location' 		=> 'menu-footer-2',
 							'container'			 		=> 'div',
-							'container_class'   => '',
-							'menu_class'		 		=> 'nav flex-column fw-bold text-white',
-							'menu_id'       		=> 'primary-menu',
+							'container_class'   => 'container_class',
+							'menu_class'		 		=> 'menu_class',
+							'menu_id'       		=> 'menu-footer-2',
 						)
 					);
 				?>

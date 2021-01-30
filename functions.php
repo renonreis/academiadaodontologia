@@ -53,6 +53,8 @@ if ( ! function_exists( 'academiadaodontologia_setup' ) ) :
 				'menu-principal' => esc_html__( 'Menu Principal', 'academiadaodontologia' ),
 				'menu-mobile-1' => esc_html__( 'Menu Mobile 1', 'academiadaodontologia' ),
 				'menu-mobile-2' => esc_html__( 'Menu Mobile 2', 'academiadaodontologia' ),
+				'menu-footer-1' => esc_html__( 'Menu Footer 1', 'academiadaodontologia' ),
+				'menu-footer-2' => esc_html__( 'Menu Footer 2', 'academiadaodontologia' ),
 			)
 		);
 

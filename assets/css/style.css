@@ -7452,7 +7452,7 @@ textarea.form-control-lg {
   top: -15px;
   color: #fff;
   left: 30px;
-  background-image: url("./assets/images/quote.svg");
+  background-image: url("../images/quote.svg");
   background-repeat: no-repeat;
   content: "";
   z-index: 1; }

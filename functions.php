@@ -53,6 +53,8 @@ if ( ! function_exists( 'academiadaodontologia_setup' ) ) :
 				'menu-principal' => esc_html__( 'Menu Principal', 'academiadaodontologia' ),
 				'menu-mobile-1' => esc_html__( 'Menu Mobile 1', 'academiadaodontologia' ),
 				'menu-mobile-2' => esc_html__( 'Menu Mobile 2', 'academiadaodontologia' ),
+				'menu-footer-1' => esc_html__( 'Menu Footer 1', 'academiadaodontologia' ),
+				'menu-footer-2' => esc_html__( 'Menu Footer 2', 'academiadaodontologia' ),
 			)
 		);
 
@@ -150,6 +152,7 @@ function academiadaodontologia_scripts() {
 	wp_enqueue_script( 'fontawesome', 'https://kit.fontawesome.com/5a495db39b.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'masonry-layout', 'https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'academiadaodontologia-js', get_template_directory_uri() . '/assets/js/index.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

@@ -1,0 +1,9 @@
+.card-post{
+    background-color: red;
+    height: 400px;
+    width: 400px;
+    transition: all 0.2s linear;
+    &:hover{
+        transform: translateY(-10px);
+    }
+}

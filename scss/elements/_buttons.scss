@@ -1,0 +1,12 @@
+.btn-primary, .btn-seconday{
+    font-weight: 700;
+    border:none;
+    text-transform: uppercase;
+    color: #fff;
+    &:hover{
+        color: #fff
+    }
+}
+.border-gray-light{
+    border: 1px solid #535353;
+}

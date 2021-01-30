@@ -1,0 +1,87 @@
+.ui-carousel {
+    font-family: 'Raleway', sans-serif;
+
+   .lead{ font-size: 20px; font-weight: 300;} 
+
+}
+
+
+.ui-carousel .carousel-item .row {
+    max-width: 960px;
+    // align-items: center;
+    // justify-content: center;
+    // align-content: center;
+    // margin: auto;
+}
+
+
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon{
+    position: relative;
+}
+
+.carousel-control-prev-icon:before, 
+.carousel-control-next-icon:before {
+    content: "";
+    background: #464646;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: -10px;
+    z-index: -1;
+    left: -50%;
+    border-radius: 50%;
+    margin-left: 7px;
+}
+
+ 
+
+
+.picture-person { 
+    width: 292px;
+    height: 292px;
+    background-position:center center;
+    background-size: cover;
+    // border: 1px solid red;
+    position: relative;
+    margin: 15px;
+}
+
+.picture-person:after {
+    position: absolute;
+    // border: 1px solid red; 
+    width: 47px;
+    height:38px;
+    top: -15px;
+    color: #fff;
+    left: 30px;
+    background-image: url("./assets/images/quote.svg");
+    background-repeat: no-repeat;
+    content: ""; 
+  z-index: 1;
+    }
+
+.picture-person:before {
+    content: "";
+    width: 172px;
+    height: 172px;
+    position: absolute;
+    right: -15px;
+    z-index: -1; 
+    bottom:-15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 172px 172px;
+    border-color: transparent transparent var(--bs-primary) transparent;
+}
+
+
+.carousel-indicators{
+    li{
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+    }
+}

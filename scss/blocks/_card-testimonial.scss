@@ -1,0 +1,84 @@
+.card-testimonial{
+    color:#fff;
+    border-radius: 0;
+    background-color: transparent;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 30px;
+&__modal{
+    background-color: #1a1a1a;
+}
+    &__media{
+        position: relative;
+        &.has-video{
+            cursor: pointer;
+            &:after{
+                display: inline-block;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: "\f04b";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                font-size: 50px;
+                margin-left: -25px;
+                margin-top: -25px;
+    
+            }
+        }
+        img{
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    &__name{ 
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center;
+        position: relative;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        &:after{
+            content: "";
+            width: 72px;
+            height: 2px;
+            position: absolute;
+            background: var(--bs-primary);
+            bottom: -11px;
+            left: 50%;
+            margin-left: -31px;
+        }
+    }
+
+    &__position {text-align: center}
+    > p{font-weight:300; font-size: 16px; }
+    .blockquote{
+        background-color: #181818;
+        color: #c7c7c7;
+        padding: 150px 60px 50px 60px;
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 0;
+        line-height: 1.8; 
+        position: relative;
+        text-align: center;
+        &:after {
+            position: absolute;
+            width: 47px;
+            height: 38px;
+            top: 80px;
+            color: #fff;
+            left: 50%;
+            background-image: url(./assets/images/quote.svg);
+            background-repeat: no-repeat;
+            content: "";
+            z-index: 1;
+            margin-left: -22px;
+        }
+        
+        p{ margin-bottom: 0;}
+    }
+}

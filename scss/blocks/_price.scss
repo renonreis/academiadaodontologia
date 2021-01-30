@@ -1,0 +1,25 @@
+.ui-plan{
+  
+
+    &__title{
+        font-size: 32px; 
+        color: #201e22;
+        font-weight: 900;
+        margin-bottom: 30px
+    }
+    &__price{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 200;
+        font-family: 'Open Sans', sans-serif;
+        span{
+            font-size: 36px;
+            letter-spacing: -0.1rem;
+        }
+    }
+    &__list{
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Open Sans', sans-serif;
+    }
+}

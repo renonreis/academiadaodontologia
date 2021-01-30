@@ -1,0 +1,38 @@
+.list-invist{
+    list-style: none; 
+   li {
+        background-color: #1b1b1b;
+        border-left:3px solid #e71d7c ;
+        color: #fff;;
+        position: relative;
+        overflow: hidden;
+        span{
+            z-index: 1;
+            position: relative;
+        }
+        &__text{ font-size: 24px;
+            
+            .number{  font-size: 36px;}
+        }
+        
+        &:hover{
+            &:after{
+                width: 100%;
+                z-index: 0;
+            }
+        }
+
+        &::after{
+            content: "";
+            background: var(--bs-primary);
+            height: 100%;
+            position: absolute;
+            width: 0%;
+            transition: all 0.25s linear;
+            top: 0;
+            left: 0;
+        }
+
+       }
+}
+

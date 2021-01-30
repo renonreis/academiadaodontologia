@@ -7835,7 +7835,7 @@ footer .nav li a {
       top: 80px;
       color: #fff;
       left: 50%;
-      background-image: url(./assets/images/quote.svg);
+      background-image: url(../images/quote.svg);
       background-repeat: no-repeat;
       content: "";
       z-index: 1;

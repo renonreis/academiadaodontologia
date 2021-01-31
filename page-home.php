@@ -231,13 +231,13 @@ get_header();
         </div>
         <?php endwhile; endif; wp_reset_query(); ?>
       </div>
-    </div>
-    <div class="row text-center">
-      <div class="col">
-        <a href="<?php echo get_home_url(); ?>/cursos"
-          class="btn btn-md btn-outline-light py-3 px-4 mt-4 text-uppercase fw-600 border-2">
-          Ver todos os cursos
-        </a>
+      <div class="row text-center">
+        <div class="col">
+          <a href="<?php echo get_home_url(); ?>/cursos"
+            class="btn btn-md btn-outline-light py-3 px-4 mt-4 text-uppercase fw-600 border-2">
+            Ver todos os cursos
+          </a>
+        </div>
       </div>
     </div>
   </section>

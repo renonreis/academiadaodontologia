@@ -10183,16 +10183,17 @@ fieldset:disabled .btn {
 }
 
 .picture-person:after {
-  position: absolute;
-  width: 47px;
-  height: 38px;
-  top: -15px;
-  color: #fff;
-  left: 30px;
-  background-image: url("../images/quote.svg");
-  background-repeat: no-repeat;
-  content: "";
-  z-index: 1; }
+	position: absolute;
+	width: 47px;
+	height: 38px;
+	top: -15px;
+	color: #fff;
+	left: 30px;
+	background-image: url("./assets/images/quote.svg");
+	background-repeat: no-repeat;
+	content: "";
+	z-index: 1;
+}
 
 .picture-person:before {
 	content: "";

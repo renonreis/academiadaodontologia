@@ -35,19 +35,16 @@ window.addEventListener('scroll', function () {
 offcanvas
 ========================= */
 function openNav() {
-    document.getElementById("app-mobile-sidebar").classList.add('mobile-menu__is-open');
-    document.getElementById("header").classList.add('mobile-menu__is-open');
-    document.getElementById("main").classList.add('foi');
+    document.getElementById("app-mobile-sidebar").classList.add('is-open');
+    document.getElementById("app-content-overlayer").classList.add('is-show');
+
 }
 
 function closeNav() {
-    document.getElementById("app-mobile-sidebar").classList.remove('mobile-menu__is-open');
-    document.getElementById("header").classList.remove('mobile-menu__is-open');
-    document.getElementById("main").classList.add('mobile-menu__is-open');
+    document.getElementById("app-mobile-sidebar").classList.remove('is-open');
+    document.getElementById("app-content-overlayer").classList.remove('is-show');
 }
 /* ---------------------------- */
-
-
 
 
 /*

@@ -26,6 +26,7 @@ header{
             color: var(--bs-primary)
         }
     }
+ 
 
     nav{
 
@@ -66,11 +67,20 @@ header{
 /* The side navigation menu */
 
 .app-content-overlayer { 
-    position: absolute;
-    background: rgba(0, 0, 0,0.25);
-    height: 100%;
-    width: 100%;
-    transition: all 0.2s linear;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.25);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: all 0.2s linear;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  &.is-show{
+    z-index: 4000;
+
+  }
 }
 
 .app-mobile-sidebar {
@@ -85,7 +95,7 @@ header{
   padding-top: 60px;
   transition: 0.5s;
 
-  &.mobile-menu__is-open {
+  &.is-open {
         z-index: 5000;
         right: 0;
     }
@@ -114,15 +124,6 @@ header{
     font-size: 36px;
     margin-right: 50px;
   }
+ 
   
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-  #app-content {
-    transition: margin-right .5s;
-    transform: translate(0);
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+ 

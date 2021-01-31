@@ -257,7 +257,7 @@ function custom_post_type() {
 				'editor',
 				'thumbnail',
 			),
-		),
+		)
 	);
 	register_taxonomy(
 		'curso_category', 

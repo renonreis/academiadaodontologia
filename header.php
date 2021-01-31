@@ -38,12 +38,21 @@
 
   <div id="app-mobile-sidebar" class="app-mobile-sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    
+    <?php
+					wp_nav_menu(
+            array(
+              'theme_location' 		=> 'menu-principal',
+							'container'			 		=> 'div',
+							'container_class'   => 'container_class',
+							'container_id'   		=> 'bdNavbar',
+							'menu_class'		 		=> 'mobile-menu',
+							'menu_id'       		=> 'mobile-menu',
+              )
+            );
+            ?>
   </div>
-
+<a href="#" onclick="closeNav()" aria-hide="true" id="app-content-overlayer" class="app-content-overlayer"></a>
 
 
 
@@ -57,22 +66,23 @@
         </a>
 
        
+<div class="d-none d-lg-block">
 
-        <?php
+  <?php
 					wp_nav_menu(
-						array(
-							'theme_location' 		=> 'menu-principal',
+            array(
+              'theme_location' 		=> 'menu-principal',
 							'container'			 		=> 'div',
-							'container_class'   => 'collapse navbar-collapse',
+							'container_class'   => 'container_class',
 							'container_id'   		=> 'bdNavbar',
-							'menu_class'		 		=> 'align-items-center navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-lg-0 ms-auto',
+							'menu_class'		 		=> 'navbar-nav ',
 							'menu_id'       		=> 'primary-menu',
-						)
-					);
-				?>
-      </nav>
-
-      <button  type="button"   onclick="openNav()"  class="menu-hamburger"> <i class="fas fa-bars"></i>  </button>
-      <button  type="button"   onclick="openNav()"  class="menu-hamburger"> <i class="fas fa-bars"></i>  </button>
-
+              )
+            );
+            ?>
+      
+    </div>
+      <button  type="button"   onclick="openNav()"  class="menu-hamburger  d-sm-block d-lg-none"> <i class="fas fa-bars"></i>  </button>
+  </nav>
+    
     </header>

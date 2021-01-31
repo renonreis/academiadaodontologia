@@ -1,5 +1,15 @@
 
 /* header*/
+
+.admin-bar {
+  .site-header, 
+  .app-mobile-sidebar{
+    top: 30px;
+  }
+  
+}
+ 
+
 header{
     &.navbar-expand-md .navbar-nav{ margin-left: auto;}
     &.navbar-dark .navbar-nav .nav-link{
@@ -16,13 +26,36 @@ header{
             color: var(--bs-primary)
         }
     }
-    .btn{
+
+    nav{
+
+      .callToAction a{
         font-size: 14px;
         font-family: 'Raleway', sans-serif;
-        font-weight: 600; 
+        font-weight: 600;
         width: 160px;
         padding-top: 10px;
         padding-bottom: 10px;
+
+        border: none;
+        text-transform: uppercase;
+        color: #fff; 
+        background-color: var(--bs-primary);
+        border-color: var(--bs-primary);
+
+        line-height: 1.5; 
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+        user-select: none;
+
+        padding-right: 1.5rem !important;
+        padding-left: 1.5rem !important;
+        
+            // btn btn-primary d-xl-inline-block ml-auto my-2 my-lg-0 ms-xl-3 px-4
+           
+      }
     }
 }
 
@@ -41,16 +74,21 @@ header{
 }
 
 .app-mobile-sidebar {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    right:  0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: -250px;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+
+  &.mobile-menu__is-open {
+        z-index: 5000;
+        right: 0;
+    }
   }
   
   /* The navigation menu links */

@@ -33,7 +33,22 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
   <div id="page" class="site">
-    <header id="masthead" class="site-header navbar fixed-top navbar-expand-lg navbar-dark bd-navbar py-4">
+
+
+
+  <div id="app-mobile-sidebar" class="app-mobile-sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+
+
+
+
+
+    <header id="header" class="site-header navbar fixed-top navbar-expand-lg navbar-dark bd-navbar py-4">
 
       <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
 
@@ -41,10 +56,7 @@
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brand.png" alt="Academia da Odontologia">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar"
-          aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </button>
+       
 
         <?php
 					wp_nav_menu(
@@ -59,5 +71,8 @@
 					);
 				?>
       </nav>
+
+      <button  type="button"   onclick="openNav()"  class="menu-hamburger"> <i class="fas fa-bars"></i>  </button>
+      <button  type="button"   onclick="openNav()"  class="menu-hamburger"> <i class="fas fa-bars"></i>  </button>
 
     </header>

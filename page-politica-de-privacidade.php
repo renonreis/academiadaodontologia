@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-<main id="main primary" class="site-main">
+<main id="main" class="site-main">
   <section class="mt-5 py-5 mb-5 ">
     <div class="container mt-5 mb-5">
       <div class="row justify-content-center">

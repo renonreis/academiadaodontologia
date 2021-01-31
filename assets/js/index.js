@@ -1,4 +1,4 @@
-console.log('rodou');
+console.log('fala tu');
 
 
 
@@ -34,23 +34,17 @@ window.addEventListener('scroll', function () {
 /*
 offcanvas
 ========================= */
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 function openNav() {
-    document.getElementById("app-mobile-sidebar").style.width = "250px";
-    document.getElementById("app-content").style.marginRight = "250px";
-    document.getElementById("app-content-overlayer").classList.add('good');;
+    document.getElementById("app-mobile-sidebar").classList.add('mobile-menu__is-open');
+    document.getElementById("header").classList.add('mobile-menu__is-open');
+    document.getElementById("main").classList.add('foi');
 }
 
-
-
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 function closeNav() {
-    document.getElementById("app-mobile-sidebar").style.width = "0";
-    document.getElementById("app-content").style.marginRight = "0";
-    document.getElementById("app-content-overlayer").classList.remove('good');
+    document.getElementById("app-mobile-sidebar").classList.remove('mobile-menu__is-open');
+    document.getElementById("header").classList.remove('mobile-menu__is-open');
+    document.getElementById("main").classList.add('mobile-menu__is-open');
 }
-
-
 /* ---------------------------- */
 
 

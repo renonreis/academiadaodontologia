@@ -192,21 +192,38 @@ get_header();
           );
           $the_query = new WP_Query( $args );          
           if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); 
+          
+          $terms = get_terms('curso_category');
+          $post_terms = get_the_terms( get_the_ID(), 'curso_category' ); 
         ?>
         <div class="col">
           <div class="card card-course  card-course_is-new"
-            style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background-course-1.jpg);">
-            <a class="card-course_all_height" href="#">
+            style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'medium_large'); ?>);">
+            <?php 
+              if( get_field('course_is_new') ) {
+                echo '';
+              } else {
+                echo '
+                <style>
+                  .card-course_is-new::after {
+                    display: none;
+                  }   
+                </style>';
+              }
+            ?>
+            <a class="card-course_all_height" href="<?php echo get_post_permalink(); ?>">
               <div class="card-course-content">
-                <img class="img-thumbnai"
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/square-person.png"
-                  alt="Nome alternativo">
-                <h3>Juliana Andriani</h3>
+                <img class="img-thumbnai" src="<?php
+                  foreach($post_terms as $term){     
+                    the_field('image_teacher', $term);                  
+                  }
+                ?>" alt="Nome alternativo">
+                <h3><?php echo $post_terms[0]->name; ?></h3>
                 <div class="line"></div>
-                <p>Impacção do primeiro molar permanente</p>
+                <p><?php the_title(); ?></p>
                 <span class="time">
                   <i class="far fa-clock"></i>
-                  18h/aula
+                  <?php the_field('course_length'); ?>h/aula
                 </span>
               </div>
             </a>
@@ -217,7 +234,8 @@ get_header();
     </div>
     <div class="row text-center">
       <div class="col">
-        <a href="#" class="btn btn-md btn-outline-light py-3 px-4 mt-4 text-uppercase fw-600 border-2">
+        <a href="<?php echo get_home_url(); ?>/cursos"
+          class="btn btn-md btn-outline-light py-3 px-4 mt-4 text-uppercase fw-600 border-2">
           Ver todos os cursos
         </a>
       </div>

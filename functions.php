@@ -250,8 +250,8 @@ function custom_post_type() {
 				'title',
 				'editor',
 				'thumbnail',
-			),
-		),
+			)
+		)
 	);
 
 	register_taxonomy(

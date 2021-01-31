@@ -9,43 +9,56 @@
 
 ?>
 
-<section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'academiadaodontologia' ); ?></h1>
-	</header><!-- .page-header -->
+<section class="mt-5 py-5 mb-5 no-results not-found">
+  <div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="ui-title">
+          <header class="page-header">
+            <h1 class="ui-title-main page-title"><?php esc_html_e( 'Nada encontrado', 'academiadaodontologia' ); ?></h1>
+          </header><!-- .page-header -->
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="text-light fs-5 fw-lighter content-entry page-content">
+          <?php
+						if ( is_home() && current_user_can( 'publish_posts' ) ) :
 
-	<div class="page-content">
-		<?php
-		if ( is_home() && current_user_can( 'publish_posts' ) ) :
-
-			printf(
-				'<p>' . wp_kses(
-					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'academiadaodontologia' ),
-					array(
-						'a' => array(
-							'href' => array(),
-						),
-					)
-				) . '</p>',
-				esc_url( admin_url( 'post-new.php' ) )
-			);
-
-		elseif ( is_search() ) :
-			?>
-
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'academiadaodontologia' ); ?></p>
-			<?php
-			get_search_form();
-
-		else :
-			?>
-
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'academiadaodontologia' ); ?></p>
-			<?php
-			get_search_form();
-
-		endif;
-		?>
-	</div><!-- .page-content -->
+							printf(
+								'<p>' . wp_kses(
+									/* translators: 1: link to WP admin new post page. */
+									__( 'pronto para publicar seu primeiro post? <a href="%1$s">Comece aqui</a>.', 'academiadaodontologia' ),
+									array(
+										'a' => array(
+											'href' => array(),
+										),
+									)
+								) . '</p>',
+								esc_url( admin_url( 'post-new.php' ) )
+							);
+						elseif ( is_search() ) :
+					?>
+          <p>
+            <?php esc_html_e( 'Desculpe, mas nada corresponde aos seus termos de pesquisa. Tente novamente com algumas palavras-chave diferentes. ',' Academiadaodontologia' ); ?>
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="text-light fs-5 fw-lighter content-entry page-content">
+          <?php
+						get_search_form();
+						else :
+					?>
+          <p>
+            <?php esc_html_e( 'Parece que não conseguimos encontrar o que você está procurando. Talvez pesquisar possa ajudar.', 'academiadaodontologia' ); ?>
+          </p>
+          <?php
+						get_search_form();
+						endif;
+					?>
+        </div>
+      </div><!-- .page-content -->
+    </div>
+  </div>
+  </div>
 </section><!-- .no-results -->

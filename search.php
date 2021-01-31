@@ -10,44 +10,50 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
+  <section class="mt-5 py-5 mb-5">
+    <div class="container mt-5 mb-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <?php if ( have_posts() ) : ?>
+          <div class="ui-title">
+            <header class="page-header">
+              <h1 class="ui-title-main page-title">
+                <?php
+									/* translators: %s: search query. */
+									printf( esc_html__( 'Resultados da busca por: %s', 'academiadaodontologia' ), '<span>' . get_search_query() . '</span>' );
+								?>
+              </h1>
+            </header><!-- .page-header -->
+          </div>
+          <?php
+						/* Start the Loop */
+						while ( have_posts() ) :
+							the_post();
 
-		<?php if ( have_posts() ) : ?>
+							/**
+							 * Run the loop for the search to output the results.
+							 * If you want to overload this in a child theme then include a file
+							 * called content-search.php and that will be used instead.
+							 */
+							get_template_part( 'template-parts/content', 'search' );
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'academiadaodontologia' ), '<span>' . get_search_query() . '</span>' );
+						endwhile;
+
+						the_posts_navigation();
+
+					else :
+
+						get_template_part( 'template-parts/content', 'none' );
+
+					endif;
 					?>
-				</h1>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
+        </div>
+      </div>
+    </div>
+    <section>
+</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();

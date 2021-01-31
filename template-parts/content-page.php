@@ -15,8 +15,8 @@
       <div class="row justify-content-center">
         <div class="col-lg-10">
           <div class="ui-title">
-            <header class="entry-header">
-              <?php the_title( '<h2 class="ui-title-main entry-title">', '</h2>' ); ?>
+            <header class="page-header">
+              <?php the_title( '<h2 class="ui-title-main page-title">', '</h2>' ); ?>
             </header><!-- .entry-header -->
           </div>
           <?php academiadaodontologia_post_thumbnail(); ?>

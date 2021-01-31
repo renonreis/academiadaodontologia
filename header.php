@@ -61,9 +61,7 @@
 
       <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
 
-        <a class="navbar-brand p-0 me-2" href="<?php echo get_home_url(); ?>" aria-label="Bootstrap">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brand.png" alt="Academia da Odontologia">
-        </a>
+        <a class="navbar-brand p-0 me-2" href="<?php echo get_home_url(); ?>" aria-label="Academia da odontologia">        </a>
 
        
 <div class="d-none d-lg-block">
@@ -82,7 +80,7 @@
             ?>
       
     </div>
-      <button  type="button"   onclick="openNav()"  class="menu-hamburger  d-sm-block d-lg-none"> <i class="fas fa-bars"></i>  </button>
+      <button  type="button"   onclick="openNav()"  class="btn btn-light menu-hamburger"> <i class="fas fa-bars"></i>  </button>
   </nav>
     
     </header>

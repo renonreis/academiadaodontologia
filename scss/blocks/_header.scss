@@ -1,4 +1,12 @@
 
+
+// @include media-breakpoint-up(sm) { ... }
+// @include media-breakpoint-up(md) { ... }
+// @include media-breakpoint-up(lg) { ... }
+// @include media-breakpoint-up(xl) { ... }
+// @include media-breakpoint-up(xxl) { ... }
+
+
 /* header*/
 
 .admin-bar {
@@ -27,7 +35,22 @@ header{
         }
     }
  
+    .menu-hamburger{
+margin-right: 10px;
+    }
 
+    .navbar-brand {
+      background-image: url(../../assets/images/brand.png);
+      width: 300px;
+      height: 42px;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @include media-breakpoint-up(md) { 
+        width: 334px;
+        height: 47px;
+      }
+  }
     nav{
 
       .callToAction a{

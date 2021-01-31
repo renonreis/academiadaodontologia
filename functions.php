@@ -201,17 +201,7 @@ function _namespace_modify_menuclass($ulclass) {
 add_filter('wp_nav_menu', '_namespace_modify_menuclass');
 
 function custom_post_type() {
-	/*register_taxonomy(
-		'professores',
-		'cursos',
-		array(
-			'label' => __( 'Professores' ),
-			'rewrite' => array( 'slug' => 'professor' ),
-			'has_archive' => false,
-			'publicly_queryable'  => false,
-		)
-	);*/
-
+	
 	register_post_type('depoimentos',
 		array(
 			'labels'      => array(
@@ -227,6 +217,7 @@ function custom_post_type() {
 			'show_in_nav_menus' => false,
 		)
 	);
+	
 	register_post_type('faq',
 		array(
 			'labels'      => array(
@@ -242,16 +233,19 @@ function custom_post_type() {
 			'show_in_nav_menus' => false,
 		)
 	);
+	
 	register_post_type('cursos',
 		array(
 			'labels'      => array(
 					'name'          => __( 'Cursos', 'textdomain' ),
 					'singular_name' => __( 'Cursos', 'textdomain' ),
 			),
-			'has_archive' => false,
+			'has_archive' => true,
 			'menu_icon' => 'dashicons-category',
 			'menu_position'	=> 50,
+			'post_type' => 'cursos',
 			'public'      => true,
+			'publicly_queryable'  => true,
 			'supports' => array(
 				'title',
 				'editor',
@@ -259,6 +253,21 @@ function custom_post_type() {
 			),
 		),
 	);
+
+	register_taxonomy(
+		'categoria-cursos', 
+		'cursos', array(
+			'hierarchical' => true, 
+			'label' => 'Categorias', 			
+			'singular_name' => 'Categoria', 
+			'rewrite' => true, 
+			'query_var' => true,
+			'public'      => true,
+			'publicly_queryable'  => false,
+			'show_in_nav_menus' => false,
+		)
+	);
+		
 	register_taxonomy(
 		'curso_category', 
 		'cursos', array(
@@ -271,5 +280,6 @@ function custom_post_type() {
 			'show_in_nav_menus' => false,
 		)
 	);
+	
 }
 add_action('init', 'custom_post_type');

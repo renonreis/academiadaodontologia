@@ -182,54 +182,7 @@ get_header();
         </div>
       </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-        <?php           
-          $args = array(
-          'numberposts'	=> -1,
-          'posts_per_page'=> 4,
-          'post_type'		=> 'cursos',
-          'orderby' => 'date',
-          'order'     => 'DESC',
-          );
-          $the_query = new WP_Query( $args );          
-          if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); 
-          
-          $terms = get_terms('curso_category');
-          $post_terms = get_the_terms( get_the_ID(), 'curso_category' ); 
-        ?>
-        <div class="col">
-          <div class="card card-course  card-course_is-new"
-            style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'medium_large'); ?>);">
-            <?php 
-              if( get_field('course_is_new') ) {
-                echo '';
-              } else {
-                echo '
-                <style>
-                  .card-course_is-new::after {
-                    display: none;
-                  }   
-                </style>';
-              }
-            ?>
-            <a class="card-course_all_height" href="<?php echo get_post_permalink(); ?>">
-              <div class="card-course-content">
-                <img class="img-thumbnai" src="<?php
-                  foreach($post_terms as $term){     
-                    the_field('image_teacher', $term);                  
-                  }
-                ?>" alt="Nome alternativo">
-                <h3><?php echo $post_terms[0]->name; ?></h3>
-                <div class="line"></div>
-                <p><?php the_title(); ?></p>
-                <span class="time">
-                  <i class="far fa-clock"></i>
-                  <?php the_field('course_length'); ?>h/aula
-                </span>
-              </div>
-            </a>
-          </div> <!-- // card-curso -->
-        </div>
-        <?php endwhile; endif; wp_reset_query(); ?>
+
       </div>
     </div>
     <div class="row text-center">

@@ -10,23 +10,30 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <header class="entry-header">
-    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-  </header><!-- .entry-header -->
+  <section class="mt-5 py-5 mb-5 ">
+    <div class="container mt-5 mb-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="ui-title">
+            <header class="entry-header">
+              <?php the_title( '<h2 class="ui-title-main entry-title">', '</h2>' ); ?>
+            </header><!-- .entry-header -->
+          </div>
+          <?php academiadaodontologia_post_thumbnail(); ?>
+          <div class="text-light fs-5 fw-lighter content-entry entry-content">
+            <?php
+							the_content();
 
-  <?php academiadaodontologia_post_thumbnail(); ?>
-
-  <div class="entry-content">
-    <?php
-		the_content();
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'academiadaodontologia' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-  </div><!-- .entry-content -->
-
+							wp_link_pages(
+								array(
+									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'academiadaodontologia' ),
+									'after'  => '</div>',
+								)
+							);
+							?>
+          </div><!-- .entry-content -->
+        </div>
+      </div>
+    </div>
+  </section>
 </article><!-- #post-<?php the_ID(); ?> -->

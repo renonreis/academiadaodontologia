@@ -972,3 +972,12 @@ textarea {
   .btn-destaque a:hover {
     background-color: #eb3f90;
   }
+
+.list-courses {
+  position:absolute;
+  opacity: 0;}
+
+.show {
+  position: static;
+  opacity: 1;
+  transition: all 0.5s}

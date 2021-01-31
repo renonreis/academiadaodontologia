@@ -62,8 +62,8 @@ get_header();
         <div class="col-12">
           <div class="row text-light g-0  rounded overflow-hidden flex-md-row mb-5 shadow-sm position-relative">
             <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
-              <img width="112" class="border-0 rounded-circle" /
-                src="<?php echo get_template_directory_uri(); ?>assets/images/person-300x300.jpg" alt="">
+              <img width="112" class="border-0 rounded-circle"
+                src="<?php echo get_template_directory_uri(); ?>/assets/images/person-300x300.jpg" alt="">
             </div>
             <div class="col p-4 pt-1 ps-5 d-flex flex-column position-static">
               <h3 class="fs-4 fw-bolder">Juliana Pereira Andriani</h3>

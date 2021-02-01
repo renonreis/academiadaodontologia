@@ -10231,6 +10231,15 @@ fieldset:disabled .btn {
 	border: 1px solid #535353;
 }
 
+.pagination {
+	margin-top: 20px;
+}
+
+.pagination .page-link {
+	margin: 0 8px;
+	border-radius: 4px;
+}
+
 /* blocks */
 .hero {
 	min-height: 100vh;

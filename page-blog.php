@@ -30,7 +30,7 @@ get_header();
       <div class="row">
         <div class="col-lg-8 mb-md-0 mb-3">
           <!--init postlist -->
-          <div class="row row-cols-1 row-cols-lg-2 g-3" data-masonry='{"percentPosition": true }'>
+          <div class="row row-cols-1 row-cols-lg-2 g-3" data-masonry='{"percentPosition": false }'>
             <div class="col">
               <div class="card card-post rounded-0 border-0 p-0 h-100">
                 <div class="card-header border-0 p-0">
@@ -284,6 +284,23 @@ get_header();
           </div> <!-- //blog-sidebar__inner-->
         </div> <!-- //col-lg-4 blog-sidebar -->
       </div> <!-- //row -->
+      <div class="row mt-4">
+            <div class="col">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Próximo</a>
+                </li>
+              </ul>
+            </nav>
+            </div>
+          </div> <!-- //row -->
     </div> <!-- //container -->
   </section>
 </main><!-- #main -->

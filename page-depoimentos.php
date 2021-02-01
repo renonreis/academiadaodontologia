@@ -26,7 +26,7 @@ get_header();
           </div>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 g-5" data-masonry='{"percentPosition": true }'>
+      <div class="row row-cols-1 row-cols-md-2 g-5" data-masonry='{"percentPosition": false }'>
         <div class="col">
           <div class="card card-testimonial" data-aos="fade-up">
             <div class="card-testimonial__media">

@@ -10356,7 +10356,7 @@ header.navbar-dark .navbar-nav .nav-link {
 	color: white;
 	font-size: 14px;
 	font-family: 'Raleway', sans-serif;
-	margin-right: 35px;
+	margin-right: 25px;
 }
 
 header.navbar-dark .navbar-nav .nav-link:hover {
@@ -10381,8 +10381,13 @@ header .menu-hamburger {
 	color: #fff;
 	border: none;
 	padding: 0;
-	/* margin: 0; */
 	font-size: 2rem;
+}
+
+@media (min-width: 992px) {
+	header .menu-hamburger {
+		display: none !important;
+	}
 }
 
 header .menu-hamburger:hover, header .menu-hamburger:focus {
@@ -10392,10 +10397,16 @@ header .menu-hamburger:hover, header .menu-hamburger:focus {
 
 header .navbar-brand {
 	background-image: url(../../assets/images/brand.png);
-	width: 300px;
+	width: 60px;
 	height: 42px;
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+@media (min-width: 425px) {
+	header .navbar-brand {
+		width: 300px;
+	}
 }
 
 @media (min-width: 768px) {
@@ -10425,6 +10436,10 @@ header nav .callToAction a {
 	user-select: none;
 	padding-right: 1.5rem !important;
 	padding-left: 1.5rem !important;
+}
+
+header nav .callToAction a:hover {
+	color: white !important;
 }
 
 /* The side navigation menu */
@@ -11094,6 +11109,26 @@ footer h2, footer .h2 {
 	-webkit-font-smoothing: none;
 	-webkit-font-smoothing: subpixel-antialiased;
 	-webkit-font-smoothing: antialiased;
+}
+
+*::-webkit-scrollbar {
+	width: 14px;
+	transition: all 0.2s linear;
+}
+
+*::-webkit-scrollbar-track {
+	background: #1a1a1a;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: var(--bs-primary);
+	border-radius: 3px;
+	cursor: pointer;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: #bd1463;
 }
 
 .ff-primary {

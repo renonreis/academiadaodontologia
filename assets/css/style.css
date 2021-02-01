@@ -10351,7 +10351,7 @@ header.navbar-expand-md .navbar-nav {
 }
 
 header.navbar-dark .navbar-nav .nav-link {
-	font-weight: 600;
+	font-weight: 700;
 	text-transform: uppercase;
 	color: white;
 	font-size: 14px;
@@ -10365,6 +10365,14 @@ header.navbar-dark .navbar-nav .nav-link:hover {
 
 header.navbar-dark .navbar-nav .nav-link.active {
 	color: var(--bs-primary);
+}
+
+header .current-menu-item a {
+	color: var(--bs-primary) !important;
+}
+
+header .current-menu-item a:hover {
+	color: rgba(255, 255, 255, 0.55) !important;
 }
 
 header .menu-hamburger {
@@ -10422,7 +10430,7 @@ header nav .callToAction a {
 /* The side navigation menu */
 .app-content-overlayer {
 	position: fixed;
-	background: rgba(0, 0, 0, 0.25);
+	background: rgba(0, 0, 0, 0.6);
 	height: 100%;
 	width: 100%;
 	z-index: -1;
@@ -10463,17 +10471,21 @@ header nav .callToAction a {
 	margin-right: 0px;
 }
 
-.app-mobile-sidebar .container__mobile-menu ul {
+.app-mobile-sidebar .mobile-menu {
+	padding: 0 20px;
+}
+
+.app-mobile-sidebar .mobile-menu ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
-.app-mobile-sidebar .container__mobile-menu ul li {
+.app-mobile-sidebar .mobile-menu ul li {
 	margin-bottom: 18px;
 }
 
-.app-mobile-sidebar .container__mobile-menu ul li .btn-destaque {
+.app-mobile-sidebar .mobile-menu ul li .btn-destaque {
 	background: #e71d7c;
 	border-radius: 3.2px;
 	line-height: 25px;
@@ -10482,7 +10494,7 @@ header nav .callToAction a {
 	text-align: center;
 }
 
-.app-mobile-sidebar .container__mobile-menu ul li a {
+.app-mobile-sidebar .mobile-menu ul li a {
 	font-weight: 600;
 	text-transform: uppercase;
 	color: white;
@@ -10490,11 +10502,11 @@ header nav .callToAction a {
 	font-family: 'Raleway', sans-serif;
 }
 
-.app-mobile-sidebar .container__mobile-menu ul li a:hover {
+.app-mobile-sidebar .mobile-menu ul li a:hover {
 	color: rgba(255, 255, 255, 0.55);
 }
 
-.app-mobile-sidebar .container__mobile-menu ul li a.active {
+.app-mobile-sidebar .mobile-menu ul li a.active {
 	color: var(--bs-primary);
 }
 

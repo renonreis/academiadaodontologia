@@ -21,7 +21,7 @@
 header{
     &.navbar-expand-md .navbar-nav{ margin-left: auto;}
     &.navbar-dark .navbar-nav .nav-link{
-        font-weight: 600;
+        font-weight: 700;
         text-transform: uppercase;
         color: white;
         font-size: 14px;
@@ -34,6 +34,15 @@ header{
             color: var(--bs-primary)
         }
     }
+
+    .current-menu-item{
+        a{
+          color: var(--bs-primary) !important;
+          &:hover{
+            color: rgba(255, 255, 255, 0.55) !important
+          }
+        }
+     }
  
     .menu-hamburger{
       margin-right: 20px;
@@ -101,7 +110,7 @@ header{
 
 .app-content-overlayer { 
   position: fixed;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.6);
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -152,7 +161,8 @@ header{
   //   }
   // }
 
-  .container__mobile-menu{
+  .mobile-menu{
+    padding: 0 20px;
     ul{
       list-style: none;
       padding: 0;

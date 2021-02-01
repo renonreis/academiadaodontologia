@@ -39,7 +39,7 @@
   <div id="app-mobile-sidebar" class="app-mobile-sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     
-     <div class="container__mobile-menu">
+     <div class="mobile-menu">
         <?php
               wp_nav_menu(
                 array(
@@ -53,7 +53,7 @@
                 );
                 ?>
      </div>
-     
+
   </div>
 <a href="#" onclick="closeNav()" aria-hide="true" id="app-content-overlayer" class="app-content-overlayer"></a>
 

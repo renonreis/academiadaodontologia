@@ -37,7 +37,7 @@
 
 
   <div id="app-mobile-sidebar" class="app-mobile-sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="fechar menu">×</a>
     
      <div class="mobile-menu">
         <?php
@@ -52,10 +52,62 @@
                   )
                 );
                 ?>
+
+<?php
+              wp_nav_menu(
+                array(
+                  'theme_location' 		=> 'menu-principal',
+                  'container'			 		=> 'div',
+                  'container_class'   => 'container_class',
+                  'container_id'   		=> 'bdNavbar',
+                  'menu_class'		 		=> 'mobile-menu',
+                  'menu_id'       		=> 'mobile-menu',
+                  )
+                );
+                ?>
+
+<?php
+              wp_nav_menu(
+                array(
+                  'theme_location' 		=> 'menu-principal',
+                  'container'			 		=> 'div',
+                  'container_class'   => 'container_class',
+                  'container_id'   		=> 'bdNavbar',
+                  'menu_class'		 		=> 'mobile-menu',
+                  'menu_id'       		=> 'mobile-menu',
+                  )
+                );
+                ?>
+
+<?php
+              wp_nav_menu(
+                array(
+                  'theme_location' 		=> 'menu-principal',
+                  'container'			 		=> 'div',
+                  'container_class'   => 'container_class',
+                  'container_id'   		=> 'bdNavbar',
+                  'menu_class'		 		=> 'mobile-menu',
+                  'menu_id'       		=> 'mobile-menu',
+                  )
+                );
+                ?>
+
+<?php
+              wp_nav_menu(
+                array(
+                  'theme_location' 		=> 'menu-principal',
+                  'container'			 		=> 'div',
+                  'container_class'   => 'container_class',
+                  'container_id'   		=> 'bdNavbar',
+                  'menu_class'		 		=> 'mobile-menu',
+                  'menu_id'       		=> 'mobile-menu',
+                  )
+                );
+                ?>
      </div>
 
   </div>
-<a href="#" onclick="closeNav()" aria-hide="true" id="app-content-overlayer" class="app-content-overlayer"></a>
+<a href="#" onclick="closeNav()" aria-label="fechar menu" id="app-content-overlayer" class="app-content-overlayer" ></a>
 
 
 

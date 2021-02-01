@@ -37,12 +37,15 @@ offcanvas
 function openNav() {
     document.getElementById("app-mobile-sidebar").classList.add('is-open');
     document.getElementById("app-content-overlayer").classList.add('is-show');
+    document.body.classList.add('overflow-hidden');
+
 
 }
 
 function closeNav() {
     document.getElementById("app-mobile-sidebar").classList.remove('is-open');
     document.getElementById("app-content-overlayer").classList.remove('is-show');
+    document.body.classList.remove('overflow-hidden');
 }
 /* ---------------------------- */
 

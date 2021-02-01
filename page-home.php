@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-<main id="main primary" class="site-main">
+<main id="main" class="site-main">
   <section class="hero"
     style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.png);">
     <div class="overlay"></div>

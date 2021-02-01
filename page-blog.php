@@ -179,9 +179,27 @@ get_header();
               </div> <!-- // card-curso -->
             </div><!-- //col -->
           </div> <!-- //row  -->
+
+          <div class="row mt-3">
+            <div class="col">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Próximo</a>
+                </li>
+              </ul>
+            </nav>
+            </div>
+          </div> <!-- //row -->
           <!-- end postlist -->
         </div> <!-- //col -->
-        <div class="col-lg-4 d-none d-lg-block pl-xs-0 pl-lg-5 blog-sidebar">
+        <aside class="col-lg-4 pl-xs-0 pl-lg-5 blog-sidebar">
           <div class="blog-sidebar__inner ps-lg-4">
             <ul class="list-inline fs-5 blog-sidebar__social d-flex">
               <li class="list-inline-item">
@@ -282,25 +300,8 @@ get_header();
               </div>
             </div>
           </div> <!-- //blog-sidebar__inner-->
-        </div> <!-- //col-lg-4 blog-sidebar -->
-      </div> <!-- //row -->
-      <div class="row mt-4">
-            <div class="col">
-            <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                  <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#">Próximo</a>
-                </li>
-              </ul>
-            </nav>
-            </div>
-          </div> <!-- //row -->
+        </aside> <!-- //col-lg-4 blog-sidebar -->
+      </div> <!-- //row --> 
     </div> <!-- //container -->
   </section>
 </main><!-- #main -->

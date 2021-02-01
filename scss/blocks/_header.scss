@@ -36,7 +36,17 @@ header{
     }
  
     .menu-hamburger{
-margin-right: 10px;
+      margin-right: 20px;
+      background: transparent;
+      color: #fff;
+      border: none;
+      padding: 0;
+      /* margin: 0; */
+      font-size: 2rem;
+      &:hover, &:focus{
+        background: transparent;
+        color: #fff;
+      }
     }
 
     .navbar-brand {
@@ -117,36 +127,63 @@ margin-right: 10px;
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
-
   &.is-open {
-        z-index: 5000;
-        right: 0;
-    }
+      z-index: 5000;
+      right: 0;
   }
-  
-  /* The navigation menu links */
-  .app-mobile-sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .app-mobile-sidebar a:hover {
-    color: #f1f1f1;
-  }
-  
-  /* Position and style the close button (top right corner) */
-  .app-mobile-sidebar .closebtn {
+
+  .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
-    margin-right: 50px;
+    margin-right: 0px;
   }
- 
   
+  // a {
+  //   padding: 8px 8px 8px 32px;
+  //   text-decoration: none;
+  //   font-size: 25px;
+  //   color: #818181;
+  //   display: block;
+  //   transition: 0.3s;
+  //   &:hover {
+  //     color: #f1f1f1;
+  //   }
+  // }
+
+  .container__mobile-menu{
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li{
+        margin-bottom: 18px;
+
+        .btn-destaque{
+          background: #e71d7c;
+          border-radius: 3.2px;
+          line-height: 25px;
+          margin: 0 20px;
+          min-width: 160px;
+          text-align: center;
+        }
+        a{
+          font-weight: 600;
+          text-transform: uppercase;
+          color: white;
+          font-size: 14px;
+          font-family: 'Raleway', sans-serif;
+           &:hover{
+              color: rgba(255, 255, 255, 0.55)
+          }
+          &.active{
+              color: var(--bs-primary)
+          }
+        }
+      }
+    }
+   }
  
+ 
+  }

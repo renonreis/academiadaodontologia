@@ -39,18 +39,21 @@
   <div id="app-mobile-sidebar" class="app-mobile-sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     
-    <?php
-					wp_nav_menu(
-            array(
-              'theme_location' 		=> 'menu-principal',
-							'container'			 		=> 'div',
-							'container_class'   => 'container_class',
-							'container_id'   		=> 'bdNavbar',
-							'menu_class'		 		=> 'mobile-menu',
-							'menu_id'       		=> 'mobile-menu',
-              )
-            );
-            ?>
+     <div class="container__mobile-menu">
+        <?php
+              wp_nav_menu(
+                array(
+                  'theme_location' 		=> 'menu-principal',
+                  'container'			 		=> 'div',
+                  'container_class'   => 'container_class',
+                  'container_id'   		=> 'bdNavbar',
+                  'menu_class'		 		=> 'mobile-menu',
+                  'menu_id'       		=> 'mobile-menu',
+                  )
+                );
+                ?>
+     </div>
+     
   </div>
 <a href="#" onclick="closeNav()" aria-hide="true" id="app-content-overlayer" class="app-content-overlayer"></a>
 
@@ -61,11 +64,10 @@
 
       <nav class="container-xxl flex-wrap flex-lg-nowrap" aria-label="Main navigation">
 
-        <a class="navbar-brand p-0 me-2" href="<?php echo get_home_url(); ?>" aria-label="Academia da odontologia">        </a>
+        <a class="navbar-brand p-0 me-2" href="<?php echo get_home_url(); ?>" aria-label="Academia da odontologia"></a>
 
        
 <div class="d-none d-lg-block">
-
   <?php
 					wp_nav_menu(
             array(

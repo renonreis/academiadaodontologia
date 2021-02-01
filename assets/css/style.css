@@ -10368,7 +10368,18 @@ header.navbar-dark .navbar-nav .nav-link.active {
 }
 
 header .menu-hamburger {
-	margin-right: 10px;
+	margin-right: 20px;
+	background: transparent;
+	color: #fff;
+	border: none;
+	padding: 0;
+	/* margin: 0; */
+	font-size: 2rem;
+}
+
+header .menu-hamburger:hover, header .menu-hamburger:focus {
+	background: transparent;
+	color: #fff;
 }
 
 header .navbar-brand {
@@ -10444,28 +10455,47 @@ header nav .callToAction a {
 	right: 0;
 }
 
-/* The navigation menu links */
-.app-mobile-sidebar a {
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	font-size: 25px;
-	color: #818181;
-	display: block;
-	transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.app-mobile-sidebar a:hover {
-	color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
 .app-mobile-sidebar .closebtn {
 	position: absolute;
 	top: 0;
 	right: 25px;
 	font-size: 36px;
-	margin-right: 50px;
+	margin-right: 0px;
+}
+
+.app-mobile-sidebar .container__mobile-menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.app-mobile-sidebar .container__mobile-menu ul li {
+	margin-bottom: 18px;
+}
+
+.app-mobile-sidebar .container__mobile-menu ul li .btn-destaque {
+	background: #e71d7c;
+	border-radius: 3.2px;
+	line-height: 25px;
+	margin: 0 20px;
+	min-width: 160px;
+	text-align: center;
+}
+
+.app-mobile-sidebar .container__mobile-menu ul li a {
+	font-weight: 600;
+	text-transform: uppercase;
+	color: white;
+	font-size: 14px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.app-mobile-sidebar .container__mobile-menu ul li a:hover {
+	color: rgba(255, 255, 255, 0.55);
+}
+
+.app-mobile-sidebar .container__mobile-menu ul li a.active {
+	color: var(--bs-primary);
 }
 
 footer {

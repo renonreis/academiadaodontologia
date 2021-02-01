@@ -84,6 +84,7 @@
 		"../../scss/elements/_ui-accordion.scss",
 		"../../scss/elements/_ui-carousel.scss",
 		"../../scss/elements/_buttons.scss",
+		"../../scss/elements/_pagination.scss",
 		"../../scss/elements/_scrollbar.scss",
 		"../../scss/blocks/_hero.scss",
 		"../../scss/blocks/_banner-info.scss",

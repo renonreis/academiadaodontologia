@@ -54,9 +54,9 @@
           </small>
         </p>
         <ul class="list-inline fs-5">
-          <li class="list-inline-item"><i class="fab fa-facebook-f"></i></li>
-          <li class="list-inline-item ms-3"><i class="fab fa-instagram"></i></li>
-          <li class="list-inline-item ms-3"><i class="fab fa-youtube"></i></li>
+          <li class="list-inline-item"> <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a> </li>
+          <li class="list-inline-item ms-3"> <a href="#" class="text-white"><i class="fab fa-instagram"></i></a> </li>
+          <li class="list-inline-item ms-3"><a href="#" class="text-white"><i class="fab fa-youtube"></i></a></li>
         </ul>
       </div>
     </div>

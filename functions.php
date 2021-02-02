@@ -190,7 +190,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 /* Add custom classes to list item "li" */
 function _namespace_menu_item_class( $classes, $item ) {       
-	$classes[] = "nav-item col-6 col-xl-auto"; // you can add multiple classes here
+	$classes[] = "nav-item"; // you can add multiple classes here
 	return $classes;
 } 
 add_filter( 'nav_menu_css_class' , '_namespace_menu_item_class' , 10, 2 );

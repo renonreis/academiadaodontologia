@@ -84,38 +84,58 @@ $author_id = get_the_author_meta( 'ID' );
         <div class="col-10">
           <div class=" row py-5  text-dark g-0   overflow-hidden flex-md-row position-relative">
             <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
-              <img width="112" class="border-0 rounded-circle"
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/person-300x300.jpg" alt="">
+              <img src="<?php echo get_avatar_url($user->ID, ['size' => '112']); ?>" class="border-1 rounded-circle"
+                width="112px" height="112px" alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
             </div>
             <div class="col p-4 pt-1 ps-5 d-flex flex-column position-static">
-              <h3 class="fs-4 fw-bolder">Juliana Pereira Andriani</h3>
+              <h3 class="fs-4 fw-bolder">
+                <?php echo get_the_author_meta( 'first_name', $author_id ); ?>
+                <?php echo get_the_author_meta( 'last_name', $author_id ); ?>
+              </h3>
               <div class="fw-lighter fs-5">
-                <p>
-                  Especialista em Odontopediatria - PUC/PR<br>
-                  Mestre em Odontologia / Área de Concentração Odontopediatria - UFSC/SC<br>
-                  Habilitação em Sedação Consciente com Óxido Nitroso<br>
-                  Professora e Coordenadora do Curso de Especialização e Atualização em Odontopediatria - ABCD<br>
-                  IAPD Membro do board 2019/2021 - Membership Committee<br>
-                  Idealizadora da CAIXA GUIA - Odontopediatria<br>
-                  Clinical Adviser NuSmile no Brasil
-                </p>
+                <?php 
+                  echo wpautop( get_the_author_meta( 'description' ) );
+                ?>
               </div>
               <ul class="list-inline fs-5">
+                <?php if (!empty(get_the_author_meta( 'facebook' , $post->post_author ))){ ?>
                 <li class="list-inline-item">
-                  <a href="#" class="text-dark"> <i class="fab fa-facebook-f"></i> </a>
+                  <a href="<?php echo get_the_author_meta( 'facebook' , $post->post_author ); ?>" target="_blank"
+                    class="text-dark">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
                 </li>
+                <?php } ?>
+                <?php if (!empty(get_the_author_meta( 'instagram' , $post->post_author ))){ ?>
                 <li class="list-inline-item ms-3">
-                  <a href="#" class="text-dark"> <i class="fab fa-instagram"></i></a>
+                  <a href="<?php echo get_the_author_meta( 'instagram' , $post->post_author ); ?>" target="_blank"
+                    class="text-dark">
+                    <i class="fab fa-instagram"></i>
+                  </a>
                 </li>
+                <?php } ?>
+                <?php if (!empty(get_the_author_meta( 'youtube' , $post->post_author ))){ ?>
                 <li class="list-inline-item ms-3">
-                  <a href="#" class="text-dark"> <i class="fab fa-youtube"></i></a>
+                  <a href="<?php echo get_the_author_meta( 'youtube' , $post->post_author ); ?>" target="_blank"
+                    class="text-dark">
+                    <i class="fab fa-youtube"></i>
+                  </a>
                 </li>
+                <?php } ?>
+                <?php if (!empty(get_the_author_meta( 'twitter' , $post->post_author ))){ ?>
                 <li class="list-inline-item ms-3">
-                  <a href="#" class="text-dark"> <i class="fab fa-twitter"></i></a>
+                  <a href="https://twitter.com/<?php echo get_the_author_meta( 'twitter' , $post->post_author ); ?>"
+                    target="_blank" class="text-dark"> <i class="fab fa-twitter"></i></a>
                 </li>
+                <?php } ?>
+                <?php if (!empty(get_the_author_meta( 'linkedin' , $post->post_author ))){ ?>
                 <li class="list-inline-item ms-3">
-                  <a href="#" class="text-dark"> <i class="fab fa-linkedin"></i></a>
+                  <a href="<?php echo get_the_author_meta( 'linkedin' , $post->post_author ); ?>" target="_blank"
+                    class="text-dark">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
                 </li>
+                <?php } ?>
               </ul>
             </div>
           </div>

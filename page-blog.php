@@ -49,9 +49,9 @@ get_header();
               $author_id = get_the_author_meta( 'ID' );
             ?>
             <div class="col">
-              <div class="card card-post rounded-0 border-0 p-0 h-100">
+              <div class="card card-post rounded-0 border-0 p-0 h-100" data-aos="fade-up">
                 <div class="card-header border-0 p-0">
-                  <a href="<?php echo get_permalink(); ?>" class="text-decoration-none">
+                  <a href="<?php echo get_permalink(); ?>" class="text-decoration-none up-link">
                     <img class="img-thumbnail img-fluid  border-0 rounded-0 p-0 "
                       src="<?php the_post_thumbnail_url( array(420, 420) ); ?>" alt="<?php the_title(); ?>"
                       title="<?php the_title_attribute(); ?>">
@@ -61,13 +61,13 @@ get_header();
                   <?php
                   $categories = get_the_category();
                   if ( ! empty( $categories ) ) {
-                      echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">
+                      echo '<a class="up-link" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">
                       <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">
                       ' . esc_html( $categories[0]->name ) . '</span></a>';
                   }
                   ?>
                   <h3>
-                    <a href="<?php echo get_permalink(); ?>" class="text-decoration-none">
+                    <a href="<?php echo get_permalink(); ?>" class="text-decoration-none stretched-link">
                       <?php the_title(); ?>
                     </a>
                   </h3>
@@ -144,7 +144,7 @@ get_header();
         </div> <!-- //col -->
         <aside class="col-lg-4 pl-xs-0 pl-lg-5 blog-sidebar">
           <div class="blog-sidebar__inner ps-lg-4">
-            <ul class="list-inline fs-5 blog-sidebar__social d-flex">
+            <ul class="list-inline fs-5 blog-sidebar__social  mb-3 d-flex">
               <li class="list-inline-item">
                 <a href="#"> <i class="fab fa-facebook-f"></i> </a>
               </li>
@@ -155,7 +155,7 @@ get_header();
                 <a href="#" class=""> <i class="fab fa-youtube"></i></a>
               </li>
               <li class="list-inline-item flex-shrink-1 ms-auto">
-                <div class="input-group blog-sidebar__search mb-3 ">
+                <div class="input-group blog-sidebar__search">
                   <input type="text" class="form-control" placeholder="Busca" aria-label="buscar conteúdo"
                     aria-describedby="buscarButton">
                   <button class="btn btn-outline-light border-gray rounded-0 bg-dark" type="button" id="buscarButton">
@@ -164,84 +164,51 @@ get_header();
                 </div>
               </li>
             </ul>
-            <div class="border-1 p-5 text-white ff-primary border-blog-light border">
-              <h4 class="f-italic">Fique por dentro</h4>
-              <p>Acompanhe as últimas publicações científicas, promoções e novidades da Academia da Odontologia.</p>
+         
+            <div class="border-1 p-5 text-white ff-primary border-blog-light border mb-4">
+              <h4 class="fw-100 fst-italic fs-2 ff-primary">Fique por dentro</h4>
+              <p class="fw-200">Acompanhe as últimas publicações científicas, promoções e novidades da Academia da Odontologia.</p>
               <form>
-                <div class="mb-3">
-                  <label for="blogInputEmail" class="form-label sr-only">Digite seu e-mail</label>
+                <div class="mb-2">
+                  <label for="blogInputEmail" class="form-label sr-only d-none">Digite seu e-mail</label>
                   <input type="email" class="form-control rounded-0" id="blogInputEmail" placeholder="Digite seu e-mail"
                     aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                 </div>
                 <div class="d-grid gap-2">
-                  <button type="submit" class="btn btn-outline-light btn-block">Enviar</button>
+                  <button type="submit" class="btn btn-outline-light btn-block text-uppercase">Enviar</button>
                 </div>
               </form>
             </div>
-            <div class="accordion mt-5 bg-white" id="accordionExample">
-              <div class="accordion-item ">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    Accordion Item #1
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <div class="list-group">
-                      <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                        Cras justo odio
-                      </a>
-                      <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                      <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-                      <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-                      <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1"
-                        aria-disabled="true">Vestibulum at eros</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Accordion Item #2
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                    that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                    does limit overflow.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Accordion Item #3
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                    that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                    does limit overflow.
-                  </div>
-                </div>
-              </div>
-            </div>
+
+            <nav class="widget-menu-link"> 
+                <ul class="">
+                      <li><a href="#" class="bg-white text-dark">Todas as categorias (2403)</a></li>
+                       <li><a href="#">E-books (19</a>
+                          <ul>
+                                  <li><a href="#">Web Design</a></li>
+                                  <li><a href="#">SEO</a></li>
+                                  <li><a href="#">Design</a></li>
+                          </ul>
+                    </li>
+                    <li><a href="#"> Odontopediatria (1376)</a>
+                          <ul>
+                                  <li><a href="#">Bruxismo (249)</a></li>
+                                  <li><a href="#">Cariostático (172) </a></li>
+                                  <li><a href="#">Endodontia (201)</a></li>
+                          </ul>
+                    </li>
+                    <li><a href="#"> Geral (212)</a>
+                          <ul>
+                                  <li><a href="#">COVID-19  (31)</a></li>
+                                  <li><a href="#">Fotografia e marketing (20) </a></li>
+                                  <li><a href="#">Livros (13)</a></li>
+                                  <li><a href="#">Odontologia do esporte (186)</a></li>
+                          </ul>
+                    </li>
+                  
+              </ul>
+              </nav>
           </div> <!-- //blog-sidebar__inner-->
         </aside> <!-- //col-lg-4 blog-sidebar -->
       </div> <!-- //row -->

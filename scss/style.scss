@@ -17,6 +17,7 @@
 @import "blocks/_header";
 @import "blocks/_footer"; 
 @import "blocks/_card-course";
+@import "blocks/_card-post";
 @import "blocks/_card-testimonial";
 @import "blocks/_price";
 @import "blocks/_single";
@@ -50,6 +51,10 @@
 
 .ff-primary{  font-family: 'Raleway', sans-serif;}
 .ff-secondary{  font-family: 'Open Sans', sans-serif;}
+
+
+.fw-100{ font-weight: 100;}
+.fw-200 { font-weight: 200;}
 
 .fs-small{ font-size: 11px;}
 .border-light-025 {border-color: rgba(255, 255, 255, 0.25) !important;}

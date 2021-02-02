@@ -1924,7 +1924,7 @@ progress {
 	width: 100%;
 	padding: 0.375rem 0.75rem;
 	font-size: 1rem;
-	font-weight: 400;
+	font-weight: 600;
 	line-height: 1.5;
 	color: #212529;
 	background-color: #fff;
@@ -2113,7 +2113,7 @@ textarea.form-control-lg {
 	width: 100%;
 	padding: 0.375rem 1.75rem 0.375rem 0.75rem;
 	font-size: 1rem;
-	font-weight: 400;
+	font-weight: 600;
 	line-height: 1.5;
 	color: #212529;
 	vertical-align: middle;
@@ -2471,7 +2471,7 @@ textarea.form-control-lg {
 	align-items: center;
 	padding: 0.375rem 0.75rem;
 	font-size: 1rem;
-	font-weight: 400;
+	font-weight: 600;
 	line-height: 1.5;
 	color: #212529;
 	text-align: center;
@@ -10611,6 +10611,11 @@ footer h2, footer .h2 {
 	transition: all 0.2s linear;
 }
 
+.card-course .up-link {
+	z-index: 3000;
+	position: relative;
+}
+
 .card-course_all_height {
 	color: #fff;
 	text-decoration: none;
@@ -10714,6 +10719,22 @@ footer h2, footer .h2 {
 .card-course-content .time {
 	margin-bottom: 25px;
 	display: block;
+}
+
+.card-post {
+	transition: all 0.2s linear;
+	transform: translateY(0px);
+}
+
+.card-post:hover {
+	box-shadow: 0 18px 32px 0 rgba(0, 0, 0, 0.5);
+	transition: all 0.2s linear;
+	transform: translateY(-10px) !important;
+}
+
+.card-post .up-link {
+	z-index: 3000;
+	position: relative;
 }
 
 .card-testimonial {
@@ -11055,10 +11076,7 @@ footer h2, footer .h2 {
 	border-radius: 0;
 	background-color: transparent;
 	border: 1px solid #656565;
-}
-
-.blog-sidebar__search input:focus, .blog-sidebar__search input:hover {
-	background-color: transparent;
+	color: #cdcdcd;
 }
 
 .blog-sidebar__search button {
@@ -11066,15 +11084,73 @@ footer h2, footer .h2 {
 	border: 1px solid #656565;
 	position: absolute !important;
 	right: 0;
+	z-index: 4 !important;
 }
 
 .blog-sidebar__search button:focus, .blog-sidebar__search button:hover {
-	background-color: rgba(255, 255, 255, 0.05) !important;
+	background-color: white !important;
 	border: 1px solid #656565;
 }
 
-.blog-sidebar__social a {
-	color: #656565;
+.blog-sidebar__social {
+	margin-bottom: 0;
+	align-items: center;
+}
+
+.blog-sidebar__social li a {
+	color: #fff;
+	opacity: 0.45;
+}
+
+.blog-sidebar__social li a:hover {
+	opacity: 1;
+}
+
+.blog-sidebar .widget-menu-link {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+.blog-sidebar .widget-menu-link ul {
+	list-style: none;
+	padding: 0;
+}
+
+.blog-sidebar .widget-menu-link ul li {
+	line-height: auto;
+}
+
+.blog-sidebar .widget-menu-link ul li a {
+	background: #181818;
+	display: block;
+	text-decoration: none;
+	color: #cdcdcd;
+	padding: 10px 30px;
+	border-bottom: 1px solid #181818;
+	font-size: 17px;
+	transition: background 0.2s linear;
+}
+
+.blog-sidebar .widget-menu-link ul li a:hover {
+	background: rgba(24, 24, 24, 0.8);
+}
+
+.blog-sidebar .widget-menu-link ul li ul {
+	line-height: auto;
+}
+
+.blog-sidebar .widget-menu-link ul li ul li {
+	line-height: auto;
+}
+
+.blog-sidebar .widget-menu-link ul li ul li a {
+	padding-left: 50px;
+	background: #2d2d2d;
+}
+
+.blog-sidebar .widget-menu-link ul li ul li a:hover {
+	background: rgba(45, 45, 45, 0.8);
 }
 
 .list-invist {
@@ -11145,6 +11221,14 @@ footer h2, footer .h2 {
 
 .ff-secondary {
 	font-family: 'Open Sans', sans-serif;
+}
+
+.fw-100 {
+	font-weight: 100;
+}
+
+.fw-200 {
+	font-weight: 200;
 }
 
 .fs-small {

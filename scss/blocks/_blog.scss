@@ -3,27 +3,72 @@
         position: relative;
         padding-right: 0px;
         input{
-            border-radius: 0; 
-            background-color:transparent; 
+            border-radius: 0;    
+            background-color: transparent;
             border: 1px solid #656565;
-            &:focus, &:hover{background-color: transparent;}
+            color: #cdcdcd;
+            // &:focus, &:hover{}
         }
         button{
             background-color: rgba(255,255,255,0) !important;
             border: 1px solid #656565;
             position: absolute !important;      
             right: 0;
+            z-index: 4 !important;
             &:focus, &:hover{
-                background-color: rgba(255,255,255,0.05) !important;
+                background-color: rgba(255,255,255,1) !important;
                 border: 1px solid #656565;
             }
         }
     }
     &__social{
-        a{color: #656565;}
+        margin-bottom: 0;
+        align-items: center;
+        li{
+            a{
+                color: #fff;
+                opacity: 0.45;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
     }
 
- 
-
     
+
+    .widget-menu-link{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        margin-bottom: 30px;
+        ul{  list-style: none;
+            padding: 0;
+            li{  line-height: auto;
+                a {
+                    background: rgba(24,24,24,1);
+                    display: block;
+                    text-decoration: none;
+                    color: #cdcdcd;
+                    padding: 10px 30px;
+                    border-bottom: 1px solid #181818;
+                    font-size: 17px;
+                    transition: background 0.2s linear;
+                    &:hover{
+                      background:  rgba(24,24,24,0.8);
+                    }
+                }
+                ul {   line-height: auto;
+                    li {  line-height: auto;
+                        a{
+                              padding-left: 50px;
+                             background:  rgba(45,45,45, 1);
+                             &:hover{
+                                background: rgba(45,45,45, 0.8)
+                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -31,170 +31,113 @@ get_header();
         <div class="col-lg-8 mb-md-0 mb-3">
           <!--init postlist -->
           <div class="row row-cols-1 row-cols-lg-2 g-3" data-masonry='{"percentPosition": false }'>
-            <div class="col">
-              <div class="card card-post rounded-0 border-0 p-0 h-100">
-                <div class="card-header border-0 p-0">
-                  <img class="img-thumbnail img-fluid  border-0 rounded-0 p-0 "
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/post-de-blog-1-768x768.jpg"
-                    alt="Nome alternativo">
-                </div>
-                <div class="card-content p-4 border-0">
-                  <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">Sedação</span>
-                  <h3><a href="<?php echo get_home_url(); ?>/post" class="stretched-link text-decoration-none">Tipos de
-                      sedação em odontologia</a></h3>
-                </div>
-                <div class="card-footer d-flex border-0 bg-white mt-auto p-4">
-                  <div class="flex-grow-1">
-                    <ul class="list-inline mb-0">
-                      <li class="list-inline-item"><img
-                          src="<?php echo get_template_directory_uri(); ?>/assets/images/square-person.png"
-                          class="border-1 rounded-circle" width="55px" height="55px" alt="Author name">
-                      </li>
-                      <li class="list-inline-item fs-5">Juliana Andriani</li>
-                    </ul>
-                  </div>
-                  <div class="align-self-center">
-                    <span class="text-muted"> 15 jan, 2021</span>
-                  </div>
-                </div>
-              </div> <!-- // card-curso -->
-            </div><!-- //col -->
-            <div class="col">
-              <div class="card card-post rounded-0 border-0 p-0 h-100">
-                <div class="card-header border-0 p-0">
-                  <img class="img-thumbnail img-fluid  border-0 rounded-0 p-0 "
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/post-de-blog-2-768x768.jpg"
-                    alt="Nome alternativo">
-                </div>
-                <div class="card-content p-4 border-0">
-                  <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">E-Books</span>
-                  <h3><a href="<?php echo get_home_url(); ?>/post" class="stretched-link text-decoration-none">E-book
-                      Pré-natal odontológico: 10
-                      cuidados
-                      essenciais para o atendimento em gestantes</a></h3>
-                </div>
-                <div class="card-footer d-flex border-0 bg-white mt-auto p-4">
-                  <div class="flex-grow-1">
-                    <ul class="list-inline mb-0">
-                      <li class="list-inline-item"><img
-                          src="<?php echo get_template_directory_uri(); ?>/assets/images/square-person.png"
-                          class="border-1 rounded-circle" width="55px" height="55px" alt="Author name">
-                      </li>
-                      <li class="list-inline-item fs-5">Juliana Andriani</li>
-                    </ul>
-                  </div>
-                  <div class="align-self-center">
-                    <span class="text-muted"> 20 dez, 2021</span>
-                  </div>
-                </div>
-              </div> <!-- // card-curso -->
-            </div><!-- //col -->
-            <div class="col">
-              <div class="card card-post rounded-0 border-0 p-0 h-100">
-                <div class="card-header border-0 p-0">
-                  <img class="img-thumbnail img-fluid  border-0 rounded-0 p-0 "
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/post-de-blog-3-768x768.jpg"
-                    alt="Nome alternativo">
-                </div>
-                <div class="card-content p-4 border-0">
-                  <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">E-Books</span>
-                  <h3><a href="<?php echo get_home_url(); ?>/post" class="stretched-link text-decoration-none">Apneia
-                      Obstrutiva do Sono em crianças:
-                      Conduta terapêutica</a></h3>
-                </div>
-                <div class="card-footer d-flex border-0 bg-white mt-auto p-4">
-                  <div class="flex-grow-1">
-                    <ul class="list-inline mb-0">
-                      <li class="list-inline-item"><img
-                          src="<?php echo get_template_directory_uri(); ?>/assets/images/square-person.png"
-                          class="border-1 rounded-circle" width="55px" height="55px" alt="Author name">
-                      </li>
-                      <li class="list-inline-item fs-5">Juliana Andriani</li>
-                    </ul>
-                  </div>
-                  <div class="align-self-center">
-                    <span class="text-muted"> 7 Jul, 2021</span>
-                  </div>
-                </div>
-              </div> <!-- // card-curso -->
-            </div><!-- //col -->
-            <div class="col">
-              <div class="card card-post rounded-0 border-0 p-0 h-100">
-                <div class="card-header border-0 p-0">
-                  <img class="img-thumbnail img-fluid  border-0 rounded-0 p-0 "
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/post-de-blog-6-768x768.jpg"
-                    alt="Nome alternativo">
-                </div>
-                <div class="card-content p-4 border-0">
-                  <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">Sedação</span>
-                  <h3><a href="<?php echo get_home_url(); ?>/post"
-                      class="stretched-link text-decoration-none">Características do aparelho expansor
-                      tipo Haas modificado</a></h3>
-                </div>
-                <div class="card-footer d-flex border-0 bg-white mt-auto p-4">
-                  <div class="flex-grow-1">
-                    <ul class="list-inline mb-0">
-                      <li class="list-inline-item"><img
-                          src="<?php echo get_template_directory_uri(); ?>/assets/images/square-person.png"
-                          class="border-1 rounded-circle" width="55px" height="55px" alt="Author name">
-                      </li>
-                      <li class="list-inline-item fs-5">Juliana Andriani</li>
-                    </ul>
-                  </div>
-                  <div class="align-self-center">
-                    <span class="text-muted"> 15 jan, 2021</span>
-                  </div>
-                </div>
-              </div> <!-- // card-curso -->
-            </div><!-- //col -->
+            <?php           
+              $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+              
+              $args = array(
+              'numberposts'	=> -1,
+              'posts_per_page'=> 8,
+              'paged' => $paged,
+              'post_type'		=> 'post',
+              'orderby' => 'date',
+              'order'     => 'DESC',
+              );
+              $the_query = new WP_Query( $args );                       
+              if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); 
 
-
+              $user = wp_get_current_user();
+              $author_id = get_the_author_meta( 'ID' );
+            ?>
             <div class="col">
               <div class="card card-post rounded-0 border-0 p-0 h-100">
                 <div class="card-header border-0 p-0">
-                  <img class="img-thumbnail img-fluid  border-0 rounded-0 p-0 "
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/post-de-blog-2-768x768.jpg"
-                    alt="Nome alternativo">
+                  <a href="<?php echo get_permalink(); ?>" class="text-decoration-none">
+                    <img class="img-thumbnail img-fluid  border-0 rounded-0 p-0 "
+                      src="<?php the_post_thumbnail_url( array(420, 420) ); ?>" alt="<?php the_title(); ?>"
+                      title="<?php the_title_attribute(); ?>">
+                  </a>
                 </div>
                 <div class="card-content p-4 border-0">
-                  <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">Sedação</span>
-                  <h3><a href="<?php echo get_home_url(); ?>/post"
-                      class="stretched-link text-decoration-none">Características do aparelho expansor
-                      tipo Haas modificado</a></h3>
+                  <?php
+                  $categories = get_the_category();
+                  if ( ! empty( $categories ) ) {
+                      echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">
+                      <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">
+                      ' . esc_html( $categories[0]->name ) . '</span></a>';
+                  }
+                  ?>
+                  <h3>
+                    <a href="<?php echo get_permalink(); ?>" class="text-decoration-none">
+                      <?php the_title(); ?>
+                    </a>
+                  </h3>
                 </div>
                 <div class="card-footer d-flex border-0 bg-white mt-auto p-4">
                   <div class="flex-grow-1">
                     <ul class="list-inline mb-0">
-                      <li class="list-inline-item"><img
-                          src="<?php echo get_template_directory_uri(); ?>/assets/images/square-person.png"
-                          class="border-1 rounded-circle" width="55px" height="55px" alt="Author name">
+                      <li class="list-inline-item">
+                        <img src="<?php echo get_avatar_url($user->ID, ['size' => '55']); ?>"
+                          class="border-1 rounded-circle" width="55px" height="55px"
+                          alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
                       </li>
-                      <li class="list-inline-item fs-5">Juliana Andriani</li>
+                      <li class="list-inline-item fs-5">
+                        <?php echo get_the_author(); ?>
+                      </li>
                     </ul>
                   </div>
                   <div class="align-self-center">
-                    <span class="text-muted"> 15 jan, 2021</span>
+                    <span class="text-muted">
+                      <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished">
+                        <?php echo get_the_date(); ?>
+                      </time>
+                    </span>
                   </div>
                 </div>
               </div> <!-- // card-curso -->
-            </div><!-- //col -->
+            </div>
+            <?php 
+              endwhile;  
+            ?>
           </div> <!-- //row  -->
+          <div class="blog-pagination">
+            <?php 
+                echo paginate_links( array (
+                  'base'         => str_replace( 9, '%#%', esc_url( get_pagenum_link( 9 ) ) ),
+                  'total'        => $the_query->max_num_pages,
+                  'current'      => max( 1, get_query_var( 'paged' ) ),
+                  'format'       => '?paged=%#%',
+                  'show_all'     => false,
+                  'type'         => 'list',
+                  'end_size'     => 3,
+                  'mid_size'     => 1,
+                  'prev_next'    => true,
+                  'prev_text'    => sprintf( '%1$s', __( 'Anterior', 'text-domain' ) ),
+                  'next_text'    => sprintf( '%1$s', __( 'Próximo', 'text-domain' ) ),
+                  'add_args'     => false,
+                  'add_fragment' => '',
+                ));
+              ?>
+          </div>
+          <?php
+              endif;
+              wp_reset_query();
+            ?>
 
           <div class="row mt-3">
             <div class="col">
-            <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                  <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#">Próximo</a>
-                </li>
-              </ul>
-            </nav>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Próximo</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div> <!-- //row -->
           <!-- end postlist -->
@@ -301,7 +244,7 @@ get_header();
             </div>
           </div> <!-- //blog-sidebar__inner-->
         </aside> <!-- //col-lg-4 blog-sidebar -->
-      </div> <!-- //row --> 
+      </div> <!-- //row -->
     </div> <!-- //container -->
   </section>
 </main><!-- #main -->

@@ -49,9 +49,9 @@ get_header();
               $author_id = get_the_author_meta( 'ID' );
             ?>
             <div class="col">
-              <div class="card card-post rounded-0 border-0 p-0 h-100">
+              <div class="card card-post rounded-0 border-0 p-0 h-100" data-aos="fade-up">
                 <div class="card-header border-0 p-0">
-                  <a href="<?php echo get_permalink(); ?>" class="text-decoration-none">
+                  <a href="<?php echo get_permalink(); ?>" class="text-decoration-none up-link">
                     <img class="img-thumbnail img-fluid  border-0 rounded-0 p-0 "
                       src="<?php the_post_thumbnail_url( array(420, 420) ); ?>" alt="<?php the_title(); ?>"
                       title="<?php the_title_attribute(); ?>">
@@ -61,13 +61,13 @@ get_header();
                   <?php
                   $categories = get_the_category();
                   if ( ! empty( $categories ) ) {
-                      echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">
+                      echo '<a class="up-link" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">
                       <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">
                       ' . esc_html( $categories[0]->name ) . '</span></a>';
                   }
                   ?>
                   <h3>
-                    <a href="<?php echo get_permalink(); ?>" class="text-decoration-none">
+                    <a href="<?php echo get_permalink(); ?>" class="text-decoration-none stretched-link">
                       <?php the_title(); ?>
                     </a>
                   </h3>

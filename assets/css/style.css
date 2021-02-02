@@ -10611,6 +10611,11 @@ footer h2, footer .h2 {
 	transition: all 0.2s linear;
 }
 
+.card-course .up-link {
+	z-index: 3000;
+	position: relative;
+}
+
 .card-course_all_height {
 	color: #fff;
 	text-decoration: none;
@@ -10714,6 +10719,22 @@ footer h2, footer .h2 {
 .card-course-content .time {
 	margin-bottom: 25px;
 	display: block;
+}
+
+.card-post {
+	transition: all 0.2s linear;
+	transform: translateY(0px);
+}
+
+.card-post:hover {
+	box-shadow: 0 18px 32px 0 rgba(0, 0, 0, 0.5);
+	transition: all 0.2s linear;
+	transform: translateY(-10px) !important;
+}
+
+.card-post .up-link {
+	z-index: 3000;
+	position: relative;
 }
 
 .card-testimonial {

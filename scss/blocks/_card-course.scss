@@ -13,7 +13,10 @@
     background-repeat: no-repeat;
     border: 0;
     transition: all 0.2s linear;
-    
+    .up-link{
+        z-index: 3000;
+        position: relative;
+    }
     &_all_height{
         color: #fff;
         text-decoration: none;

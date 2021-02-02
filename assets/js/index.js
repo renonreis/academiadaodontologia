@@ -13,14 +13,14 @@ const add_class_on_scroll = () => header.classList.add("bg-dark")
 const remove_class_on_scroll = () => header.classList.remove("bg-dark")
 
 window.addEventListener('scroll', function () {
-    scrollpos = window.scrollY;
+  scrollpos = window.scrollY;
 
 
 
-    if (scrollpos >= header_height) { add_class_on_scroll() }
-    else { remove_class_on_scroll() }
+  if (scrollpos >= header_height) { add_class_on_scroll() }
+  else { remove_class_on_scroll() }
 
-    // console.log(scrollpos);
+  // console.log(scrollpos);
 });
 
 // end vanilla scrol
@@ -30,25 +30,19 @@ window.addEventListener('scroll', function () {
 
 
 /*
-offcanvas
+Menu mobile
 ========================= */
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 function openNav() {
-    document.getElementById("app-mobile-sidebar").style.width = "250px";
-    document.getElementById("app-content").style.marginRight = "250px";
-    document.getElementById("app-content-overlayer").classList.add('good');;
+  document.getElementById("app-mobile-sidebar").classList.add('is-open');
+  document.getElementById("app-content-overlayer").classList.add('is-show');
+  document.body.classList.add('overflow-hidden');
 }
 
-
-
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 function closeNav() {
-    document.getElementById("app-mobile-sidebar").style.width = "0";
-    document.getElementById("app-content").style.marginRight = "0";
-    document.getElementById("app-content-overlayer").classList.remove('good');
+  document.getElementById("app-mobile-sidebar").classList.remove('is-open');
+  document.getElementById("app-content-overlayer").classList.remove('is-show');
+  document.body.classList.remove('overflow-hidden');
 }
-
-
 /* ---------------------------- */
 
 
@@ -78,7 +72,7 @@ function AddClass(element, name) {
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
   for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
   }
 }
 
@@ -88,7 +82,7 @@ function RemoveClass(element, name) {
   arr2 = name.split(" ");
   for (i = 0; i < arr2.length; i++) {
     while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
     }
   }
   element.className = arr1.join(" ");
@@ -98,7 +92,7 @@ function RemoveClass(element, name) {
 var btnContainer = document.getElementById("filters");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
+  btns[i].addEventListener("click", function () {
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";

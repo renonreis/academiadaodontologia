@@ -1,14 +1,22 @@
 
+/* case to have admin-bar*/
+.admin-bar {
+  .site-header, 
+  .app-mobile-sidebar{
+    top: 30px;
+  }
+}
+
 /* header*/
 header{
     &.navbar-expand-md .navbar-nav{ margin-left: auto;}
     &.navbar-dark .navbar-nav .nav-link{
-        font-weight: 600;
+        font-weight: 700;
         text-transform: uppercase;
         color: white;
         font-size: 14px;
         font-family: 'Raleway', sans-serif;
-        margin-right: 35px;
+        margin-right: 25px;
         &:hover{
             color: rgba(255, 255, 255, 0.55)
         }
@@ -16,14 +24,82 @@ header{
             color: var(--bs-primary)
         }
     }
-    .btn{
-        font-size: 14px;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 600; 
-        width: 160px;
-        padding-top: 10px;
-        padding-bottom: 10px;
+
+     .current-menu-item{
+        a{
+          color: var(--bs-primary) !important;
+          &:hover{
+            color: rgba(255, 255, 255, 0.55) !important
+          }
+        }
+     }
+
+
+     .menu-hamburger{
+      margin-right: 20px;
+      background: transparent;
+      color: #fff;
+      border: none;
+      padding: 0; 
+      font-size: 2rem;
+      @include media-breakpoint-up(lg) { 
+       display: none !important;
+      }
+      &:hover, &:focus{
+        background: transparent;
+        color: #fff;
+      }
     }
+
+
+    .navbar-brand {
+      background-image: url(../../assets/images/brand.png);
+      width: 60px;
+      height: 42px;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media (min-width: 425px) { 
+        width: 300px;
+      }
+
+      @include media-breakpoint-up(md) { 
+        width: 334px;
+        height: 47px;
+      }
+  }
+
+
+
+
+  nav{
+    .callToAction a{
+      font-size: 14px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      width: 160px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: none;
+      text-transform: uppercase;
+      color: #fff; 
+      background-color: var(--bs-primary);
+      border-color: var(--bs-primary);
+      line-height: 1.5; 
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      cursor: pointer;
+      user-select: none;
+      padding-right: 1.5rem !important;
+      padding-left: 1.5rem !important;
+      &:hover{
+        color: rgba(255, 255, 255, 1) !important
+      } 
+    }
+  }
+
+
 }
 
 
@@ -33,58 +109,74 @@ header{
 /* The side navigation menu */
 
 .app-content-overlayer { 
-    position: absolute;
-    background: rgba(0, 0, 0,0.25);
-    height: 100%;
-    width: 100%;
-    transition: all 0.2s linear;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: all 0.2s linear;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  &.is-show{
+    z-index: 4000;
+  }
 }
 
 .app-mobile-sidebar {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    right:  0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: -250px;
+  background-color: #1a1a1a;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  &.is-open {
+      z-index: 5000;
+      right: 0;
   }
-  
-  /* The navigation menu links */
-  .app-mobile-sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .app-mobile-sidebar a:hover {
-    color: #f1f1f1;
-  }
-  
-  /* Position and style the close button (top right corner) */
-  .app-mobile-sidebar .closebtn {
+
+  .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
-    margin-right: 50px;
+    margin-right: 0px;
+    text-decoration: none;
   }
-  
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-  #app-content {
-    transition: margin-right .5s;
-    transform: translate(0);
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+ 
+
+  .mobile-menu{
+    padding: 0 20px;
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li{  margin-bottom: 18px;
+        .btn-destaque{
+          background: #e71d7c;
+          border-radius: 3.2px;
+          line-height: 25px;
+          margin: 0 20px;
+          min-width: 160px;
+          text-align: center;
+        }
+        a{
+          font-weight: 600;
+          text-transform: uppercase;
+          color: white;
+          font-size: 14px;
+          font-family: 'Raleway', sans-serif;
+              &:hover{  color: rgba(255, 255, 255, 0.55) }
+              &.active{ color: var(--bs-primary) }
+        }
+      }
+
+    } //ul
+   } // .mobile-menu
+ 
+  } //.app-mobile-sidebar

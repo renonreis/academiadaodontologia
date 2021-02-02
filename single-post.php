@@ -31,7 +31,8 @@ get_header();
         <div class="col-12 col-lg-10 py-2 pb-4">
           <header class="entry-header ff-primary">
             <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">E-Book</span>
-            <h1 class="entry-title display-2"><?php the_title(); ?></h1>
+            <h1 class="entry-title display-2">Apneia Obstrutiva do Sono em crianças: Conduta
+              terapêutica</h1>
             <ul class="list-inline pt-3">
               <li class="list-inline-item"><img
                   src="<?php echo get_template_directory_uri(); ?>/assets/images/square-person.png"

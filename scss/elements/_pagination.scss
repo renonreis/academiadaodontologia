@@ -1,8 +1,39 @@
+//caso use bootstrap
 .pagination{
     margin-top: 20px;
 
     .page-link{
         margin: 0 8px;
         border-radius: 4px;
+    }
+}
+
+//caso use paginação do wp
+.blog-pagination{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    .page-numbers{
+        margin-top: 20px;
+        justify-content: center !important;
+
+        @extend .pagination;
+        @extend .justify-content-center;
+
+        li{
+            @extend .page-item;
+            .page-numbers{
+                &.current{
+                    color: #6c757d;
+                    pointer-events: none;
+                    background-color: #fff;
+                    border-color: #dee2e6;
+                }
+                @extend .page-link;
+            }
+        }
+        
     }
 }

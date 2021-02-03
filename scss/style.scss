@@ -21,6 +21,7 @@
 @import "blocks/_card-testimonial";
 @import "blocks/_price";
 @import "blocks/_single";
+@import "blocks/_single-course";
 @import "blocks/_blog";
 @import "blocks/_list-invist";
 
@@ -56,7 +57,7 @@
 .fw-100{ font-weight: 100;}
 .fw-200 { font-weight: 200;}
 
-.fs-small{ font-size: 11px;}
+.fs-small{ font-size: 0.688rem;}
 .border-light-025 {border-color: rgba(255, 255, 255, 0.25) !important;}
 .border-blog-light{border-color:  #656565 !important;}
 

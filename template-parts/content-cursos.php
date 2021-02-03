@@ -10,131 +10,95 @@
 get_header();
 ?>
 
-<main id="main" class="site-main">
-  <section class="mt-5 py-5">
-    <div class="container mt-5 mb-5">
-      <div class="d-flex align-items-center">
-        <div class="flex-shrink-1 d-flex">
-          <a href="<?php echo get_home_url(); ?>/blog" id="" class="return-page text-white fs-1 ff-primary"
-            data-bs-toggle="tooltip" data-bs-placement="top" title="Voltar para página anterior">
-            <span class="arrow-light-left"></span>
-          </a>
-        </div>
-        <div class="d-flex w-100">
-          <div class="ui-title pb-4 w-100">
-            <h2 class="ui-title-main">Blog da Academia</h2>
-          </div>
-        </div> <!-- //col-->
-      </div>
-      <!--//row-->
-      <div class="row bg-white justify-content-center">
-        <div class="col-12 col-lg-10 py-2 pb-4">
-          <header class="entry-header ff-primary">
-            <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">E-Book</span>
-            <h1 class="entry-title display-2"><?php the_title(); ?></h1>
-            <ul class="list-inline pt-3">
-              <li class="list-inline-item"><img
-                  src="<?php echo get_template_directory_uri(); ?>/assets/images/square-person.png"
-                  class="border-1 rounded-circle" width="55px" height="55px" alt="Author name">
-              </li>
-              <li class="list-inline-item fs-5">Juliana Andriani</li>
-            </ul>
-            <span class="text-muted"> 15 jan 2021</span>
-          </header>
-          <div class="entry-content">
-            <p> Entenda a importância do cirurgião dentista na prevenção das doenças bucais na gestante e quais os
-              cuidados essenciais para o atendimento odontológico em gestantes baixando o e-book Pré-Natal
-              Odontológico. </p>
-            <p> Você sabe o que é Pré-Natal odontológico? O objetivo do pré-natal odontológico é dar atenção integral
-              ao binômio materno-fetal, ou seja, cuidar da saúde bucal da gestante, assim como dar as primeiras
-              orientações em relação à saúde bucal de seu bebê.</p>
-            <p> Porém, o número de gestantes que buscam atendimento odontológico ainda é pequeno. <strong>Mas por que
-                será?</strong>
-            </p>
-            <p> Às vezes o que falta é conhecimento da gestante em relação a importância de manter uma boa saúde bucal
-              para a saúde de seu bebê, já que problemas bucais também podem estar associados à parto prematuro ou
-              mesmo pré-eclâmpsia, ou mesmo falta de conhecimento do cirurgião dentista em saber como conduzir o
-              tratamento dessa gestante.</p>
-            <p> <strong>Leia também o texto</strong> <em>“Como se diferenciar no mercado de trabalho oferecendo
-                atendimento odontológico
-                para gestante”</em>.</p>
-            <p> Por isso um trabalho do cirurgião dentista direcionado às mulheres gestantes pode ser uma boa
-              estratégia para se diferenciar no mercado de trabalho.</p>
-            <p> A Academia da Odontologia juntamente com a Professora Aline Manfro preparou e-book com os 10 cuidados
-              essenciais para o tratamento odontológico em gestantes com o intuito de auxiliar o cirurgião-dentista no
-              atendimento à gestante.gravidez.</p>
-            <h3> 01. Anamnese direcionada para gestantes</h3>
-            <p> Para definir o melhor horário e tempo de atendimento à gestante, é importante acrescentar algumas
-              perguntas em sua anamnese, como: qual o tempo de gestação? Sente náuseas ou vômitos?</p>
-            <p> Essas perguntas podem direcionar o profissional em relação ao melhor o horário e o momento oportuno de
-              atendimento.</p>
-            <h3> 02. Monitore os sinais vitais no pré-natal odontológico </h3>
-            <p> A avaliação dos sinais vitais antes do atendimento, como frequência respiratória, frequência cardíaca
-              e pressão arterial, ajudam a estabelecer um padrão de normalidade antes e após à consulta, bem como
-              avaliar o estado de saúde geral de sua paciente.</p>
-            <p> Dessa forma o profissional pode orientar sua conduta clínica em consultas posteriores como reduzir o
-              tempo de atendimento ou rever a realização do procedimento caso encontre alterações dos sinais vitais.
-            </p>
-            <h3> 03. Horário de atendimento</h3>
-            <p> Dê preferência para realizar o atendimento no segundo período da manhã, já que geralmente neste
-              horário a gestante está mais disposta e as náuseas são menos frequentes.</p>
-          </div>
-        </div>
-        <!--//col-12-->
-      </div> <!-- //row-->
-      <section class="row">
-        <div class="banner-info banner-info--center position-relative py-5">
-          <div class="col py-3">
-            <h2>Invista em conhecimento, invista em você</h2>
-            <p class="lead">A comodidade do Ensino On-line aliada à interação com o professor possível no Ensino
-              Presencial.</p>
-            <a href="#" class="btn btn-lg btn-outline-light  stretched-link"> junte-se a nós</a>
+
+
+
+   <section>
+
+      <aside class="single__big-hero-image pt-5" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background-course-2.jpg)">
+           <div class="container pt-5">
+           <div class="row justify-content-center pt-5">
+              <div class="col-lg-10">
+                <div class="ui-title pb-4 w-100">
+                  <h2 class="ui-title-main"><?php the_title(); ?> </h2>
+                </div>
+              </div> <!-- //col -->
+
+              <div class="col-lg-6 mb-5">
+                  <div class="card-course-content text-white text-center">
+                          <img class="img-thumbnai" src="http://odonto.test/wp-content/uploads/2021/01/square-person.png" alt="Nome alternativo">
+                          <h3>Juliana Andriani</h3>
+                          <div class="line--small mx-auto" ></div>
+                          <span class="time">
+                            <i class="far fa-clock" aria-hidden="true"></i>
+                            1h25min
+                          </span>
+                          <a href="#" class="btn btn-lg btn-primary"> Saiba mais</a>
+                    </div>
+              </div>
+
+              
+            
+            </div> <!--//row-->
+           </div> <!-- //container -->
+      </aside>
+
+
+
+
+      <section>
+
+
+      <div class="container">
+        <div class="row justify-content-center">
+       
+        <div class="col-lg-8 mt-5">
+                <div>
+                    <div class="videoWrapper">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/Do5HAPmcL2c" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    </div>
+                  </div>
+              </div> 
+
+          <div class="col-10 mt-2">
+            <div class="entry-content text-white fw-100"> 
+              <p>Já ouviu falar em agilizar seu tempo no tratamento endodôntico com a técnica mais rápida? Também tem receio de fazer endodonia porque sua experiência clínica as vezes te traz insucesso e você não sabe onde está errando? Fica confuso (a) em qual material utilizar e por onde começar a saber sobre a técnica mecanizada? Então este curso pode te ajudar e muito! </p>
+              <p>O objetivo o curso de endodontia mecanizada é capacitar os profissionais a realizarem o tratamento endodôntico de dentes decíduos lançando mão da técnica conhecida como “mecanizada” para facilitar o procedimento assim como diferenciar esta técnica da convencional, ou seja, a técnica manual.</p>
+              <p> Além disso, o curso abordará indicações e contraindicações para uma endodontia de sucesso em dentes decíduos, explanará o passo-a-passo da técnica mecanizada e dicas clínicas abordando: abertura coronária, odontometria com e sem localizador apical eletrônico, preparo químico-mecânico, secagem dos canais, obturação, restauração e radiografias finais. E dentre esses tópicos, ensinará e discutirá os tipos de materiais utilizados e suas principais diferenças. </p>
+              <p>O curso também contempla o aluno com uma apostila completa para acompanhar as aulas sem precisar escrever todo o conteúdo, assim tem a possibilidade de ter completa atenção às aulas juntamente com um material de apoio com revisão e contextualização da literatura para ampliar ainda mais seu embasamento científico.</p>
+              <h3>Conteúdo programático</h3>
+              <p>Aula contínua completa de 85 minutos com os tópicos:</p>
+                <ul>
+                  <li>Conceito; </li>
+                  <li>Indicações e contraindicações; </li>
+                  <li>Motivos relacionados ao insucesso; </li>
+                  <li>Passo a passo: abertura coronária, odontometria, preparo químico-mecânico, secagem dos canais, obturação, restauração e radiografia final; </li>
+                  <li>Abertura coronária: técnicas de abertura e material utilizado; </li>
+                  <li>Odontometria: Técnica convencional e Uso de localizadores apicais eletrônicos; </li>
+                  <li>Preparo químico-mecânico: irrigação dos canais, instrumentação dos canais, sistema manual, sistema oscilatório, sistema rotatório e reciprocante. </li>
+                </ul>
+              </div>  <!-- //entry-content -->
+            </div> <!-- // col -->
+          </div><!-- // row -->
+        </div> <!-- // container -->
+      </section>
+      <section>
+        <div class="row">
+            <div class="col">
+                    
           </div>
         </div>
       </section>
-      <section class="row bg-white justify-content-center">
-        <div class="col-10">
-          <div class=" row py-5  text-dark g-0   overflow-hidden flex-md-row position-relative">
-            <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
-              <img width="112" class="border-0 rounded-circle"
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/person-300x300.jpg" alt="">
-            </div>
-            <div class="col p-4 pt-1 ps-5 d-flex flex-column position-static">
-              <h3 class="fs-4 fw-bolder">Juliana Pereira Andriani</h3>
-              <div class="fw-lighter fs-5">
-                <p>
-                  Especialista em Odontopediatria - PUC/PR<br>
-                  Mestre em Odontologia / Área de Concentração Odontopediatria - UFSC/SC<br>
-                  Habilitação em Sedação Consciente com Óxido Nitroso<br>
-                  Professora e Coordenadora do Curso de Especialização e Atualização em Odontopediatria - ABCD<br>
-                  IAPD Membro do board 2019/2021 - Membership Committee<br>
-                  Idealizadora da CAIXA GUIA - Odontopediatria<br>
-                  Clinical Adviser NuSmile no Brasil
-                </p>
-              </div>
-              <ul class="list-inline fs-5">
-                <li class="list-inline-item">
-                  <a href="#" class="text-dark"> <i class="fab fa-facebook-f"></i> </a>
-                </li>
-                <li class="list-inline-item ms-3">
-                  <a href="#" class="text-dark"> <i class="fab fa-instagram"></i></a>
-                </li>
-                <li class="list-inline-item ms-3">
-                  <a href="#" class="text-dark"> <i class="fab fa-youtube"></i></a>
-                </li>
-                <li class="list-inline-item ms-3">
-                  <a href="#" class="text-dark"> <i class="fab fa-twitter"></i></a>
-                </li>
-                <li class="list-inline-item ms-3">
-                  <a href="#" class="text-dark"> <i class="fab fa-linkedin"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div> <!-- //col-->
-    </div> <!-- //container-->
-  </section>
-</main><!-- #main -->
+   <section>
+     
 
+
+     
+          
+          
+      
+ 
 <?php
 get_footer();

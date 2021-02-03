@@ -10717,11 +10717,15 @@ footer h2, footer .h2 {
 	margin-bottom: 15px;
 }
 
-.card-course-content .line {
+.card-course-content .line, .card-course-content .line--small {
 	width: 80%;
 	height: 1px;
 	background: var(--bs-primary);
 	margin-bottom: 15px;
+}
+
+.card-course-content .line--small {
+	max-width: 320px;
 }
 
 .card-course-content h3, .card-course-content .h3 {

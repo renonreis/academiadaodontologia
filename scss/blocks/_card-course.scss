@@ -99,7 +99,13 @@
         height: 1px;
         background: var(--bs-primary);
         margin-bottom: 15px;
+        &--small{
+            @extend .line;
+            max-width: 320px;
+            
+        }
        }
+       
        h3{
         font-weight: 300;
         font-size: 24px;

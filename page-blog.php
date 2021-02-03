@@ -155,19 +155,14 @@ get_header();
                 <a href="#" class=""> <i class="fab fa-youtube"></i></a>
               </li>
               <li class="list-inline-item flex-shrink-1 ms-auto">
-                <div class="input-group blog-sidebar__search">
-                  <input type="text" class="form-control" placeholder="Busca" aria-label="buscar conteúdo"
-                    aria-describedby="buscarButton">
-                  <button class="btn btn-outline-light border-gray rounded-0 bg-dark" type="button" id="buscarButton">
-                    <i aria-label="Buscar" class="fas fa-search text-muted"></i>
-                  </button>
-                </div>
+                <?php get_search_form(); ?>
               </li>
             </ul>
-         
+
             <div class="border-1 p-5 text-white ff-primary border-blog-light border mb-4">
               <h4 class="fw-100 fst-italic fs-2 ff-primary">Fique por dentro</h4>
-              <p class="fw-200">Acompanhe as últimas publicações científicas, promoções e novidades da Academia da Odontologia.</p>
+              <p class="fw-200">Acompanhe as últimas publicações científicas, promoções e novidades da Academia da
+                Odontologia.</p>
               <form>
                 <div class="mb-2">
                   <label for="blogInputEmail" class="form-label sr-only d-none">Digite seu e-mail</label>
@@ -181,34 +176,26 @@ get_header();
               </form>
             </div>
 
-            <nav class="widget-menu-link"> 
-                <ul class="">
-                      <li><a href="#" class="bg-white text-dark">Todas as categorias (2403)</a></li>
-                       <li><a href="#">E-books (19</a>
-                          <ul>
-                                  <li><a href="#">Web Design</a></li>
-                                  <li><a href="#">SEO</a></li>
-                                  <li><a href="#">Design</a></li>
-                          </ul>
-                    </li>
-                    <li><a href="#"> Odontopediatria (1376)</a>
-                          <ul>
-                                  <li><a href="#">Bruxismo (249)</a></li>
-                                  <li><a href="#">Cariostático (172) </a></li>
-                                  <li><a href="#">Endodontia (201)</a></li>
-                          </ul>
-                    </li>
-                    <li><a href="#"> Geral (212)</a>
-                          <ul>
-                                  <li><a href="#">COVID-19  (31)</a></li>
-                                  <li><a href="#">Fotografia e marketing (20) </a></li>
-                                  <li><a href="#">Livros (13)</a></li>
-                                  <li><a href="#">Odontologia do esporte (186)</a></li>
-                          </ul>
-                    </li>
-                  
+            <nav class="widget-menu-link">
+              <ul>
+                <li><a href="<?php echo get_home_url(); ?>/blog/" class="bg-white text-dark">Todas as categorias</a>
+                </li>
+                <?php 
+                  $our_walker= new Walker_Category_Custom();
+                  academia_wp_list_categories( array(
+                    'walker'=>$our_walker,
+                    'orderby' => 'name',
+                    'hierarchical'        => true,
+                    'order'               => 'ASC',
+                    'orderby'             => 'name',
+                    'show_count'          => 1,
+                    'show_option_all'     => '',
+                    'style'               => 'list',
+                    'taxonomy'            => 'category',
+                    'title_li'            => '',
+                  ) ); ?>
               </ul>
-              </nav>
+            </nav>
           </div> <!-- //blog-sidebar__inner-->
         </aside> <!-- //col-lg-4 blog-sidebar -->
       </div> <!-- //row -->

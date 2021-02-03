@@ -21,7 +21,7 @@ get_header();
       <div class="row">
         <div class="col">
           <div class="ui-title pb-4 w-100">
-            <h2 class="ui-title-main">Blog da Academia</h2>
+            <h2 class="ui-title-main"><?php the_title(); ?></h2>
             <!-- <span class="ui-title-sub"> some subtitle</span> -->
           </div>
         </div> <!-- //col-->
@@ -123,7 +123,7 @@ get_header();
               wp_reset_query();
             ?>
 
-           
+
           <!-- end postlist -->
         </div> <!-- //col -->
         <aside class="col-lg-4 pl-xs-0 pl-lg-5 blog-sidebar">

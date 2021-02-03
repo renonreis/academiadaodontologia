@@ -167,7 +167,6 @@ get_header();
             <div class="p-3 bg-primary"></div>
           </div> <!-- //ui-plan -->
         </div> <!-- //col  -->
-
       </div> <!-- //row -->
     </div> <!-- //container -->
   </section>
@@ -308,11 +307,11 @@ get_header();
             <?php $i++; endwhile; ?>
             <a class="carousel-control-prev" href="#carouselTestimonial" role="button" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+              <span class="visually-hidden">Voltar</span>
             </a>
             <a class="carousel-control-next" href="#carouselTestimonial" role="button" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+              <span class="visually-hidden">Próximo</span>
             </a>
             <?php endif; wp_reset_query(); ?>
           </div>

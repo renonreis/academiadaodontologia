@@ -1,0 +1,26 @@
+.single__big-hero-image{
+    background-color: #1a1a1a;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    &::after {
+        content: "";
+        background-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.3) 100%);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        transition: all 0.2s linear;
+        bottom: 0;
+
+    }
+    .container{
+        z-index: 2;
+        position: relative;
+    }
+
+    .ui-title-main{
+        text-transform: inherit;
+        font-size: 4.375rem;
+    }
+ }

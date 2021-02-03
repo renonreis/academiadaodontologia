@@ -9,6 +9,7 @@
 
 /* header*/
 header{
+  transition: all 0.2s linear;
     &.navbar-expand-md .navbar-nav{ margin-left: auto;}
     &.navbar-dark .navbar-nav .nav-link{
         font-weight: 700;

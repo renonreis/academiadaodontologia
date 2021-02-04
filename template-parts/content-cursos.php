@@ -15,7 +15,6 @@ $course_video = get_field('course_video');
 
 ?>
 <section>
-
   <aside class="single__big-hero-image pt-5"
     style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>">
     <div class="container pt-5">
@@ -87,13 +86,5 @@ $course_video = get_field('course_video');
     </div>
   </section>
   <section>
-
-
-
-
-
-
-
-
     <?php
 get_footer();

@@ -10892,6 +10892,10 @@ footer h2, footer .h2 {
 	letter-spacing: -0.1rem;
 }
 
+.ui-plan__info {
+	color: #979797;
+}
+
 .ui-plan__list {
 	font-size: 18px;
 	font-weight: 600;

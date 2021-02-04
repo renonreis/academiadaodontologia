@@ -91,7 +91,7 @@ $course_video = get_field('course_video');
                     <div>
                       <a href="#" class="btn btn-lg btn-primary my-4 fs-4 px-4 ff-primary"> Comece agora</a>
                     </div>
-                    <p class="text-muted">Este curso não faz parte dos pacotes Odontopediatria Premium <br> ou Odontopediatria Plus e portanto é vendido separadamente.</p>
+                    <p class="ui-plan__info">Este curso não faz parte dos pacotes Odontopediatria Premium <br> ou Odontopediatria Plus e portanto é vendido separadamente.</p>
               </div> <!-- //d-flex -->
             </div> <!-- //col -->
         </div> <!-- //row -->

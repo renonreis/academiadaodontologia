@@ -53,6 +53,7 @@
     </div>
   <a href="#" onclick="closeNav()" aria-label="fechar menu" id="app-content-overlayer" class="app-content-overlayer" ></a>
 
+  
 
     <header id="masthead" class="site-header navbar fixed-top navbar-expand-lg navbar-dark bd-navbar py-4">
 
@@ -74,5 +75,14 @@
         </div> <!-- //d-none d-lg-block -->
         <button  type="button"   onclick="openNav()"  class="btn btn-light menu-hamburger"> <i class="fas fa-bars"></i>  </button>
       </nav>
+
+      <div class="talk-whatsapp">
+        <div class="talk-whatsapp__info">
+          <span>Fale conosco via whatsapp</span>
+        </div>
+        <a class="talk-whatsapp__link" href="https://api.whatsapp.com/send?phone=5548999113048" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
 
     </header>

@@ -1,5 +1,5 @@
 .ui-plan{
-  
+  position: relative;
 
     &__title{
         font-size: 32px; 
@@ -22,4 +22,59 @@
         font-weight: 600;
         font-family: 'Open Sans', sans-serif;
     }
+
+
+
+
+    .ribbon {
+        position: absolute;
+        left: -9px;
+        top: -9px;
+        z-index: 1;
+        overflow: hidden;
+        width: 235px;
+        height: 235px;
+        text-align: right;
+       }
+      .ribbon span {
+        font-size: 18px;
+        color: #FFF;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 20px;
+        transform: rotate(-45deg);
+        width: 250px;
+        display: flex;
+        background: var(--bs-primary);
+        box-shadow: 3px 4px 0px 0px #00000054;
+        position: absolute;
+        top: 42px;
+        left: -54px;
+        align-items: center;
+        height: 50px;
+        justify-content: center;
+        font-weight: 500;
+      }
+      .ribbon span::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 100%;
+        z-index: -1;
+        border-left: 5px solid #741147;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-top: 5px solid #741147;
+    }
+      .ribbon span::after {
+        content: "";
+        position: absolute;
+        right: 7px;
+        top: 100%;
+        z-index: -1;
+        border-left: 5px solid transparent;
+        border-right: 5px solid #741147;
+        border-bottom: 5px solid transparent;
+        border-top: 5px solid #741147;
+      }
 }

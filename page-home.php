@@ -120,6 +120,7 @@ get_header();
         </div> <!-- //col  -->
         <div class="col">
           <div class="ui-plan bg-white mb-5 ms-auto">
+          <div class="ribbon"><span>Recomendado</span></div>
             <div class="p-5">
               <h5 class="ui-plan__title card-title text-uppercase text-center mt-4">Odontopediatria <br>
                 Plus <span><i class="fas fa-plus-circle text-primary"></i></span></h5>

@@ -51,7 +51,7 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 	color: #212529;
-	background-color: #1a1a1a;
+	background-color: #202020;
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -542,7 +542,7 @@ progress {
 
 .img-thumbnail {
 	padding: 0.25rem;
-	background-color: #1a1a1a;
+	background-color: #202020;
 	border: 1px solid #dee2e6;
 	border-radius: 0.2rem;
 	max-width: 100%;
@@ -2179,7 +2179,7 @@ textarea.form-control-lg {
 	height: 1em;
 	margin-top: 0.25em;
 	vertical-align: top;
-	background-color: #1a1a1a;
+	background-color: #202020;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -2293,11 +2293,11 @@ textarea.form-control-lg {
 }
 
 .form-range:focus::-webkit-slider-thumb {
-	box-shadow: 0 0 0 1px #1a1a1a, 0 0 0 0.25rem rgba(231, 29, 124, 0.25);
+	box-shadow: 0 0 0 1px #202020, 0 0 0 0.25rem rgba(231, 29, 124, 0.25);
 }
 
 .form-range:focus::-moz-range-thumb {
-	box-shadow: 0 0 0 1px #1a1a1a, 0 0 0 0.25rem rgba(231, 29, 124, 0.25);
+	box-shadow: 0 0 0 1px #202020, 0 0 0 0.25rem rgba(231, 29, 124, 0.25);
 }
 
 .form-range::-moz-focus-outer {
@@ -3812,8 +3812,8 @@ fieldset:disabled .btn {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
 	color: #495057;
-	background-color: #1a1a1a;
-	border-color: #dee2e6 #dee2e6 #1a1a1a;
+	background-color: #202020;
+	border-color: #dee2e6 #dee2e6 #202020;
 }
 
 .nav-tabs .dropdown-menu {
@@ -7379,7 +7379,7 @@ fieldset:disabled .btn {
 }
 
 .bg-body {
-	background-color: #1a1a1a !important;
+	background-color: #202020 !important;
 }
 
 .bg-white {
@@ -10179,7 +10179,11 @@ fieldset:disabled .btn {
 	background-position: center center;
 	background-size: cover;
 	position: relative;
-	margin: 15px;
+	margin: 15px !important;
+}
+
+.picture-person__container {
+	transform: translateY(0);
 }
 
 .picture-person:after {
@@ -10189,7 +10193,7 @@ fieldset:disabled .btn {
 	top: -15px;
 	color: #fff;
 	left: 30px;
-	background-image: url("./assets/images/quote.svg");
+	background-image: url("../../assets/images/quote.svg");
 	background-repeat: no-repeat;
 	content: "";
 	z-index: 1;
@@ -10203,8 +10207,6 @@ fieldset:disabled .btn {
 	right: -15px;
 	z-index: -1;
 	bottom: -15px;
-	width: 0;
-	height: 0;
 	border-style: solid;
 	border-width: 0 0 172px 172px;
 	border-color: transparent transparent var(--bs-primary) transparent;
@@ -10506,10 +10508,12 @@ header nav .callToAction a:hover {
 	right: 0;
 	left: 0;
 	bottom: 0;
+	opacity: 0;
 }
 
 .app-content-overlayer.is-show {
 	z-index: 4000;
+	opacity: 1;
 }
 
 .app-mobile-sidebar {
@@ -10771,6 +10775,7 @@ footer h2, footer .h2 {
 	background-color: transparent;
 	font-family: 'Raleway', sans-serif;
 	margin-bottom: 30px;
+	border: none;
 }
 
 .card-testimonial__modal {
@@ -11159,10 +11164,6 @@ footer h2, footer .h2 {
 	font-style: italic;
 	line-height: 1.6153846154;
 	padding-top: 0.5384615385em;
-}
-
-.single-cursos #main {
-	background-color: #202020;
 }
 
 .single__big-hero-image {

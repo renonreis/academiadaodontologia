@@ -120,8 +120,10 @@ header{
   right: 0;
   left: 0;
   bottom: 0;
+  opacity: 0;
   &.is-show{
     z-index: 4000;
+    opacity: 1;
   }
 }
 

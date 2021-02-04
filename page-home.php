@@ -174,7 +174,7 @@ get_header();
     </div> <!-- //container -->
   </section>
   <section class="mt-5 pb-5 pt-2">
-    <div class="container">
+    <div class="container pb-5">
       <div class="row">
         <div class="col-sm">
           <div class="ui-title">
@@ -250,8 +250,8 @@ get_header();
       </div>
     </div>
   </section>
-  <section class="py-5 my-5">
-    <div class="container">
+  <section class="py-5 bg-dark">
+    <div class="container pt-5">
       <div class="row">
         <div class="ui-title">
           <h2 class="ui-title-main">O que dizem nossos alunos</h2>
@@ -259,7 +259,7 @@ get_header();
       </div> <!-- //row -->
       <!-- //container -->
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid pb-5">
       <div class="row">
         <?php 
           $i = 0;
@@ -270,7 +270,7 @@ get_header();
 					);
 					$the_query = new WP_Query( $args );
         ?>
-        <div id="carouselTestimonial" data-bs-interval="5000"
+        <div id="carouselTestimonial" data-bs-interval="false"
           class="ui-carousel carousel slide _carousel-fade text-white" data-bs-ride="carousel">
           <ol class="carousel-indicators">
             <?php if( $the_query->have_posts() ): ?>
@@ -283,8 +283,8 @@ get_header();
             <?php $i = 0; if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); ?>
             <div class="carousel-item <?php if($i == 0) echo 'active';?>">
               <div class="row justify-content-center align-items-center align-content-center m-auto">
-                <div class="col-12 col-lg-auto justify-content-center">
-                  <div class="picture-person mb-5 m-auto"
+                <div class="picture-person__container col-12 col-lg-auto justify-content-center">
+                  <div class="picture-person m-auto"
                     style="background-image: url(<?php the_field('testimonial_thumb'); ?>">
                   </div>
                 </div>

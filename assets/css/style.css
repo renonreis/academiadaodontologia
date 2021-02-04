@@ -603,7 +603,7 @@ progress {
 
 @media (min-width: 1400px) {
 	.container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-		max-width: 1320px;
+		max-width: 1200px;
 	}
 }
 
@@ -10868,6 +10868,9 @@ footer h2, footer .h2 {
 
 .ui-plan {
 	position: relative;
+	width: 570px;
+	max-width: 100%;
+	margin: auto;
 }
 
 .ui-plan__title {
@@ -10915,7 +10918,7 @@ footer h2, footer .h2 {
 	transform: rotate(-45deg);
 	width: 250px;
 	display: flex;
-	background: var(--bs-primary);
+	background: #ff0084;
 	box-shadow: 3px 4px 0px 0px #00000054;
 	position: absolute;
 	top: 42px;

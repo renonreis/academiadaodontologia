@@ -1,5 +1,8 @@
 .ui-plan{
   position: relative;
+  width: 570px;
+  max-width: 100%;
+  margin: auto;
 
     &__title{
         font-size: 32px; 
@@ -45,7 +48,7 @@
         transform: rotate(-45deg);
         width: 250px;
         display: flex;
-        background: var(--bs-primary);
+        background: #ff0084;
         box-shadow: 3px 4px 0px 0px #00000054;
         position: absolute;
         top: 42px;

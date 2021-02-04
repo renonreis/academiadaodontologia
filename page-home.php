@@ -26,7 +26,7 @@ get_header();
     <div class="container h-100">
       <div class="d-flex h-100 align-items-end">
         <div class="w-100 text-white">
-          <h1 class="display-1">Odontopediatras atualizados a qualquer hora e em qualquer lugar</h1>
+          <h1 class="display-1">Sua atualização online <br> em Odontopediatria</h1>
           <a href="#" class="hero-button btn btn-primary btn-lg py-3 px-5 mt-4">Comece agora!</a>
         </div>
       </div>
@@ -84,6 +84,7 @@ get_header();
               <div class="text-center mt-3">
                 <a href="#" class="btn btn-secondary btn-lg text-uppercase fw-bold py-3 px-5">Assinar
                   Premium</a>
+                  <p class="ff-secondary mt-2 mb-0">* Plano anual total R$ 1.558,80</p>
               </div>
               <ul class="ui-plan__list list-group list-group-flush mt-5">
                 <li class="list-group-item">
@@ -128,6 +129,7 @@ get_header();
               <div class="text-center mt-3">
                 <a href="#" class="btn btn-primary btn-lg text-uppercase fw-bold py-3 px-5">Assinar
                   Plus</a>
+                  <p class="ff-secondary mt-2 mb-0">* Plano anual total R$ 1.653,60</p>
               </div>
               <ul class="ui-plan__list list-group list-group-flush mt-5">
                 <li class="list-group-item">

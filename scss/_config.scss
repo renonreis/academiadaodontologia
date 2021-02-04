@@ -60,7 +60,15 @@ $display-font-sizes: (
   2: 3rem
 ) !default; 
  
-
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1200px 
+) !default;
+// scss-docs-end container-max-widths
  
 @import "../node_modules/bootstrap/scss/bootstrap";
 

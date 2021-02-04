@@ -1,3 +1,7 @@
+.single-cursos #main{
+    background-color: #202020;
+}
+
 .single__big-hero-image{
     background-color: #1a1a1a;
     background-repeat: no-repeat;
@@ -5,7 +9,7 @@
     position: relative;
     &::after {
         content: "";
-        background-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.3) 100%);
+        background-image: linear-gradient(to top, #202020 0%, rgba(0, 0, 0, 0.4) 120%);
         height: 100%;
         width: 100%;
         position: absolute;

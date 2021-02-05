@@ -1,6 +1,3 @@
-console.log('rodou');
-
-
 /* vanilla scroll
 -- Verifica se o header está na posição 0 caso não esteja adiciona background;
 */
@@ -29,6 +26,13 @@ window.addEventListener('scroll', function () {
 
 
 
+
+
+
+
+
+
+
 /*
 Menu mobile
 ========================= */
@@ -48,10 +52,18 @@ function closeNav() {
 
 
 
+
+
+
+
 /*
 Animate On Scroll Library
+Precisa ser o ultimo do código
 ========================= */
 AOS.init();
+
+
+
 
 
 
@@ -90,7 +102,7 @@ function RemoveClass(element, name) {
 
 // Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("filters");
-var btns = btnContainer.getElementsByClassName("btn");
+var btns = btnContainer.getElementsByClassName("filters__btn");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
     var current = document.getElementsByClassName("active");
@@ -98,3 +110,15 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+

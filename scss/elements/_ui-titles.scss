@@ -14,8 +14,11 @@
 }
 .ui-title-sub{ 
     color: #53bcd6;
-    font-size: 1.25rem;
+    font-size: 0.9rem;
     font-weight: 600;
     text-transform: uppercase; 
     font-family: 'Raleway', sans-serif; 
+    @include media-breakpoint-up(md) { 
+        font-size: 1.25rem;
+    }
 }

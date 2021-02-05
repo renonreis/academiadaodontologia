@@ -1,0 +1,18 @@
+.form-control--dark {
+    @extend .form-control;
+    background-color: #1a1a1a;
+    border: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    color: #fff !important;
+
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-size: 18px;
+    &:focus{
+        background-color: #1a1a1a !important;
+       
+    }
+
+ 
+    
+}

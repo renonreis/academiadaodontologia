@@ -25,15 +25,15 @@ get_header();
         <div class="col-sm">
           <ul id="filters" class="list-inline text-center mb-5">
 
-            <a class="btn active btn-lg btn-outline-light ms-2 border-gray-light"
+            <a class="filters__btn btn active btn-lg btn-outline-light ms-2 border-gray-light"
               onclick="filterSelection('all')">Todos</a>
-            <a class=" btn btn-lg btn-outline-light ms-2 border-gray-light"
+            <a class="filters__btn btn btn-lg btn-outline-light ms-2 border-gray-light"
               onclick="filterSelection('lancamentos')">Lançamentos</a>
-            <a class="btn btn-lg btn-outline-light ms-2 border-gray-light"
+            <a class="filters__btn btn btn-lg btn-outline-light ms-2 border-gray-light"
               onclick="filterSelection('mais-acessados')">Mais acessados</a>
-            <a class="btn btn-lg btn-outline-light ms-2 border-gray-light"
+            <a class="filters__btn btn btn-lg btn-outline-light ms-2 border-gray-light"
               onclick="filterSelection('semi-presenciais')">Semi-presenciais</a>
-            <a class="btn btn-lg btn-outline-light ms-2 border-gray-light" onclick="filterSelection('sedacao')">
+            <a class="filters__btn btn btn-lg btn-outline-light ms-2 border-gray-light" onclick="filterSelection('sedacao')">
               Sedação <i class="fas fa-plus-circle"></i>
             </a>
           </ul>

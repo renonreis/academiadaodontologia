@@ -13,7 +13,7 @@
   <section class="mt-5 py-5 mb-5 ">
     <div class="container mt-5 mb-5">
       <div class="row justify-content-center">
-        <div class="col-lg-10">
+        <div class="col-lg-11">
           <div class="ui-title">
             <header class="page-header">
               <?php the_title( '<h2 class="ui-title-main page-title">', '</h2>' ); ?>

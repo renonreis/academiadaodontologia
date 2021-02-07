@@ -421,11 +421,6 @@ function academia_wp_list_categories( $args = '' ) {
 
 	/**
 	 * Filters the HTML output of a taxonomy list.
-	 *
-	 * @since 2.1.0
-	 *
-	 * @param string $output HTML output.
-	 * @param array  $args   An array of taxonomy-listing arguments.
 	 */
 	$html = apply_filters( 'wp_list_categories', $output, $args );
 
@@ -476,4 +471,20 @@ class Walker_Category_Custom extends Walker_Category {
 			$output .= "\t$link<br />\n";
 		}
 	}	
+}
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Opções do Tema',
+		'menu_title'	=> 'Opções do Tema',
+		'menu_slug' 	=> 'theme-options',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'position'		=> 59,
+		'icon_url'		=> 'dashicons-star-filled',
+		'update_button' => __('Atualizar', 'acf'),
+		'updated_message' => __("Opções do tema atualizado", 'acf'),
+	));
+		
 }

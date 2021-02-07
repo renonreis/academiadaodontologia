@@ -126,62 +126,7 @@ get_header();
 
           <!-- end postlist -->
         </div> <!-- //col -->
-        <aside class="col-lg-4 pl-xs-0 pl-lg-5 blog-sidebar">
-          <div class="blog-sidebar__inner ps-lg-4">
-            <ul class="list-inline fs-5 blog-sidebar__social  mb-3 d-flex">
-              <li class="list-inline-item">
-                <a href="#"> <i class="fab fa-facebook-f"></i> </a>
-              </li>
-              <li class="list-inline-item ms-3">
-                <a href="#" class=""> <i class="fab fa-instagram"></i></a>
-              </li>
-              <li class="list-inline-item ms-3">
-                <a href="#" class=""> <i class="fab fa-youtube"></i></a>
-              </li>
-              <li class="list-inline-item flex-shrink-1 ms-auto">
-                <?php get_search_form(); ?>
-              </li>
-            </ul>
-
-            <div class="border-1 p-5 text-white ff-primary border-blog-light border mb-4">
-              <h4 class="fw-100 fst-italic fs-2 ff-primary">Fique por dentro</h4>
-              <p class="fw-200">Acompanhe as últimas publicações científicas, promoções e novidades da Academia da
-                Odontologia.</p>
-              <form>
-                <div class="mb-2">
-                  <label for="blogInputEmail" class="form-label sr-only d-none">Digite seu e-mail</label>
-                  <input type="email" class="form-control rounded-0" id="blogInputEmail" placeholder="Digite seu e-mail"
-                    aria-describedby="emailHelp">
-                  <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-                </div>
-                <div class="d-grid gap-2">
-                  <button type="submit" class="btn btn-outline-light btn-block text-uppercase">Enviar</button>
-                </div>
-              </form>
-            </div>
-
-            <nav class="widget-menu-link">
-              <ul>
-                <li><a href="<?php echo get_home_url(); ?>/blog/" class="bg-white text-dark">Todas as categorias</a>
-                </li>
-                <?php 
-                  $our_walker= new Walker_Category_Custom();
-                  academia_wp_list_categories( array(
-                    'walker'=>$our_walker,
-                    'orderby' => 'name',
-                    'hierarchical'        => true,
-                    'order'               => 'ASC',
-                    'orderby'             => 'name',
-                    'show_count'          => 1,
-                    'show_option_all'     => '',
-                    'style'               => 'list',
-                    'taxonomy'            => 'category',
-                    'title_li'            => '',
-                  ) ); ?>
-              </ul>
-            </nav>
-          </div> <!-- //blog-sidebar__inner-->
-        </aside> <!-- //col-lg-4 blog-sidebar -->
+        <?php get_sidebar(); ?>
       </div> <!-- //row -->
     </div> <!-- //container -->
   </section>

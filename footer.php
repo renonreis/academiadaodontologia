@@ -54,9 +54,21 @@
           </small>
         </p>
         <ul class="list-inline fs-5">
-          <li class="list-inline-item"> <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a> </li>
-          <li class="list-inline-item ms-3"> <a href="#" class="text-white"><i class="fab fa-instagram"></i></a> </li>
-          <li class="list-inline-item ms-3"><a href="#" class="text-white"><i class="fab fa-youtube"></i></a></li>
+          <li class="list-inline-item">
+            <a href="<?php the_field('facebook_url', 'option'); ?>" target="_blank" class="text-white">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="list-inline-item ms-3">
+            <a href="<?php the_field('instagram_url', 'option'); ?>" target="_blank" class="text-white">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="list-inline-item ms-3">
+            <a href="<?php the_field('youtube_url', 'option'); ?>" target="_blank" class="text-white">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -64,7 +76,7 @@
   <div class="container py-5">
     <div class="row text-center">
       <div class="col">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-site-seguro.png" alt="">
+        <img src="<?php echo wp_get_attachment_image_url( 143, '' ); ?>" alt="">
       </div>
     </div>
   </div>
@@ -72,6 +84,16 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+
+<div class="talk-whatsapp">
+  <div class="talk-whatsapp__info">
+    <span>Fale conosco via whatsapp</span>
+  </div>
+  <a class="talk-whatsapp__link"
+    href="https://api.whatsapp.com/send?phone=55<?php the_field('whatsapp_number', 'option'); ?>" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
 
 </body>
 

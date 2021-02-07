@@ -13,8 +13,8 @@ get_header();
 <main id="main" class="site-main">
   <section class="mt-5 py-5 mb-5">
     <div class="container mt-5 mb-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
+      <div class="row">
+        <div class="col">
           <?php if ( have_posts() ) : ?>
           <div class="ui-title">
             <header class="page-header">
@@ -26,32 +26,38 @@ get_header();
               </h1>
             </header><!-- .page-header -->
           </div>
-          <?php
-						/* Start the Loop */
-						while ( have_posts() ) :
-							the_post();
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mb-md-0 mb-3">
+          <div class="row row-cols-1 row-cols-lg-2 g-3" data-masonry='{"percentPosition": false }'>
+            <?php
+              /* Start the Loop */
+              while ( have_posts() ) :
+                the_post();
 
-							/**
-							 * Run the loop for the search to output the results.
-							 * If you want to overload this in a child theme then include a file
-							 * called content-search.php and that will be used instead.
-							 */
-							get_template_part( 'template-parts/content', 'search' );
+                /**
+                 * Run the loop for the search to output the results.
+                 * If you want to overload this in a child theme then include a file
+                 * called content-search.php and that will be used instead.
+                 */
+                get_template_part( 'template-parts/content', 'search' );
 
-						endwhile;
+              endwhile;
 
-						the_posts_navigation();
+              the_posts_navigation();
 
-					else :
+              else :
 
-						get_template_part( 'template-parts/content', 'none' );
+                get_template_part( 'template-parts/content', 'none' );
 
-					endif;
-					?>
+              endif;
+            ?>
+          </div>
         </div>
       </div>
     </div>
-    <section>
+  </section>
 </main><!-- #main -->
 
 <?php

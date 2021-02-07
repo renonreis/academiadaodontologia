@@ -1,7 +1,6 @@
 /* vanilla scroll
 -- Verifica se o header está na posição 0 caso não esteja adiciona background;
 */
-
 let scrollpos = window.scrollY
 const header = document.querySelector("header.navbar")
 const header_height = header.offsetHeight
@@ -11,28 +10,12 @@ const remove_class_on_scroll = () => header.classList.remove("bg-dark")
 
 window.addEventListener('scroll', function () {
   scrollpos = window.scrollY;
-
-
-
   if (scrollpos >= header_height) { add_class_on_scroll() }
   else { remove_class_on_scroll() }
 
   // console.log(scrollpos);
 });
-
-// end vanilla scrol
-
-
-
-
-
-
-
-
-
-
-
-
+// end vanilla scroll
 /*
 Menu mobile
 ========================= */
@@ -48,25 +31,11 @@ function closeNav() {
   document.body.classList.remove('overflow-hidden');
 }
 /* ---------------------------- */
-
-
-
-
-
-
-
-
 /*
 Animate On Scroll Library
 Precisa ser o ultimo do código
 ========================= */
 AOS.init();
-
-
-
-
-
-
 /* ---------------------------- */
 filterSelection("all")
 function filterSelection(c) {
@@ -100,15 +69,17 @@ function RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("filters");
-var btns = btnContainer.getElementsByClassName("filters__btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function () {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+if(window.location.pathname == '/cursos') {
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("filters");
+  var btns = btnContainer.getElementsByClassName("filters__btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
 }
 
 

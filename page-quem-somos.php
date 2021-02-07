@@ -24,8 +24,8 @@ get_header();
             <h2 class="ui-title-main">Quem somos</h2>
           </div>
           <div class="text-light fs-5 fw-lighter content-entry">
-            <img class="float-start me-5 mb-5 mw-100"
-              src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-image-1.jpg" alt="">
+            <img class="float-start me-5 mb-5 mw-100" src="<?php echo wp_get_attachment_image_url( 147, '' ); ?>"
+              alt="">
             <p>A Academia da Odontologia foi criada em 2018 com o objetivo de oferecer uma plataforma completa e
               acessível para quem almeja se manter atualizado com o que há de novo na Odontopediatria e Ortodontia.
               Com
@@ -63,7 +63,7 @@ get_header();
           <div class="row text-light g-0  rounded overflow-hidden flex-md-row mb-5 shadow-sm position-relative">
             <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
               <img width="112" class="border-0 rounded-circle"
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/person-300x300.jpg" alt="">
+                src="<?php echo wp_get_attachment_image_url( 79, '' ); ?>" alt="">
             </div>
             <div class="col p-4 pt-1 ps-5 d-flex flex-column position-static">
               <h3 class="fs-4 fw-bolder">Juliana Pereira Andriani</h3>
@@ -80,22 +80,31 @@ get_header();
               </div>
               <ul class="list-inline fs-5">
                 <li class="list-inline-item">
-                  <a href="#" class="text-light"> <i class="fab fa-facebook-f"></i> </a>
+                  <a href="#" target="_blank" class="text-light">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
                 </li>
                 <li class="list-inline-item ms-3">
-                  <a href="#" class="text-light"> <i class="fab fa-instagram"></i></a>
+                  <a href="#" target="_blank" class="text-light">
+                    <i class="fab fa-instagram"></i>
+                  </a>
                 </li>
                 <li class="list-inline-item ms-3">
-                  <a href="#" class="text-light"> <i class="fab fa-youtube"></i></a>
+                  <a href="#" target="_blank" class="text-light">
+                    <i class="fab fa-youtube"></i>
+                  </a>
                 </li>
                 <li class="list-inline-item ms-3">
-                  <a href="#" class="text-light"> <i class="fab fa-twitter"></i></a>
+                  <a href="#" target="_blank" class="text-light">
+                    <i class="fab fa-twitter"></i>
+                  </a>
                 </li>
                 <li class="list-inline-item ms-3">
-                  <a href="#" class="text-light"> <i class="fab fa-linkedin"></i></a>
+                  <a href="#" target="_blank" class="text-light">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
                 </li>
               </ul>
-
             </div>
           </div>
         </div> <!-- //col-->
@@ -103,7 +112,7 @@ get_header();
           <div class="row text-light g-0  rounded overflow-hidden flex-md-row mb-5 shadow-sm position-relative">
             <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
               <img width="112" class="border-0 rounded-circle"
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/person-300x300.jpg" alt="">
+                src="<?php echo wp_get_attachment_image_url( 79, '' ); ?>" alt="">
             </div>
             <div class="col p-4 pt-1 ps-5 d-flex flex-column position-static">
               <h3 class="fs-4 fw-bolder">Juliana Pereira Andriani</h3>
@@ -120,19 +129,29 @@ get_header();
               </div>
               <ul class="list-inline fs-5">
                 <li class="list-inline-item">
-                  <a href="#" class="text-light"> <i class="fab fa-facebook-f"></i> </a>
+                  <a href="#" target="_blank" class="text-light">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
                 </li>
                 <li class="list-inline-item ms-3">
-                  <a href="#" class="text-light"> <i class="fab fa-instagram"></i></a>
+                  <a href="#" target="_blank" class="text-light">
+                    <i class="fab fa-instagram"></i>
+                  </a>
                 </li>
                 <li class="list-inline-item ms-3">
-                  <a href="#" class="text-light"> <i class="fab fa-youtube"></i></a>
+                  <a href="#" target="_blank" class="text-light">
+                    <i class="fab fa-youtube"></i>
+                  </a>
                 </li>
                 <li class="list-inline-item ms-3">
-                  <a href="#" class="text-light"> <i class="fab fa-twitter"></i></a>
+                  <a href="#" target="_blank" class="text-light">
+                    <i class="fab fa-twitter"></i>
+                  </a>
                 </li>
                 <li class="list-inline-item ms-3">
-                  <a href="#" class="text-light"> <i class="fab fa-linkedin"></i></a>
+                  <a href="#" target="_blank" class="text-light">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
                 </li>
               </ul>
             </div>

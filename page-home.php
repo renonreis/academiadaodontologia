@@ -16,8 +16,7 @@ get_header();
 ?>
 
 <main id="main" class="site-main">
-  <section class="hero"
-    style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.png);">
+  <section class="hero" style="background-image: url(<?php echo wp_get_attachment_image_url( 145, '' ); ?>">
     <div class="overlay"></div>
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
       <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/Mariane-Makinf-of-VERSAO-1-MINUTO.mp4"
@@ -84,7 +83,7 @@ get_header();
               <div class="text-center mt-3">
                 <a href="#" class="btn btn-secondary btn-lg text-uppercase fw-bold py-3 px-5">Assinar
                   Premium</a>
-                  <p class="ff-secondary mt-2 mb-0">* Plano anual total R$ 1.558,80</p>
+                <p class="ff-secondary mt-2 mb-0">* Plano anual total R$ 1.558,80</p>
               </div>
               <ul class="ui-plan__list list-group list-group-flush mt-5">
                 <li class="list-group-item">
@@ -121,7 +120,7 @@ get_header();
         </div> <!-- //col  -->
         <div class="col">
           <div class="ui-plan bg-white mb-5 ms-auto">
-          <div class="ribbon"><span>Recomendado</span></div>
+            <div class="ribbon"><span>Recomendado</span></div>
             <div class="p-5">
               <h5 class="ui-plan__title card-title text-uppercase text-center mt-4">Odontopediatria <br>
                 Plus <span><i class="fas fa-plus-circle text-primary"></i></span></h5>
@@ -129,7 +128,7 @@ get_header();
               <div class="text-center mt-3">
                 <a href="#" class="btn btn-primary btn-lg text-uppercase fw-bold py-3 px-5">Assinar
                   Plus</a>
-                  <p class="ff-secondary mt-2 mb-0">* Plano anual total R$ 1.653,60</p>
+                <p class="ff-secondary mt-2 mb-0">* Plano anual total R$ 1.653,60</p>
               </div>
               <ul class="ui-plan__list list-group list-group-flush mt-5">
                 <li class="list-group-item">

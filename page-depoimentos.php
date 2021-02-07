@@ -102,6 +102,18 @@ get_header();
       </div> <!-- //row -->
     </div> <!-- //container-->
   </section>
+  <section class="banner-info banner-info--center position-relative py-5">
+    <div class="container">
+      <div class="row py-4">
+        <div>
+          <h2>Invista em conhecimento, invista em você</h2>
+          <p class="lead">A comodidade do Ensino On-line aliada à interação com o professor possível no Ensino
+            Presencial.</p>
+          <a href="#" class="btn btn-lg btn-outline-light  stretched-link"> junte-se a nós</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main><!-- #main -->
 
 <?php

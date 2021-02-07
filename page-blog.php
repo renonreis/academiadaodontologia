@@ -59,12 +59,12 @@ get_header();
                 </div>
                 <div class="card-content p-4 border-0">
                   <?php
-                  $categories = get_the_category();
-                  if ( ! empty( $categories ) ) {
-                      echo '<a class="up-link" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">
-                      <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">
-                      ' . esc_html( $categories[0]->name ) . '</span></a>';
-                  }
+                    $categories = get_the_category();
+                    if ( ! empty( $categories ) ) {
+                        echo '<a class="up-link" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">
+                        <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">
+                        ' . esc_html( $categories[0]->name ) . '</span></a>';
+                    }
                   ?>
                   <h3>
                     <a href="<?php echo get_permalink(); ?>" class="text-decoration-none stretched-link">

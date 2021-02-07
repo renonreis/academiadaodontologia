@@ -42,11 +42,7 @@
       </div>
       <div class="col-sm-12 col-lg-4 mt-4 mt-md-0 ms-auto">
         <h2 class="h6 mb-3">Inscreva-se em nossa newsletter</h2>
-        <div class="input-group mb-2">
-          <input type="text" class="form-control rounded-0 border-0" placeholder="name@example.com"
-            aria-label="name@example.com" aria-describedby="button-addon1">
-          <button class="btn btn-outline-light ms-2  rounded-0" type="button" id="button-addon1">Enviar</button>
-        </div>
+        <?php echo do_shortcode( '[wpforms id="161"]'); ?>
         <p class="text-muted lh-1">
           <small>The information you provide on this form will only be used to provide you
             with

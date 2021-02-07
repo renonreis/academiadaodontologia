@@ -33,7 +33,8 @@ get_header();
               onclick="filterSelection('mais-acessados')">Mais acessados</a>
             <a class="filters__btn btn btn-lg btn-outline-light ms-2 border-gray-light"
               onclick="filterSelection('semi-presenciais')">Semi-presenciais</a>
-            <a class="filters__btn btn btn-lg btn-outline-light ms-2 border-gray-light" onclick="filterSelection('sedacao')">
+            <a class="filters__btn btn btn-lg btn-outline-light ms-2 border-gray-light"
+              onclick="filterSelection('sedacao')">
               Sedação <i class="fas fa-plus-circle"></i>
             </a>
           </ul>

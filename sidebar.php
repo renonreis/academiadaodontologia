@@ -39,17 +39,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
       <h4 class="fw-100 fst-italic fs-2 ff-primary">Fique por dentro</h4>
       <p class="fw-200">Acompanhe as últimas publicações científicas, promoções e novidades da Academia da
         Odontologia.</p>
-      <form>
-        <div class="mb-2">
-          <label for="blogInputEmail" class="form-label sr-only d-none">Digite seu e-mail</label>
-          <input type="email" class="form-control rounded-0" id="blogInputEmail" placeholder="Digite seu e-mail"
-            aria-describedby="emailHelp">
-          <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-        </div>
-        <div class="d-grid gap-2">
-          <button type="submit" class="btn btn-outline-light btn-block text-uppercase">Enviar</button>
-        </div>
-      </form>
+      <?php echo do_shortcode( '[wpforms id="161"]'); ?>
     </div>
 
     <nav class="widget-menu-link">

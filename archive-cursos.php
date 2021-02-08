@@ -37,6 +37,7 @@ get_header();
               onclick="filterSelection('sedacao')">
               Sedação <i class="fas fa-plus-circle"></i>
             </a>
+
           </ul>
         </div>
       </div>

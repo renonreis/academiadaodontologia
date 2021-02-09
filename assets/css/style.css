@@ -10233,8 +10233,76 @@ fieldset:disabled .btn {
 	font-weight: 300;
 }
 
+.ui-carousel figure {
+	margin: 0 0 1rem;
+}
+
+@media (min-width: 375px) {
+	.ui-carousel figure {
+		margin: 0 0 1rem;
+	}
+}
+
+@media (min-width: 425px) {
+	.ui-carousel figure {
+		margin: 0 2rem 1rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.ui-carousel figure {
+		margin: 0 2rem 1rem;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.ui-carousel figure blockquote p {
+		font-size: 1rem;
+	}
+}
+
 .ui-carousel .carousel-item .row {
 	max-width: 960px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+	top: -430px;
+}
+
+@media (min-width: 375px) {
+	.carousel-control-prev,
+	.carousel-control-next {
+		top: -300px;
+	}
+}
+
+@media (min-width: 425px) {
+	.carousel-control-prev,
+	.carousel-control-next {
+		top: -270px;
+	}
+}
+
+@media (min-width: 768px) {
+	.carousel-control-prev,
+	.carousel-control-next {
+		top: -220px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.carousel-control-prev,
+	.carousel-control-next {
+		top: 30px;
+	}
+}
+
+@media (min-width: 768px) {
+	.carousel-control-prev,
+	.carousel-control-next {
+		font-size: 1rem;
+	}
 }
 
 .carousel-control-prev-icon,
@@ -10259,10 +10327,19 @@ fieldset:disabled .btn {
 .picture-person {
 	width: 292px;
 	height: 292px;
+	max-width: 100%;
 	background-position: center center;
 	background-size: cover;
 	position: relative;
 	margin: 15px !important;
+}
+
+@media (max-width: 991.98px) {
+	.picture-person {
+		margin: 15px auto 35px auto !important;
+		width: 232px;
+		height: 232px;
+	}
 }
 
 .picture-person__container {

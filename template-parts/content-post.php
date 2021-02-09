@@ -52,7 +52,7 @@ $author_id = get_the_author_meta( 'ID' );
                 <img src="<?php echo get_avatar_url($user->ID, ['size' => '55']); ?>" class="border border-1 rounded-circle border-primarye"
                   width="55px" height="55px" alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
               </li>
-              <li class="list-inline-item"  style="font-size: 1.125rem">
+              <li class="list-inline-item">
                 <?php echo get_the_author(); ?>
               </li>
             </ul>
@@ -183,7 +183,7 @@ $author_id = get_the_author_meta( 'ID' );
                       class="border border-1 rounded-circle border-primary" width="55px" height="55px"
                       alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
                   </li>
-                  <li class="list-inline-item fs-5">
+                  <li class="list-inline-item author">
                     <?php echo get_the_author(); ?>
                   </li>
                 </ul>

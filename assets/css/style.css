@@ -6417,7 +6417,7 @@ fieldset:disabled .btn {
 	display: table-cell !important;
 }
 
-.d-flex {
+.d-flex, .card-post .card-footer {
 	display: flex !important;
 }
 
@@ -6529,7 +6529,7 @@ fieldset:disabled .btn {
 	border: 1px solid #dee2e6 !important;
 }
 
-.border-0 {
+.border-0, .card-post .card-footer {
 	border: 0 !important;
 }
 
@@ -6601,7 +6601,7 @@ fieldset:disabled .btn {
 	border-color: #fff !important;
 }
 
-.border-0 {
+.border-0, .card-post .card-footer {
 	border-width: 0 !important;
 }
 
@@ -7007,7 +7007,7 @@ fieldset:disabled .btn {
 	margin-top: 3rem !important;
 }
 
-.mt-auto {
+.mt-auto, .card-post .card-footer {
 	margin-top: auto !important;
 }
 
@@ -7111,7 +7111,7 @@ fieldset:disabled .btn {
 	padding: 1rem !important;
 }
 
-.p-4 {
+.p-4, .card-post .card-footer {
 	padding: 1.5rem !important;
 }
 
@@ -7307,7 +7307,7 @@ fieldset:disabled .btn {
 	font-style: normal !important;
 }
 
-.fw-light {
+.fw-light, .card-post h3, .card-post .h3, .card-post h3 a, .card-post .h3 a, .card-post .card-footer time {
 	font-weight: 300 !important;
 }
 
@@ -7459,7 +7459,7 @@ fieldset:disabled .btn {
 	background-color: #202020 !important;
 }
 
-.bg-white {
+.bg-white, .card-post .card-footer {
 	background-color: #fff !important;
 }
 
@@ -10960,6 +10960,10 @@ footer h2, footer .h2 {
 	position: relative;
 }
 
+.card-post .card-footer .author {
+	font-size: 1.125rem;
+}
+
 .card-testimonial {
 	color: #fff;
 	border-radius: 0;
@@ -11210,12 +11214,32 @@ footer h2, footer .h2 {
 }
 
 .entry-content h3, .entry-content .h3 {
-	font-size: 1.438rem;
-	font-size: 1.4375rem;
+	font-size: 1.5rem;
 	line-height: 1.2173913043;
 	margin-top: 2.4347826087em;
 	margin-bottom: 1.2173913043em;
 	font-weight: 600;
+}
+
+.entry-content .wp-block-image {
+	background: #e7e7e7;
+	display: flex;
+	margin: 0 auto 1.5rem auto;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: max-content;
+}
+
+.entry-content .wp-block-image img {
+	margin: 0;
+}
+
+.entry-content .wp-block-image figcaption {
+	margin-top: .5em;
+	margin-bottom: .5em;
+	font-size: 18px;
 }
 
 .entry-content p {
@@ -11602,11 +11626,11 @@ footer h2, footer .h2 {
 	-webkit-font-smoothing: antialiased;
 }
 
-.ff-primary {
+.ff-primary, .card-post h3, .card-post .h3, .card-post h3 a, .card-post .h3 a {
 	font-family: "Raleway", sans-serif;
 }
 
-.ff-secondary {
+.ff-secondary, .card-post .card-footer time {
 	font-family: "Open Sans", sans-serif;
 }
 

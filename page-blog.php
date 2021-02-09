@@ -77,7 +77,7 @@ get_header();
                     <ul class="list-inline mb-0">
                       <li class="list-inline-item">
                         <img src="<?php echo get_avatar_url($user->ID, ['size' => '55']); ?>"
-                          class="border-1 rounded-circle" width="55px" height="55px"
+                          class="border border-2 rounded-circle border-primary" width="55px" height="55px"
                           alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
                       </li>
                       <li class="list-inline-item fw-normal ff-primary" style="font-size: 1.125rem">

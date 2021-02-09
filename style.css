@@ -392,13 +392,4 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   background-color: #eb3f90;
 }
 
-.list-courses {
-  position: absolute;
-  opacity: 0;
-}
 
-.show {
-  position: static;
-  opacity: 1;
-  transition: all 0.5s;
-}

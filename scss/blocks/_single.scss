@@ -10,13 +10,13 @@
 
  
 .entry-header{
+    padding: 3rem 3rem 1rem 3rem;
     h1 { 
         color: var(--bs-primary);
         font-family: 'Raleway', sans-serif;
         font-weight: 300;
         // font-size: 48px;
     }
-    padding: 3rem 3rem 1rem 3rem;
 
     &__badge{
          padding: 0.5rem  1rem ;
@@ -26,10 +26,14 @@
         font-size: 0.688rem;
         &.primary{background-color: #ca5290 !important;}
     }
+    time{
+        font-size: 16px; 
+    }
 }
 .entry-content{
     font-family: 'Open Sans', sans-serif;
     font-size: 1.25rem;
+    font-weight: 300;
     padding: 1rem 3rem 3rem 3rem;
 
     h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
@@ -42,14 +46,29 @@
     margin-bottom: 1em;
     }
     h3{
-        font-size: 1.438rem;
-        font-size: 1.4375rem;
+        font-size: 1.5rem;
         line-height: 1.2173913043;
         margin-top: 2.4347826087em;
         margin-bottom: 1.2173913043em;
         font-weight: 600;
     }
 
+    .wp-block-image{
+        background: #e7e7e7;
+        display: flex;
+        margin: 0 auto 1.5rem auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: max-content;
+        img{ margin: 0;} 
+        figcaption{
+            margin-top: .5em;
+            margin-bottom: .5em;
+            font-size: 18px;
+         }
+    }
 
     /* == WordPress WYSIWYG Editor Styles == */
 

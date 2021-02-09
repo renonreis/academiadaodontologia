@@ -62,12 +62,12 @@ get_header();
                     $categories = get_the_category();
                     if ( ! empty( $categories ) ) {
                         echo '<a class="up-link" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">
-                        <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">
+                        <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary fw-500">
                         ' . esc_html( $categories[0]->name ) . '</span></a>';
                     }
                   ?>
                   <h3>
-                    <a href="<?php echo get_permalink(); ?>" class="text-decoration-none stretched-link">
+                    <a href="<?php echo get_permalink(); ?>" class="text-decoration-none stretched-link fw-light">
                       <?php the_title(); ?>
                     </a>
                   </h3>
@@ -77,10 +77,10 @@ get_header();
                     <ul class="list-inline mb-0">
                       <li class="list-inline-item">
                         <img src="<?php echo get_avatar_url($user->ID, ['size' => '55']); ?>"
-                          class="border-1 rounded-circle" width="55px" height="55px"
+                          class="border border-2 rounded-circle border-primary" width="55px" height="55px"
                           alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
                       </li>
-                      <li class="list-inline-item fs-5">
+                      <li class="list-inline-item author">
                         <?php echo get_the_author(); ?>
                       </li>
                     </ul>

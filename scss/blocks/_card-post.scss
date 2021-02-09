@@ -6,9 +6,30 @@
         transition: all 0.2s linear;
         transform: translateY(-10px) !important;
     }
-
+    h3, h3 a{
+        color: #000;
+        font-size: 1.625rem; 
+         @extend .ff-primary;
+         @extend .fw-light;
+    }
     .up-link{
         z-index: 3000;
         position: relative;
+    }
+
+    .card-footer{
+        @extend .d-flex;  
+        @extend .border-0; 
+        @extend .bg-white; 
+        @extend .mt-auto; 
+        @extend .p-4;
+
+        .author{
+            font-size: 1.125rem; 
+        }
+        time{
+            @extend .ff-secondary;
+            @extend .fw-light;
+        }
     }
 }

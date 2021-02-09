@@ -1,11 +1,19 @@
 .list-invist{
     list-style: none; 
+    margin-bottom: 20px;
    li {
-        background-color: #1b1b1b;
-        border-left:3px solid #e71d7c ;
-        color: #fff;;
+        border-left: 3px solid #e71d7c;
+        color: #fff;
         position: relative;
         overflow: hidden;
+        font-weight: 700;
+        padding: 2.7rem;
+        background-color: #131313;
+        margin-bottom: 1.1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
         span{
             z-index: 1;
             position: relative;

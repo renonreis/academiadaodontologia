@@ -26,7 +26,7 @@ $author_id = get_the_author_meta( 'ID' );
 					$categories = get_the_category();
 					if ( ! empty( $categories ) ) {
 							echo '<a class="up-link" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">
-							<span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">
+							<span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary fw-500">
 							' . esc_html( $categories[0]->name ) . '</span></a>';
 					}
 				?>
@@ -40,17 +40,17 @@ $author_id = get_the_author_meta( 'ID' );
         <div class="flex-grow-1">
           <ul class="list-inline mb-0">
             <li class="list-inline-item">
-              <img src="<?php echo get_avatar_url($user->ID, ['size' => '55']); ?>" class="border-1 rounded-circle"
+              <img src="<?php echo get_avatar_url($user->ID, ['size' => '55']); ?>" class="border border-1 rounded-circle border-primary"
                 width="55px" height="55px" alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
             </li>
-            <li class="list-inline-item fs-5">
+            <li class="list-inline-item author">
               <?php echo get_the_author(); ?>
             </li>
           </ul>
         </div>
         <div class="align-self-center">
           <span class="text-muted">
-            <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished">
+            <time  class="ff-secondary fw-light"  datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished">
               <?php echo get_the_date(); ?>
             </time>
           </span>

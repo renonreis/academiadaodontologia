@@ -16,6 +16,7 @@
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="profile" href="https://gmpg.org/xfn/11">
 
   <link rel="icon" href="<?php echo wp_get_attachment_image_url( 139, '' ); ?>" sizes="32x32" />

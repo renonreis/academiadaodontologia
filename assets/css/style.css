@@ -6417,7 +6417,7 @@ fieldset:disabled .btn {
 	display: table-cell !important;
 }
 
-.d-flex {
+.d-flex, .card-post .card-footer {
 	display: flex !important;
 }
 
@@ -6529,7 +6529,7 @@ fieldset:disabled .btn {
 	border: 1px solid #dee2e6 !important;
 }
 
-.border-0 {
+.border-0, .card-post .card-footer {
 	border: 0 !important;
 }
 
@@ -6601,7 +6601,7 @@ fieldset:disabled .btn {
 	border-color: #fff !important;
 }
 
-.border-0 {
+.border-0, .card-post .card-footer {
 	border-width: 0 !important;
 }
 
@@ -7007,7 +7007,7 @@ fieldset:disabled .btn {
 	margin-top: 3rem !important;
 }
 
-.mt-auto {
+.mt-auto, .card-post .card-footer {
 	margin-top: auto !important;
 }
 
@@ -7111,7 +7111,7 @@ fieldset:disabled .btn {
 	padding: 1rem !important;
 }
 
-.p-4 {
+.p-4, .card-post .card-footer {
 	padding: 1.5rem !important;
 }
 
@@ -7307,7 +7307,7 @@ fieldset:disabled .btn {
 	font-style: normal !important;
 }
 
-.fw-light {
+.fw-light, .card-post h3, .card-post .h3, .card-post h3 a, .card-post .h3 a, .card-post .card-footer time {
 	font-weight: 300 !important;
 }
 
@@ -7459,7 +7459,7 @@ fieldset:disabled .btn {
 	background-color: #202020 !important;
 }
 
-.bg-white {
+.bg-white, .card-post .card-footer {
 	background-color: #fff !important;
 }
 
@@ -10473,9 +10473,11 @@ fieldset:disabled .btn {
 }
 
 /* case to have admin-bar*/
-.admin-bar .site-header,
-.admin-bar .app-mobile-sidebar {
-	top: 30px;
+@media (min-width: 992px) {
+	.admin-bar .site-header,
+	.admin-bar .app-mobile-sidebar {
+		top: 30px;
+	}
 }
 
 /* header*/
@@ -10678,6 +10680,7 @@ header nav .callToAction a:hover {
 	justify-content: center;
 	transition: all 0.2s linear;
 	overflow: hidden;
+	z-index: 1000;
 }
 
 .talk-whatsapp:hover {
@@ -10770,6 +10773,18 @@ footer h2, footer .h2 {
 	font-size: 18px;
 }
 
+.list-courses {
+	position: absolute;
+	opacity: 0;
+}
+
+.list-courses.show {
+	position: static;
+	opacity: 1;
+	transition: all 0.5s;
+	z-index: 1;
+}
+
 .card-course {
 	height: 600px;
 	margin-bottom: 20px;
@@ -10781,7 +10796,7 @@ footer h2, footer .h2 {
 	font-family: 'Raleway', sans-serif;
 	background-size: cover;
 	background-position: top 0px right 0px;
-	position: relative;
+	position: relative !important;
 	background-repeat: no-repeat;
 	border: 0;
 	transition: all 0.2s linear;
@@ -10873,6 +10888,23 @@ footer h2, footer .h2 {
 	margin-bottom: 15px;
 }
 
+.card-course-content .thumb-avatar {
+	width: 111px;
+	height: 111px;
+	margin: auto;
+	background-size: cover;
+	background-color: #222;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius: 50%;
+	margin-bottom: 15px;
+}
+
+.card-course-content .thumb-avatar--large {
+	width: 160px;
+	height: 160px;
+}
+
 .card-course-content .line, .card-course-content .line--small {
 	width: 80%;
 	height: 1px;
@@ -10891,6 +10923,10 @@ footer h2, footer .h2 {
 	margin-bottom: 5px;
 }
 
+.card-course-content h3.h3--large, .card-course-content .h3--large.h3 {
+	font-size: 30px;
+}
+
 .card-course-content p {
 	font-size: 18px;
 	margin: 0 30px 30px 30px;
@@ -10899,6 +10935,8 @@ footer h2, footer .h2 {
 .card-course-content .time {
 	margin-bottom: 25px;
 	display: block;
+	font-family: 'Open sans', sans-serif;
+	font-weight: 300;
 }
 
 .card-post {
@@ -10912,9 +10950,18 @@ footer h2, footer .h2 {
 	transform: translateY(-10px) !important;
 }
 
+.card-post h3, .card-post .h3, .card-post h3 a, .card-post .h3 a {
+	color: #000;
+	font-size: 1.625rem;
+}
+
 .card-post .up-link {
 	z-index: 3000;
 	position: relative;
+}
+
+.card-post .card-footer .author {
+	font-size: 1.125rem;
 }
 
 .card-testimonial {
@@ -11008,7 +11055,7 @@ footer h2, footer .h2 {
 	top: 80px;
 	color: #fff;
 	left: 50%;
-	background-image: url(./assets/images/quote.svg);
+	background-image: url(../../assets/images/quote.svg);
 	background-repeat: no-repeat;
 	content: "";
 	z-index: 1;
@@ -11031,6 +11078,8 @@ footer h2, footer .h2 {
 	color: #201e22;
 	font-weight: 900;
 	margin-bottom: 30px;
+	word-wrap: break-word !important;
+	word-break: break-word !important;
 }
 
 .ui-plan__price {
@@ -11141,9 +11190,14 @@ footer h2, footer .h2 {
 	background-color: #ca5290 !important;
 }
 
+.entry-header time {
+	font-size: 16px;
+}
+
 .entry-content {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.25rem;
+	font-weight: 300;
 	padding: 1rem 3rem 3rem 3rem;
 	/* == WordPress WYSIWYG Editor Styles == */
 }
@@ -11160,12 +11214,32 @@ footer h2, footer .h2 {
 }
 
 .entry-content h3, .entry-content .h3 {
-	font-size: 1.438rem;
-	font-size: 1.4375rem;
+	font-size: 1.5rem;
 	line-height: 1.2173913043;
 	margin-top: 2.4347826087em;
 	margin-bottom: 1.2173913043em;
 	font-weight: 600;
+}
+
+.entry-content .wp-block-image {
+	background: #e7e7e7;
+	display: flex;
+	margin: 0 auto 1.5rem auto;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: max-content;
+}
+
+.entry-content .wp-block-image img {
+	margin: 0;
+}
+
+.entry-content .wp-block-image figcaption {
+	margin-top: .5em;
+	margin-bottom: .5em;
+	font-size: 18px;
 }
 
 .entry-content p {
@@ -11430,14 +11504,22 @@ footer h2, footer .h2 {
 
 .list-invist {
 	list-style: none;
+	margin-bottom: 20px;
 }
 
 .list-invist li {
-	background-color: #1b1b1b;
 	border-left: 3px solid #e71d7c;
 	color: #fff;
 	position: relative;
 	overflow: hidden;
+	font-weight: 700;
+	padding: 2.7rem;
+	background-color: #131313;
+	margin-bottom: 1.1rem;
+}
+
+.list-invist li:last-child {
+	margin-bottom: 0;
 }
 
 .list-invist li span {
@@ -11544,11 +11626,11 @@ footer h2, footer .h2 {
 	-webkit-font-smoothing: antialiased;
 }
 
-.ff-primary {
+.ff-primary, .card-post h3, .card-post .h3, .card-post h3 a, .card-post .h3 a {
 	font-family: "Raleway", sans-serif;
 }
 
-.ff-secondary {
+.ff-secondary, .card-post .card-footer time {
 	font-family: "Open Sans", sans-serif;
 }
 
@@ -11558,6 +11640,10 @@ footer h2, footer .h2 {
 
 .fw-200 {
 	font-weight: 200;
+}
+
+.fw-500 {
+	font-weight: 500;
 }
 
 .fs-small {

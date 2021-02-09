@@ -27,12 +27,12 @@ $course_video = get_field('course_video');
       </div> <!-- //col -->
       <div class="col-lg-6 mb-5">
         <div class="card-course-content text-white text-center">
-          <img class="img-thumbnai" src="<?php
-                foreach($post_terms as $term){     
-                  the_field('image_teacher', $term);                  
-                }
-              ?>" alt="Nome alternativo">
-          <h3><?php echo $post_terms[0]->name; ?></h3>
+        <div class="thumb-avatar thumb-avatar--large mb-4" style="background-image: url(<?php
+                  foreach($post_terms as $term){     
+                    the_field('image_teacher', $term);                  
+                  }
+                ?>)"></div> <!-- //thumb-avatar -->
+          <h3 class='h3--large'><?php echo $post_terms[0]->name; ?></h3>
           <div class="line--small mx-auto"></div>
           <span class="time">
             <i class="far fa-clock" aria-hidden="true"></i>
@@ -40,7 +40,7 @@ $course_video = get_field('course_video');
           </span>
           <?php if( $course_link ){ ?>
           <a href="<?php echo $course_link['link']; ?>" <?php if( $course_link['new_window'] ) { echo 'target="_blank"' ; }
-                else { echo '' ; } ?> class="btn btn-lg btn-primary"><?php echo $course_link['text']; ?></a>
+                else { echo '' ; } ?> class="btn btn-lg btn-primary px-4"><?php echo $course_link['text']; ?></a>
           <?php } ?>
         </div>
       </div>

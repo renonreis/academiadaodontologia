@@ -11,9 +11,28 @@
   
  
 
+.home{
+    @include media-breakpoint-down(md) { 
+        .card-course{ 
+                background-image: none !important;
+                min-height: 210px;
+            } 
+    
+        .thumb-avatar{
+            display: none;
+        }
+        .card-course_is-new::after{
+            top: 0;
+            left: 0px;
+            border-radius: 0;
+            font-size: 11px;
+            height: 25px;
+        }
+    }
+}
 
 .card-course{
-    height: 600px;
+    min-height: 600px;
     margin-bottom: 20px;
     border-radius: 0;
     text-align: center;
@@ -26,7 +45,14 @@
     position: relative !important;
     background-repeat: no-repeat;
     border: 0;
-    transition: all 0.2s linear;
+    transition: all 0.2s linear; 
+   
+        @include media-breakpoint-down(sm) { 
+            margin-right: 1.5rem !important;
+            margin-left: 1.5rem !important;
+        } 
+
+
     .up-link{
         z-index: 3000;
         position: relative;
@@ -102,6 +128,7 @@
     &-content{
         z-index: 2;
         width: 100%;
+        padding-top: 40px;
         img{
             width: 112px;
             height: 112px;
@@ -141,6 +168,11 @@
         font-size: 24px;
         text-transform: uppercase;
         margin-bottom: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-left: 20px;
+        padding-right: 20px;
         &.h3--large{ font-size: 30px; }
        }
 

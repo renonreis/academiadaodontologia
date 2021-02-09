@@ -1,3 +1,15 @@
+ul#filters{
+    overflow-x: auto;
+    white-space: nowrap;
+    @include media-breakpoint-down(md) { 
+        a{
+            display: flex;
+          border-radius: 0;
+        }
+    }
+}
+
+
 .blog-sidebar{
     &__search{
         position: relative;

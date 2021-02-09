@@ -220,13 +220,13 @@ get_header();
               }
             ?>
             <a class="card-course_all_height" href="<?php echo get_post_permalink(); ?>">
-              <div class="card-course-content">
-                <img class="img-thumbnai" src="<?php
+              <div class="card-course-content"> 
+                <div class="thumb-avatar" style="background-image: url(<?php
                   foreach($post_terms as $term){     
                     the_field('image_teacher', $term);                  
                   }
-                ?>" alt="Nome alternativo">
-                <h3><?php echo $post_terms[0]->name; ?></h3>
+                ?>)"></div>
+                <h3 title="<?php echo $post_terms[0]->name; ?>"><?php echo $post_terms[0]->name; ?></h3>
                 <div class="line"></div>
                 <p><?php the_title(); ?></p>
                 <span class="time">

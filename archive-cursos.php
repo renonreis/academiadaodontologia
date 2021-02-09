@@ -16,7 +16,7 @@ get_header();
       <div class="row">
         <div class="col">
           <div class="ui-title pb-4">
-            <h2 class="ui-title-main">Conheça os nossos cursos</h2>
+            <h2 class="ui-title-main">Conheça nossos cursos</h2>
             <!-- <span class="ui-title-sub"> some subtitle</span> -->
           </div>
         </div>
@@ -102,7 +102,7 @@ get_header();
   </section>
   <section class="banner-info banner-info--center position-relative py-5">
     <div class="container">
-      <div class="row py-3">
+      <div class="row">
         <div>
           <h2>Invista em conhecimento, invista em você</h2>
           <p class="lead">A comodidade do Ensino On-line aliada à interação com o professor possível no Ensino

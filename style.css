@@ -380,16 +380,4 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   margin-bottom: 1.5em;
 }
 
-.btn-destaque a {
-  background: #e71d7c;
-  border-radius: 3.2px;
-  line-height: 25px;
-  margin: 0 0 0 16px !important;
-  min-width: 160px;
-  text-align: center;
-}
-.btn-destaque a:hover {
-  background-color: #eb3f90;
-}
-
 

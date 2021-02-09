@@ -10431,6 +10431,8 @@ fieldset:disabled .btn {
 	background: linear-gradient(134deg, var(--bs-primary) 18%, var(--bs-secondary) 70%);
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	color: #fff;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 
 .banner-info--center {
@@ -10440,22 +10442,40 @@ fieldset:disabled .btn {
 .banner-info h2, .banner-info .h2 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 100;
-	font-size: 48px;
 	font-style: italic;
+	font-size: 29px;
+}
+
+@media (min-width: 576px) {
+	.banner-info h2, .banner-info .h2 {
+		font-size: 32px;
+	}
+}
+
+@media (min-width: 768px) {
+	.banner-info h2, .banner-info .h2 {
+		font-size: 48px;
+	}
 }
 
 .banner-info .lead {
 	font-family: 'Raleway', sans-serif;
-	font-size: 21px;
+	font-size: 18px;
 	font-weight: 400;
 	margin-top: 1.2rem;
+}
+
+@media (min-width: 576px) {
+	.banner-info .lead {
+		font-size: 21px;
+	}
 }
 
 .banner-info .btn {
 	font-weight: 700;
 	border-radius: 3px;
 	text-transform: uppercase;
-	font-size: 24px;
+	font-size: 16px;
 	margin-bottom: 20px;
 	border: 2px solid;
 	padding: 0.7rem 2rem;
@@ -10464,6 +10484,18 @@ fieldset:disabled .btn {
 	border: 2px solid;
 	background-color: rgba(255, 255, 255, 0);
 	border-color: white;
+}
+
+@media (min-width: 576px) {
+	.banner-info .btn {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 768px) {
+	.banner-info .btn {
+		font-size: 24px;
+	}
 }
 
 .banner-info .btn:hover {
@@ -10542,9 +10574,17 @@ header .navbar-brand {
 	background-repeat: no-repeat;
 }
 
+@media (min-width: 375px) {
+	header .navbar-brand {
+		width: 270px;
+		height: 38px;
+	}
+}
+
 @media (min-width: 425px) {
 	header .navbar-brand {
 		width: 300px;
+		height: 42px;
 	}
 }
 
@@ -10553,6 +10593,20 @@ header .navbar-brand {
 		width: 334px;
 		height: 47px;
 	}
+}
+
+header .btn-destaque a {
+	background: #e71d7c;
+	border-radius: 3.2px;
+	line-height: 25px;
+	margin: 0 0 0 16px !important;
+	min-width: 160px;
+	text-align: center;
+}
+
+header .btn-destaque a:hover {
+	background-color: #eb3f90;
+	color: white !important;
 }
 
 header nav .callToAction a {
@@ -10660,7 +10714,7 @@ header nav .callToAction a:hover {
 }
 
 .app-mobile-sidebar .mobile-menu ul li a:hover {
-	color: rgba(255, 255, 255, 0.55);
+	color: white;
 }
 
 .app-mobile-sidebar .mobile-menu ul li a.active {
@@ -10669,8 +10723,8 @@ header nav .callToAction a:hover {
 
 .talk-whatsapp {
 	position: fixed;
-	right: 30px;
-	bottom: 30px;
+	right: 63px;
+	bottom: 63px;
 	width: 70px;
 	height: 70px;
 	background: #00d26f;
@@ -10685,6 +10739,7 @@ header nav .callToAction a:hover {
 
 .talk-whatsapp:hover {
 	overflow: visible;
+	background: #009a00;
 }
 
 .talk-whatsapp:hover .talk-whatsapp__info {
@@ -10785,8 +10840,25 @@ footer h2, footer .h2 {
 	z-index: 1;
 }
 
+@media (max-width: 767.98px) {
+	.home .card-course {
+		background-image: none !important;
+		min-height: 210px;
+	}
+	.home .thumb-avatar {
+		display: none;
+	}
+	.home .card-course_is-new::after {
+		top: 0;
+		left: 0px;
+		border-radius: 0;
+		font-size: 11px;
+		height: 25px;
+	}
+}
+
 .card-course {
-	height: 600px;
+	min-height: 600px;
 	margin-bottom: 20px;
 	border-radius: 0;
 	text-align: center;
@@ -10800,6 +10872,13 @@ footer h2, footer .h2 {
 	background-repeat: no-repeat;
 	border: 0;
 	transition: all 0.2s linear;
+}
+
+@media (max-width: 575.98px) {
+	.card-course {
+		margin-right: 1.5rem !important;
+		margin-left: 1.5rem !important;
+	}
 }
 
 .card-course .up-link {
@@ -10879,6 +10958,7 @@ footer h2, footer .h2 {
 .card-course-content {
 	z-index: 2;
 	width: 100%;
+	padding-top: 40px;
 }
 
 .card-course-content img {
@@ -10921,6 +11001,11 @@ footer h2, footer .h2 {
 	font-size: 24px;
 	text-transform: uppercase;
 	margin-bottom: 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .card-course-content h3.h3--large, .card-course-content .h3--large.h3 {
@@ -11414,6 +11499,18 @@ footer h2, footer .h2 {
 .single__big-hero-image .ui-title-main {
 	text-transform: inherit;
 	font-size: 4.375rem;
+}
+
+ul#filters {
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+@media (max-width: 767.98px) {
+	ul#filters a {
+		display: flex;
+		border-radius: 0;
+	}
 }
 
 .blog-sidebar__search {

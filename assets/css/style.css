@@ -11186,6 +11186,10 @@ footer h2, footer .h2 {
 	background-color: #ca5290 !important;
 }
 
+.entry-header time {
+	font-size: 16px;
+}
+
 .entry-content {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.25rem;

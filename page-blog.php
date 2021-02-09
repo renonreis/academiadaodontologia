@@ -87,7 +87,7 @@ get_header();
                   </div>
                   <div class="align-self-center">
                     <span class="text-muted">
-                      <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished">
+                      <time class="ff-secondary fw-light" datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished">
                         <?php echo get_the_date(); ?>
                       </time>
                     </span>

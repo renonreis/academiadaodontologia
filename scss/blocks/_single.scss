@@ -10,13 +10,13 @@
 
  
 .entry-header{
+    padding: 3rem 3rem 1rem 3rem;
     h1 { 
         color: var(--bs-primary);
         font-family: 'Raleway', sans-serif;
         font-weight: 300;
         // font-size: 48px;
     }
-    padding: 3rem 3rem 1rem 3rem;
 
     &__badge{
          padding: 0.5rem  1rem ;
@@ -25,6 +25,9 @@
         border-radius: 0;
         font-size: 0.688rem;
         &.primary{background-color: #ca5290 !important;}
+    }
+    time{
+        font-size: 16px; 
     }
 }
 .entry-content{

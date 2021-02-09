@@ -10950,6 +10950,11 @@ footer h2, footer .h2 {
 	transform: translateY(-10px) !important;
 }
 
+.card-post h3, .card-post .h3, .card-post h3 a, .card-post .h3 a {
+	color: #000;
+	font-size: 1.625rem;
+}
+
 .card-post .up-link {
 	z-index: 3000;
 	position: relative;
@@ -11606,6 +11611,10 @@ footer h2, footer .h2 {
 
 .fw-200 {
 	font-weight: 200;
+}
+
+.fw-500 {
+	font-weight: 500;
 }
 
 .fs-small {

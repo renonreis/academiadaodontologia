@@ -26,12 +26,12 @@ $author_id = get_the_author_meta( 'ID' );
 					$categories = get_the_category();
 					if ( ! empty( $categories ) ) {
 							echo '<a class="up-link" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">
-							<span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">
+							<span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary fw-500">
 							' . esc_html( $categories[0]->name ) . '</span></a>';
 					}
 				?>
         <h3>
-          <a href="<?php echo get_permalink(); ?>" class="text-decoration-none stretched-link">
+          <a href="<?php echo get_permalink(); ?>" class="text-decoration-none stretched-link fw-light">
             <?php the_title(); ?>
           </a>
         </h3>

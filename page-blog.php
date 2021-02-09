@@ -62,12 +62,12 @@ get_header();
                     $categories = get_the_category();
                     if ( ! empty( $categories ) ) {
                         echo '<a class="up-link" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">
-                        <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary">
+                        <span class="badge bg-primary mb-3 fs-small rounded-0 text-uppercase p-2 ff-primary fw-500">
                         ' . esc_html( $categories[0]->name ) . '</span></a>';
                     }
                   ?>
                   <h3>
-                    <a href="<?php echo get_permalink(); ?>" class="text-decoration-none stretched-link">
+                    <a href="<?php echo get_permalink(); ?>" class="text-decoration-none stretched-link fw-light">
                       <?php the_title(); ?>
                     </a>
                   </h3>
@@ -80,7 +80,7 @@ get_header();
                           class="border-1 rounded-circle" width="55px" height="55px"
                           alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
                       </li>
-                      <li class="list-inline-item fs-5">
+                      <li class="list-inline-item fw-normal ff-primary" style="font-size: 1.125rem">
                         <?php echo get_the_author(); ?>
                       </li>
                     </ul>

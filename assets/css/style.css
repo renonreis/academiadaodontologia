@@ -10900,6 +10900,11 @@ footer h2, footer .h2 {
 	margin-bottom: 15px;
 }
 
+.card-course-content .thumb-avatar--large {
+	width: 160px;
+	height: 160px;
+}
+
 .card-course-content .line, .card-course-content .line--small {
 	width: 80%;
 	height: 1px;
@@ -10918,6 +10923,10 @@ footer h2, footer .h2 {
 	margin-bottom: 5px;
 }
 
+.card-course-content h3.h3--large, .card-course-content .h3--large.h3 {
+	font-size: 30px;
+}
+
 .card-course-content p {
 	font-size: 18px;
 	margin: 0 30px 30px 30px;
@@ -10927,6 +10936,7 @@ footer h2, footer .h2 {
 	margin-bottom: 25px;
 	display: block;
 	font-family: 'Open sans', sans-serif;
+	font-weight: 300;
 }
 
 .card-post {

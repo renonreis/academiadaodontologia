@@ -10473,9 +10473,11 @@ fieldset:disabled .btn {
 }
 
 /* case to have admin-bar*/
-.admin-bar .site-header,
-.admin-bar .app-mobile-sidebar {
-	top: 30px;
+@media (min-width: 992px) {
+	.admin-bar .site-header,
+	.admin-bar .app-mobile-sidebar {
+		top: 30px;
+	}
 }
 
 /* header*/
@@ -10678,6 +10680,7 @@ header nav .callToAction a:hover {
 	justify-content: center;
 	transition: all 0.2s linear;
 	overflow: hidden;
+	z-index: 1000;
 }
 
 .talk-whatsapp:hover {
@@ -11008,7 +11011,7 @@ footer h2, footer .h2 {
 	top: 80px;
 	color: #fff;
 	left: 50%;
-	background-image: url(./assets/images/quote.svg);
+	background-image: url(../../assets/images/quote.svg);
 	background-repeat: no-repeat;
 	content: "";
 	z-index: 1;
@@ -11031,6 +11034,8 @@ footer h2, footer .h2 {
 	color: #201e22;
 	font-weight: 900;
 	margin-bottom: 30px;
+	word-wrap: break-word !important;
+	word-break: break-word !important;
 }
 
 .ui-plan__price {
@@ -11430,14 +11435,22 @@ footer h2, footer .h2 {
 
 .list-invist {
 	list-style: none;
+	margin-bottom: 20px;
 }
 
 .list-invist li {
-	background-color: #1b1b1b;
 	border-left: 3px solid #e71d7c;
 	color: #fff;
 	position: relative;
 	overflow: hidden;
+	font-weight: 700;
+	padding: 2.7rem;
+	background-color: #131313;
+	margin-bottom: 1.1rem;
+}
+
+.list-invist li:last-child {
+	margin-bottom: 0;
 }
 
 .list-invist li span {

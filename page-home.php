@@ -43,12 +43,12 @@ get_header();
       </div>
       <div class="row">
         <div class="col-lg-4">
-          <ul class="list-invist text-center p-0 m-0">
-            <li class="p-5 mb-2 fw-bold bg-dark mb-4"><span class="fs-2">+22</span> <span class="fs-3">cursos</span>
+          <ul class="list-invist text-center p-0">
+            <li><span class="fs-2">+22</span> <span class="fs-3">cursos</span>
             </li>
-            <li class="p-5 mb-2 fw-bold bg-dark mb-4"><span class="fs-2">14</span> <span class="fs-3">professores</span>
+            <li><span class="fs-2">14</span> <span class="fs-3">professores</span>
             </li>
-            <li class="p-5 mb-2 fw-bold bg-dark"><span class="fs-2">540</span> <span class="fs-3">horas/aula</span>
+            <li><span class="fs-2">540</span> <span class="fs-3">horas/aula</span>
             </li>
           </ul>
         </div>

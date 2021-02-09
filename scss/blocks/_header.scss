@@ -1,9 +1,21 @@
 
+
+
+
+
 /* case to have admin-bar*/
-.admin-bar {
+.admin-bar { 
+  // #wpadminbar { 
+  //   @include media-breakpoint-down(lg) { 
+  //     display: none;
+  //   }
+  // }
   .site-header, 
-  .app-mobile-sidebar{
-    top: 30px;
+  .app-mobile-sidebar{ 
+    @include media-breakpoint-up(lg) { 
+      top: 30px;
+     }
+
   }
 }
 
@@ -199,6 +211,7 @@ header{
     justify-content: center;
     transition: all 0.2s linear;
     overflow: hidden;
+    z-index: 1000;
         &:hover{
           overflow: visible;
           .talk-whatsapp__info{

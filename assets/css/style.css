@@ -10261,6 +10261,28 @@ fieldset:disabled .btn {
 	}
 }
 
+.ui-carousel figure figcaption {
+	display: flex;
+	flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+	.ui-carousel figure figcaption {
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+.ui-carousel figure figcaption cite {
+	margin-left: 0 !important;
+}
+
+@media (min-width: 1024px) {
+	.ui-carousel figure figcaption cite {
+		margin-left: 15px !important;
+	}
+}
+
 .ui-carousel .carousel-item .row {
 	max-width: 960px;
 }
@@ -10370,6 +10392,10 @@ fieldset:disabled .btn {
 	border-style: solid;
 	border-width: 0 0 172px 172px;
 	border-color: transparent transparent var(--bs-primary) transparent;
+}
+
+.carousel-indicators {
+	bottom: -50px;
 }
 
 .carousel-indicators li {

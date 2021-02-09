@@ -7315,7 +7315,7 @@ fieldset:disabled .btn {
 	font-weight: lighter !important;
 }
 
-.fw-normal {
+.fw-normal, .card-post .card-footer .author {
 	font-weight: 400 !important;
 }
 
@@ -11626,7 +11626,7 @@ footer h2, footer .h2 {
 	-webkit-font-smoothing: antialiased;
 }
 
-.ff-primary, .card-post h3, .card-post .h3, .card-post h3 a, .card-post .h3 a {
+.ff-primary, .card-post h3, .card-post .h3, .card-post h3 a, .card-post .h3 a, .card-post .card-footer .author {
 	font-family: "Raleway", sans-serif;
 }
 

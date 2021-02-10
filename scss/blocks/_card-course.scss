@@ -147,10 +147,14 @@
         background-position: center center; 
         border-radius: 50%;
         margin-bottom: 15px;
-        &--large{
-            width: 160px;
-            height: 160px;  
-        }
+            &--large{
+                 width: 160px;
+                 height: 160px;  
+                @media (min-width: 375px) {}
+                @media (min-width: 425px) {}
+                @media (min-width: 768px) {}
+                @media (min-width: 1024px) {}
+            }
        }
        .line{
         width: 80%;

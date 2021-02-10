@@ -65,9 +65,9 @@ get_header();
               <img width="112" class="border-0 rounded-circle"
                 src="<?php echo wp_get_attachment_image_url( 79, '' ); ?>" alt="">
             </div>
-            <div class="col p-4 pt-1 ps-5 d-flex flex-column position-static">
+            <div class="col p-4 pt-1 ps-2 ps-lg-5 d-flex flex-column position-static">
               <h3 class="fs-4 fw-bolder">Juliana Pereira Andriani</h3>
-              <div class="fw-lighter fs-5">
+              <div class="fw-lighter author__descripion">
                 <p>
                   Especialista em Odontopediatria - PUC/PR<br>
                   Mestre em Odontologia / Área de Concentração Odontopediatria - UFSC/SC<br>
@@ -114,9 +114,9 @@ get_header();
               <img width="112" class="border-0 rounded-circle"
                 src="<?php echo wp_get_attachment_image_url( 79, '' ); ?>" alt="">
             </div>
-            <div class="col p-4 pt-1 ps-5 d-flex flex-column position-static">
+            <div class="col p-4 pt-1 ps-2 ps-lg-5 d-flex flex-column position-static">
               <h3 class="fs-4 fw-bolder">Juliana Pereira Andriani</h3>
-              <div class="fw-lighter fs-5">
+              <div class="fw-lighter author__descripion">
                 <p>
                   Especialista em Odontopediatria - PUC/PR<br>
                   Mestre em Odontologia / Área de Concentração Odontopediatria - UFSC/SC<br>

@@ -11405,7 +11405,13 @@ footer h2, footer .h2 {
 }
 
 .entry-header {
-	padding: 3rem 3rem 1rem 3rem;
+	padding: 3rem 1rem 1rem 1rem;
+}
+
+@media (min-width: 576px) {
+	.entry-header {
+		padding: 3rem 3rem 1rem 3rem;
+	}
 }
 
 .entry-header h1, .entry-header .h1 {
@@ -11457,11 +11463,23 @@ footer h2, footer .h2 {
 }
 
 .entry-content h3, .entry-content .h3 {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	line-height: 1.2173913043;
 	margin-top: 2.4347826087em;
 	margin-bottom: 1.2173913043em;
 	font-weight: 600;
+}
+
+@media (min-width: 576px) {
+	.entry-content h3, .entry-content .h3 {
+		font-size: 1.3rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.entry-content h3, .entry-content .h3 {
+		font-size: 1.5rem;
+	}
 }
 
 .entry-content .wp-block-image {

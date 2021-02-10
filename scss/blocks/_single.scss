@@ -10,7 +10,10 @@
 
  
 .entry-header{
-    padding: 3rem 3rem 1rem 3rem;
+    padding: 3rem 1rem 1rem 1rem;
+    @include media-breakpoint-up(sm) {
+        padding: 3rem 3rem 1rem 3rem;
+    }
     h1 { 
         color: var(--bs-primary);
         font-family: 'Raleway', sans-serif;
@@ -51,12 +54,20 @@
     margin-bottom: 1em;
     }
     h3{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         line-height: 1.2173913043;
         margin-top: 2.4347826087em;
         margin-bottom: 1.2173913043em;
         font-weight: 600;
+
+        @include media-breakpoint-up(sm) {
+            font-size: 1.3rem;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 1.5rem;
+        }
     }
+
 
     .wp-block-image{
         background: #e7e7e7;

@@ -12,7 +12,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<aside class="col-lg-4 pl-xs-0 pl-lg-5 blog-sidebar">
+<aside class="col-lg-4 pt-5 pt-lg-0 pl-xs-0 pl-lg-5 blog-sidebar">
   <div class="blog-sidebar__inner">
     <ul class="list-inline fs-5 blog-sidebar__social  mb-3 d-flex">
       <li class="list-inline-item">

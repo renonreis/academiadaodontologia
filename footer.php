@@ -27,7 +27,7 @@
 					);
 				?>
       </div>
-      <div class="col-12 col-sm-6  col-lg-3 has_menu-footer">
+      <div class="col-12 col-sm-6  col-lg-4 has_menu-footer">
         <?php
 					wp_nav_menu(
 						array(
@@ -40,7 +40,7 @@
 					);
 				?>
       </div>
-      <div class="col-sm-12 col-lg-4 mt-4 mt-md-0 ms-auto">
+      <div class="col-sm-12 col-lg-4 mt-5 mt-lg-0 ms-auto">
         <h2 class="h6 mb-3">Inscreva-se em nossa newsletter</h2>
         <?php echo do_shortcode( '[wpforms id="161"]'); ?>
         <p class="text-muted lh-1">

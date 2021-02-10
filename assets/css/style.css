@@ -10504,9 +10504,8 @@ fieldset:disabled .btn {
 
 /* blocks */
 .hero {
-	min-height: 100vh;
-	height: 900px;
-	/* background: #000; */
+	min-height: calc(100vh - 30px);
+	height: 600px;
 	background-size: cover;
 	align-items: flex-end;
 	display: flex;
@@ -10514,6 +10513,13 @@ fieldset:disabled .btn {
 	font-family: "Raleway", sans-serif;
 	position: relative;
 	overflow: hidden;
+}
+
+@media (min-width: 768px) {
+	.hero {
+		min-height: 100vh;
+		height: 900px;
+	}
 }
 
 .hero-button {
@@ -10868,8 +10874,8 @@ header nav .callToAction a:hover {
 
 .talk-whatsapp {
 	position: fixed;
-	right: 63px;
-	bottom: 63px;
+	right: 10px;
+	bottom: 10px;
 	width: 70px;
 	height: 70px;
 	background: #00d26f;
@@ -10880,6 +10886,13 @@ header nav .callToAction a:hover {
 	transition: all 0.2s linear;
 	overflow: hidden;
 	z-index: 1000;
+}
+
+@media (min-width: 992px) {
+	.talk-whatsapp {
+		right: 63px;
+		bottom: 63px;
+	}
 }
 
 .talk-whatsapp:hover {

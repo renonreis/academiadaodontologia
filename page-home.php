@@ -22,8 +22,8 @@ get_header();
       <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/Mariane-Makinf-of-VERSAO-1-MINUTO.mp4"
         type="video/mp4">
     </video>
-    <div class="container h-100">
-      <div class="d-flex h-100 align-items-end">
+    <div class="container">
+      <div class="d-flex align-items-end">
         <div class="w-100 text-white text-center text-sm-start">
           <h1 class="display-1">Sua atualização online <span class="br"> em Odontopediatria</h1>
           <a href="#" class="hero-button btn btn-primary btn-lg py-3 px-5 mt-4">Comece agora!</a>

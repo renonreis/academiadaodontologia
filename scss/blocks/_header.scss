@@ -227,8 +227,8 @@ header{
 
   .talk-whatsapp {
     position: fixed;
-    right: 63px;
-    bottom: 63px;
+    right: 10px;
+    bottom: 10px;
     width: 70px;
     height: 70px;
     background: #00d26f;
@@ -239,6 +239,12 @@ header{
     transition: all 0.2s linear;
     overflow: hidden;
     z-index: 1000;
+      @include media-breakpoint-up(sm) {}
+      @include media-breakpoint-up(md) { }
+      @include media-breakpoint-up(lg) {
+        right: 63px;
+        bottom: 63px;
+      }
         &:hover{
           overflow: visible;
           background: #009a00;

@@ -6321,7 +6321,7 @@ fieldset:disabled .btn {
 	border: 0 !important;
 }
 
-.stretched-link::after {
+.stretched-link::after, .card-course_all_height::after {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -11665,7 +11665,25 @@ footer h2, footer .h2 {
 
 .single__big-hero-image .ui-title-main {
 	text-transform: inherit;
-	font-size: 4.375rem;
+	font-size: 2.7rem;
+}
+
+@media (min-width: 425px) {
+	.single__big-hero-image .ui-title-main {
+		font-size: 2.7rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.single__big-hero-image .ui-title-main {
+		font-size: 3.7rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.single__big-hero-image .ui-title-main {
+		font-size: 4.375rem;
+	}
 }
 
 ul#filters {
@@ -11677,6 +11695,10 @@ ul#filters {
 	ul#filters a {
 		display: flex;
 		border-radius: 0;
+		align-items: center;
+	}
+	ul#filters a i {
+		margin-left: 5px;
 	}
 }
 

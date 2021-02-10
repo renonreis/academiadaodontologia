@@ -91,7 +91,7 @@ get_header();
       <div class="row justify-content-center row-cols-1 row-cols-lg-2 g-lg-5">
         <div class="col">
           <div class="ui-plan ff-primary bg-white mb-5 ms-auto">
-            <div class="p-5">
+            <div class="d-flex flex-column">
               <h5 class="ui-plan__title card-title text-uppercase text-center  mt-4">Odontopediatria <br>
                 Premium</h5>
               <h6 class="ui-plan__price">R$ <span>129,90</span> /mês</h6>
@@ -100,7 +100,7 @@ get_header();
                   Premium</a>
                 <p class="ff-secondary mt-2 mb-0">* Plano anual total R$ 1.558,80</p>
               </div>
-              <ul class="ui-plan__list list-group list-group-flush mt-5">
+              <ul class="ui-plan__list list-group list-group-flush">
                 <li class="list-group-item">
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Plano de ensino personalizado
                 </li>
@@ -130,13 +130,13 @@ get_header();
                 </li>
               </ul>
             </div>
-            <div class="p-3 bg-secondary"></div>
+            <div class="mt-3 p-3 bg-secondary"></div>
           </div> <!-- //ui-plan -->
         </div> <!-- //col  -->
         <div class="col">
           <div class="ui-plan bg-white mb-5 ms-auto">
             <div class="ribbon"><span>Recomendado</span></div>
-            <div class="p-5">
+            <div class="d-flex flex-column">
               <h5 class="ui-plan__title card-title text-uppercase text-center mt-4">Odontopediatria <br>
                 Plus <span><i class="fas fa-plus-circle text-primary"></i></span></h5>
               <h6 class="ui-plan__price">R$ <span>137,80</span> /mês</h6>
@@ -145,7 +145,7 @@ get_header();
                   Plus</a>
                 <p class="ff-secondary mt-2 mb-0">* Plano anual total R$ 1.653,60</p>
               </div>
-              <ul class="ui-plan__list list-group list-group-flush mt-5">
+              <ul class="ui-plan__list list-group list-group-flush">
                 <li class="list-group-item">
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Plano de ensino personalizado
                 </li>
@@ -181,7 +181,7 @@ get_header();
                 </li>
               </ul>
             </div>
-            <div class="p-3 bg-primary"></div>
+            <div class="mt-3 p-3 bg-primary"></div>
           </div> <!-- //ui-plan -->
         </div> <!-- //col  -->
       </div> <!-- //row -->

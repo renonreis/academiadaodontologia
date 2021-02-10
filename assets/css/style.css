@@ -10847,11 +10847,11 @@ header nav .callToAction a:hover {
 	margin-bottom: 18px;
 }
 
-.app-mobile-sidebar .mobile-menu ul li .btn-destaque {
+.app-mobile-sidebar .mobile-menu ul li.btn-destaque {
 	background: #e71d7c;
 	border-radius: 3.2px;
 	line-height: 25px;
-	margin: 0 20px;
+	margin: 0px;
 	min-width: 160px;
 	text-align: center;
 }
@@ -11323,12 +11323,26 @@ footer h2, footer .h2 {
 }
 
 .ui-plan__title {
-	font-size: 32px;
+	font-size: 24px;
 	color: #201e22;
 	font-weight: 900;
 	margin-bottom: 30px;
 	word-wrap: break-word !important;
 	word-break: break-word !important;
+	margin-top: 80px !important;
+}
+
+@media (min-width: 768px) {
+	.ui-plan__title {
+		font-size: 32px;
+		margin-top: 60px !important;
+	}
+}
+
+@media (min-width: 1024px) {
+	.ui-plan__title {
+		margin-top: 80px !important;
+	}
 }
 
 .ui-plan__price {
@@ -11348,9 +11362,52 @@ footer h2, footer .h2 {
 }
 
 .ui-plan__list {
-	font-size: 18px;
+	font-size: 15px;
 	font-weight: 600;
 	font-family: 'Open Sans', sans-serif;
+	margin-top: 30px;
+}
+
+@media (min-width: 375px) {
+	.ui-plan__list {
+		padding: 0 20px;
+	}
+}
+
+@media (min-width: 425px) {
+	.ui-plan__list {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 768px) {
+	.ui-plan__list {
+		font-size: 18px;
+		padding: 0 40px;
+		margin-top: 20px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.ui-plan__list {
+		padding: 0 50px;
+	}
+}
+
+.ui-plan__list li {
+	padding-left: 30px;
+}
+
+@media (min-width: 768px) {
+	.ui-plan__list li {
+		padding-left: 40px;
+	}
+}
+
+.ui-plan__list li i {
+	position: absolute;
+	left: 0;
+	top: 13px;
 }
 
 .ui-plan .ribbon {

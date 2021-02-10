@@ -8,6 +8,15 @@ const header_height = header.offsetHeight
 const add_class_on_scroll = () => header.classList.add("bg-dark")
 const remove_class_on_scroll = () => header.classList.remove("bg-dark")
 
+// verifica se o scrool está abaixo do 95px do topo adiciona a classe bg-dark
+if (window.scrollY > 95) {
+  // add class
+  header.classList.add("bg-dark");
+} else {
+  // remove class
+}
+
+
 window.addEventListener('scroll', function () {
   scrollpos = window.scrollY;
   if (scrollpos >= header_height) { add_class_on_scroll() }
@@ -15,7 +24,16 @@ window.addEventListener('scroll', function () {
 
   // console.log(scrollpos);
 });
-// end vanilla scroll
+
+
+
+
+
+
+
+
+
+
 /*
 Menu mobile
 ========================= */
@@ -69,7 +87,7 @@ function RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-if(window.location.pathname == '/cursos/') {
+if (window.location.pathname == '/cursos/') {
   // Add active class to the current button (highlight it)
   var btnContainer = document.getElementById("filters");
   var btns = btnContainer.getElementsByClassName("filters__btn");

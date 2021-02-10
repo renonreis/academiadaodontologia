@@ -199,11 +199,11 @@ header{
       padding: 0;
       margin: 0;
       li{  margin-bottom: 18px;
-        .btn-destaque{
+        &.btn-destaque{
           background: #e71d7c;
           border-radius: 3.2px;
           line-height: 25px;
-          margin: 0 20px;
+          margin: 0px;
           min-width: 160px;
           text-align: center;
         }

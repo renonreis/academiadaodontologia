@@ -33,6 +33,11 @@
         font-size: 16px; 
     }
 }
+
+.content-entry{
+    @extend .entry-content
+}
+
 .entry-content{
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
@@ -88,7 +93,13 @@
 
     /* == WordPress WYSIWYG Editor Styles == */
 
-p{    margin: 0 0 1.75em;}
+p{    
+    margin: 0 0 1.75em;
+    font-size: 1rem; 
+    @include media-breakpoint-up(md) {
+        font-size: 1.25rem;
+    }
+}
 address {
     font-style: italic;
     margin: 0 0 1.75em;

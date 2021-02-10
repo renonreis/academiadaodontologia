@@ -11831,15 +11831,59 @@ ul#filters {
 	margin-bottom: 20px;
 }
 
-.list-invist li {
+@media (min-width: 992px) {
+	.list-invist {
+		height: 100%;
+	}
+}
+
+.list-invist .list-invist__item-center {
+	padding: 3% 0;
+}
+
+@media (min-width: 425px) {
+	.list-invist .list-invist__item-center {
+		padding: 2% 0;
+	}
+}
+
+@media (min-width: 768px) {
+	.list-invist .list-invist__item-center {
+		padding: 1% 0;
+	}
+}
+
+@media (min-width: 992px) {
+	.list-invist .list-invist__item-center {
+		padding: 3.1% 0;
+	}
+}
+
+@media (min-width: 1024px) {
+	.list-invist li {
+		height: 33%;
+	}
+}
+
+@media (min-width: 1440px) {
+	.list-invist li {
+		height: 33.6%;
+	}
+}
+
+.list-invist li > div {
 	border-left: 3px solid #e71d7c;
 	color: #fff;
 	position: relative;
 	overflow: hidden;
 	font-weight: 700;
-	padding: 2.7rem;
 	background-color: #131313;
-	margin-bottom: 1.1rem;
+	padding: 1.86rem;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
 }
 
 .list-invist li:last-child {

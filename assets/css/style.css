@@ -11073,9 +11073,21 @@ footer h2, footer .h2 {
 	transform: translateY(-10px);
 }
 
+@media (max-width: 575.98px) {
+	.card-course:hover {
+		background-color: #fff;
+	}
+}
+
 .card-course:hover::before {
-	background-image: linear-gradient(to top, white 30%, rgba(0, 0, 0, 0) 80%);
 	transition: all 0.2s linear;
+	background: linear-gradient(to top, white 0%, white 100%);
+}
+
+@media (min-width: 768px) {
+	.card-course:hover::before {
+		background-image: linear-gradient(to top, white 30%, rgba(0, 0, 0, 0) 80%);
+	}
 }
 
 .card-course:hover .card-course_all_height {
@@ -11084,12 +11096,17 @@ footer h2, footer .h2 {
 
 .card-course::before {
 	content: "";
-	background-image: linear-gradient(to top, black 30%, rgba(0, 0, 0, 0) 80%);
 	height: 100%;
 	width: 100%;
 	position: absolute;
 	z-index: 1;
 	transition: all 0.2s linear;
+}
+
+@media (min-width: 768px) {
+	.card-course::before {
+		background-image: linear-gradient(to top, black 30%, rgba(0, 0, 0, 0) 80%);
+	}
 }
 
 .card-course_is-new::after {

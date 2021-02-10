@@ -10495,6 +10495,12 @@ fieldset:disabled .btn {
 	color: #fff;
 }
 
+@media (min-width: 576px) {
+	.hero h1 .br, .hero .h1 .br {
+		display: block;
+	}
+}
+
 .hero .container {
 	position: relative;
 	z-index: 2;
@@ -10962,7 +10968,6 @@ footer h2, footer .h2 {
 
 .card-course {
 	min-height: 600px;
-	margin-bottom: 20px;
 	border-radius: 0;
 	text-align: center;
 	background: #141414;

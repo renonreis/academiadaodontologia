@@ -24,8 +24,8 @@ get_header();
     </video>
     <div class="container h-100">
       <div class="d-flex h-100 align-items-end">
-        <div class="w-100 text-white">
-          <h1 class="display-1">Sua atualização online <br> em Odontopediatria</h1>
+        <div class="w-100 text-white text-center text-sm-start">
+          <h1 class="display-1">Sua atualização online <span class="br"> em Odontopediatria</h1>
           <a href="#" class="hero-button btn btn-primary btn-lg py-3 px-5 mt-4">Comece agora!</a>
         </div>
       </div>
@@ -182,7 +182,7 @@ get_header();
           </div>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3 g-lg-4">
         <?php           
           $args = array(
           'numberposts'	=> -1,

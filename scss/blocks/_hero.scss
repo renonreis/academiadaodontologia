@@ -26,6 +26,9 @@
         //  font-size: 68px;
          font-weight: 700;
          color: #fff;
+         .br{ 
+           @include media-breakpoint-up(sm) { display: block;}
+         }
     }
 
     &__content{

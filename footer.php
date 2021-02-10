@@ -84,6 +84,7 @@
 <div class="talk-whatsapp">
   <div class="talk-whatsapp__info">
     <span>Fale conosco via whatsapp</span>
+    <span><?php the_field('whatsapp_number', 'option'); ?></span>
   </div>
   <a class="talk-whatsapp__link"
     href="https://api.whatsapp.com/send?phone=55<?php the_field('whatsapp_number', 'option'); ?>" target="_blank">

@@ -81,13 +81,13 @@ $author_id = get_the_author_meta( 'ID' );
         </div>
       </section>
       <section class="row bg-white justify-content-center">
-        <div class="col-10">
-          <div class=" row py-5  text-dark g-0   overflow-hidden flex-md-row position-relative">
+        <div class="col-12 col-lg-10">
+          <div class=" row py-5  text-dark g-0  overflow-hidden flex-md-row position-relative">
             <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
               <img src="<?php echo get_avatar_url($user->ID, ['size' => '112']); ?>" class="border-1 rounded-circle"
                 width="112px" height="112px" alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
             </div>
-            <div class="col p-4 pt-1 ps-5 d-flex flex-column position-static">
+            <div class="col p-lg-4 p-3 pt-1 ps-lg-5 d-flex flex-column position-static">
               <h3 class="fs-4 fw-bolder">
                 <?php echo get_the_author_meta( 'first_name', $author_id ); ?>
                 <?php echo get_the_author_meta( 'last_name', $author_id ); ?>

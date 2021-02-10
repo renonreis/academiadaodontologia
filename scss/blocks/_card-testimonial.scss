@@ -5,9 +5,9 @@
     font-family: 'Raleway', sans-serif;
     margin-bottom: 30px;
     border:none;
-&__modal{
-    background-color: #1a1a1a;
-}
+    &__modal{
+        background-color: #1a1a1a;
+    }
     &__media{
         position: relative;
         &.has-video{
@@ -59,13 +59,21 @@
     .blockquote{
         background-color: #181818;
         color: #c7c7c7;
-        padding: 150px 60px 50px 60px;
-        font-size: 20px;
+        padding: 150px 20px 50px 20px;
+        font-size: 18px;
         font-weight: 300;
         margin-bottom: 0;
         line-height: 1.8; 
         position: relative;
         text-align: center;
+        
+        @include media-breakpoint-up(sm) { }
+        @include media-breakpoint-up(md) { }
+        @include media-breakpoint-up(lg) {
+            padding: 150px 60px 50px 60px;
+            font-size: 20px;    
+         } 
+
         &:after {
             position: absolute;
             width: 47px;

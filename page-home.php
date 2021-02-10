@@ -22,10 +22,10 @@ get_header();
       <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/Mariane-Makinf-of-VERSAO-1-MINUTO.mp4"
         type="video/mp4">
     </video>
-    <div class="container h-100">
-      <div class="d-flex h-100 align-items-end">
-        <div class="w-100 text-white">
-          <h1 class="display-1">Sua atualização online <br> em Odontopediatria</h1>
+    <div class="container">
+      <div class="d-flex align-items-end">
+        <div class="w-100 text-white text-center text-sm-start">
+          <h1 class="display-1">Sua atualização online <span class="br"> em Odontopediatria</h1>
           <a href="#" class="hero-button btn btn-primary btn-lg py-3 px-5 mt-4">Comece agora!</a>
         </div>
       </div>
@@ -44,11 +44,26 @@ get_header();
       <div class="row">
         <div class="col-lg-4">
           <ul class="list-invist text-center p-0">
-            <li><span class="fs-2">+22</span> <span class="fs-3">cursos</span>
+            <li>
+              <div>
+                  <div class>
+                      <span class="fs-2">+22</span> <span class="fs-3">cursos</span>
+                  </div>
+              </div>
             </li>
-            <li><span class="fs-2">14</span> <span class="fs-3">professores</span>
+            <li class="list-invist__item-center">
+              <div>
+                <div>
+                   <span class="fs-2">14</span> <span class="fs-3">professores</span>
+                </div>
+              </div>
             </li>
-            <li><span class="fs-2">540</span> <span class="fs-3">horas/aula</span>
+            <li>
+              <div>
+                <div>
+                   <span class="fs-2">540</span> <span class="fs-3">horas/aula</span>    
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -182,7 +197,7 @@ get_header();
           </div>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3 g-lg-4">
         <?php           
           $args = array(
           'numberposts'	=> -1,
@@ -220,13 +235,13 @@ get_header();
               }
             ?>
             <a class="card-course_all_height" href="<?php echo get_post_permalink(); ?>">
-              <div class="card-course-content">
-                <img class="img-thumbnai" src="<?php
+              <div class="card-course-content"> 
+                <div class="thumb-avatar" style="background-image: url(<?php
                   foreach($post_terms as $term){     
                     the_field('image_teacher', $term);                  
                   }
-                ?>" alt="Nome alternativo">
-                <h3><?php echo $post_terms[0]->name; ?></h3>
+                ?>)"></div>
+                <h3 title="<?php echo $post_terms[0]->name; ?>"><?php echo $post_terms[0]->name; ?></h3>
                 <div class="line"></div>
                 <p><?php the_title(); ?></p>
                 <span class="time">

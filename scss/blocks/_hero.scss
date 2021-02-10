@@ -1,9 +1,13 @@
 .hero{
-    min-height: 100vh;
-    height: 900px;
-    // background: radial-gradient(circle, white 0%, black 100%);
-    // background-blend-mode: difference;
-    /* background: #000; */
+    min-height: calc(100vh - 30px);
+    height: 600px;
+    @include media-breakpoint-up(sm) {}
+    @include media-breakpoint-up(md) { 
+      min-height: 100vh;
+      height: 900px;
+    }
+    @include media-breakpoint-up(lg) {}
+
     background-size: cover;
     align-items: flex-end;
     display: flex;
@@ -26,6 +30,9 @@
         //  font-size: 68px;
          font-weight: 700;
          color: #fff;
+         .br{ 
+           @include media-breakpoint-up(sm) { display: block;}
+         }
     }
 
     &__content{

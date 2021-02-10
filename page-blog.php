@@ -30,7 +30,7 @@ get_header();
       <div class="row">
         <div class="col-lg-8 mb-md-0 mb-3">
           <!--init postlist -->
-          <div class="row row-cols-1 row-cols-lg-2 g-3" data-masonry='{"percentPosition": false }'>
+          <div class="row row-cols-1 row-cols-md-2 g-3" data-masonry='{"percentPosition": false }'>
             <?php           
               $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
               

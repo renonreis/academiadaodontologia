@@ -10,7 +10,10 @@
 
  
 .entry-header{
-    padding: 3rem 3rem 1rem 3rem;
+    padding: 3rem 1rem 1rem 1rem;
+    @include media-breakpoint-up(sm) {
+        padding: 3rem 3rem 1rem 3rem;
+    }
     h1 { 
         color: var(--bs-primary);
         font-family: 'Raleway', sans-serif;
@@ -32,9 +35,14 @@
 }
 .entry-content{
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 300;
-    padding: 1rem 3rem 3rem 3rem;
+    padding: 1rem 1rem 3rem 1rem;
+
+    @include media-breakpoint-up(sm) { 
+        padding: 1rem 3rem 3rem 3rem;
+        font-size: 1.25rem;
+    }
 
     h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
         font-family: 'Open Sans', sans-serif;
@@ -46,12 +54,20 @@
     margin-bottom: 1em;
     }
     h3{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         line-height: 1.2173913043;
         margin-top: 2.4347826087em;
         margin-bottom: 1.2173913043em;
         font-weight: 600;
+
+        @include media-breakpoint-up(sm) {
+            font-size: 1.3rem;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 1.5rem;
+        }
     }
+
 
     .wp-block-image{
         background: #e7e7e7;
@@ -221,3 +237,19 @@ table {
 
 
  } 
+
+
+
+
+ .author{
+    &__card{}
+
+    &__descripion{
+        font-size: 1rem;
+        @media (min-width: 375px) {}
+        @media (min-width: 425px) {}
+        @media (min-width: 768px) { font-size: 1.1rem}
+        @media (min-width: 1024px) { font-size: 1.25rem}
+     }
+
+ }

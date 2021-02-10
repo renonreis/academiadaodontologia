@@ -25,7 +25,9 @@
         @extend .p-4;
 
         .author{
-            font-size: 1.125rem; 
+            font-size: 1.125rem;
+            @extend .fw-normal;
+            @extend .ff-primary;
         }
         time{
             @extend .ff-secondary;

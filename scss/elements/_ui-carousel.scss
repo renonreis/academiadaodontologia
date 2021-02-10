@@ -3,6 +3,46 @@
 
    .lead{ font-size: 20px; font-weight: 300;} 
 
+   figure{
+    margin: 0 0 1rem;
+
+    @media (min-width: 375px) { 
+        margin: 0 0 1rem;
+    }
+    @media (min-width: 425px) { 
+        margin: 0 2rem 1rem;
+    }
+    @media (min-width: 768px) { 
+        margin: 0 2rem 1rem;
+    }
+    
+
+        blockquote{
+            p{
+                @include media-breakpoint-down(md) { font-size: 1rem; }
+            }
+        }
+
+
+        figcaption{
+            display: flex;
+            flex-direction: column;
+            @media (min-width: 375px) {}
+            @media (min-width: 425px) {}
+            @media (min-width: 768px) {}
+            @media (min-width: 1024px) {
+                flex-direction: row;
+                align-items: center;
+            }
+            cite{  
+                margin-left: 0 !important; 
+                @media (min-width: 1024px) {
+                    margin-left: 15px !important; 
+                }
+             }
+        }
+    }
+
 }
 
 
@@ -15,7 +55,24 @@
 }
 
 
+.carousel-control-prev, 
+.carousel-control-next{ 
+    top: -430px;
+    @media (min-width: 375px) { 
+        top: -300px;
+    }
+    @media (min-width: 425px) { 
+        top: -270px;
+    }
+    @media (min-width: 768px) { 
+        top: -220px;
+    }
+    @media (min-width: 1024px) { 
+        top: 30px;
+    }
 
+    @include media-breakpoint-up(md) { font-size: 1rem; }
+}
 .carousel-control-prev-icon, 
 .carousel-control-next-icon{
     position: relative;
@@ -41,11 +98,16 @@
 .picture-person { 
     width: 292px;
     height: 292px;
+    max-width: 100%;
     background-position:center center;
-    background-size: cover;
-    // border: 1px solid red;
+    background-size: cover; 
     position: relative;
     margin: 15px !important; 
+    @include media-breakpoint-down(lg) { 
+         margin: 15px auto 35px auto !important; 
+         width: 232px;
+         height: 232px;
+    }
     &__container{
         transform: translateY(0);
     }
@@ -80,6 +142,12 @@
 
 
 .carousel-indicators{
+    bottom: -50px;
+    @media (min-width: 375px) {}
+    @media (min-width: 425px) {}
+    @media (min-width: 768px) {}
+    @media (min-width: 1024px) {}
+
     li{
         border-radius: 50%;
         width: 10px;

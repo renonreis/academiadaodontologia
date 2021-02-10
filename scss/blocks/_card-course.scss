@@ -11,10 +11,29 @@
   
  
 
+.home{
+    @include media-breakpoint-down(md) { 
+        .card-course{ 
+                background-image: none !important;
+                min-height: 210px;
+            } 
+    
+        .thumb-avatar{
+            display: none;
+        }
+        .card-course_is-new::after{
+            top: 0;
+            left: 0px;
+            border-radius: 0;
+            font-size: 11px;
+            height: 25px;
+        }
+    }
+}
 
 .card-course{
-    height: 600px;
-    margin-bottom: 20px;
+    min-height: 600px;
+    // margin-bottom: 20px;
     border-radius: 0;
     text-align: center;
     background: #141414;
@@ -26,7 +45,14 @@
     position: relative !important;
     background-repeat: no-repeat;
     border: 0;
-    transition: all 0.2s linear;
+    transition: all 0.2s linear; 
+   
+        @include media-breakpoint-down(sm) { 
+            margin-right: 1.5rem !important;
+            margin-left: 1.5rem !important;
+        } 
+
+
     .up-link{
         z-index: 3000;
         position: relative;
@@ -40,6 +66,7 @@
         display: flex;
         align-items: flex-end;
         transition: all 0.2s linear;
+        @extend .stretched-link;
         &:hover{
             color: #fff;
         }
@@ -102,6 +129,7 @@
     &-content{
         z-index: 2;
         width: 100%;
+        padding-top: 40px;
         img{
             width: 112px;
             height: 112px;
@@ -119,10 +147,14 @@
         background-position: center center; 
         border-radius: 50%;
         margin-bottom: 15px;
-        &--large{
-            width: 160px;
-            height: 160px;  
-        }
+            &--large{
+                 width: 160px;
+                 height: 160px;  
+                @media (min-width: 375px) {}
+                @media (min-width: 425px) {}
+                @media (min-width: 768px) {}
+                @media (min-width: 1024px) {}
+            }
        }
        .line{
         width: 80%;
@@ -141,6 +173,11 @@
         font-size: 24px;
         text-transform: uppercase;
         margin-bottom: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-left: 20px;
+        padding-right: 20px;
         &.h3--large{ font-size: 30px; }
        }
 

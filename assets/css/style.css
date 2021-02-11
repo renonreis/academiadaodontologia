@@ -10719,8 +10719,8 @@ header .menu-hamburger:hover, header .menu-hamburger:focus {
 
 header .navbar-brand {
 	background-image: url(../../assets/images/brand.png);
-	width: 60px;
-	height: 42px;
+	width: 230px;
+	height: 32px;
 	background-size: cover;
 	background-repeat: no-repeat;
 }

@@ -11003,6 +11003,24 @@ footer h2, footer .h2 {
 		background-image: none !important;
 		min-height: 210px;
 	}
+	.home .card-course:hover {
+		background-color: #fff !important;
+	}
+}
+
+@media (max-width: 767.98px) and (max-width: 767.98px) {
+	.home .card-course::before {
+		background-image: none !important;
+	}
+}
+
+@media (max-width: 767.98px) and (max-width: 767.98px) {
+	.home .card-course::before:hover {
+		background-image: none  !important;
+	}
+}
+
+@media (max-width: 767.98px) {
 	.home .thumb-avatar {
 		display: none;
 	}
@@ -11082,12 +11100,7 @@ footer h2, footer .h2 {
 .card-course:hover::before {
 	transition: all 0.2s linear;
 	background: linear-gradient(to top, white 0%, white 100%);
-}
-
-@media (min-width: 768px) {
-	.card-course:hover::before {
-		background-image: linear-gradient(to top, white 30%, rgba(0, 0, 0, 0) 80%);
-	}
+	background-image: linear-gradient(to top, white 30%, rgba(0, 0, 0, 0) 80%);
 }
 
 .card-course:hover .card-course_all_height {
@@ -11101,12 +11114,7 @@ footer h2, footer .h2 {
 	position: absolute;
 	z-index: 1;
 	transition: all 0.2s linear;
-}
-
-@media (min-width: 768px) {
-	.card-course::before {
-		background-image: linear-gradient(to top, black 30%, rgba(0, 0, 0, 0) 80%);
-	}
+	background-image: linear-gradient(to top, black 30%, rgba(0, 0, 0, 0) 80%);
 }
 
 .card-course_is-new::after {

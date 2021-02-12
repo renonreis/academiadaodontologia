@@ -234,6 +234,11 @@ get_header();
                 </style>';
               }
             ?>
+            <?php  if(	$term->slug === 'sedacao') : ?>
+            <span class="card-course__plus">
+              <i class="fas fa-plus-circle"></i>
+            </span>
+            <?php endif;  ?>
             <a class="card-course_all_height" href="<?php echo get_post_permalink(); ?>">
               <div class="card-course-content"> 
                 <div class="thumb-avatar" style="background-image: url(<?php

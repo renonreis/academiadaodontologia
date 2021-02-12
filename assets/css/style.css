@@ -11021,6 +11021,17 @@ footer h2, footer .h2 {
 }
 
 @media (max-width: 767.98px) {
+	.home .card-course .card-course__plus {
+		font-size: 29px;
+		right: 10px;
+		top: 5px;
+	}
+	.home .card-course .card-course__plus:after {
+		width: 1.1rem;
+		height: 1.1rem;
+		right: 6px;
+		top: 11px;
+	}
 	.home .thumb-avatar {
 		display: none;
 	}
@@ -11054,6 +11065,31 @@ footer h2, footer .h2 {
 		margin-right: 1.5rem !important;
 		margin-left: 1.5rem !important;
 	}
+}
+
+.card-course .card-course__plus {
+	position: absolute;
+	right: 20px;
+	top: 8px;
+	font-size: 49px;
+	color: var(--bs-primary);
+}
+
+.card-course .card-course__plus:after {
+	content: "";
+	background: #fff;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 9px;
+	top: 21px;
+	z-index: 0;
+	border-radius: 50%;
+}
+
+.card-course .card-course__plus i {
+	position: relative;
+	z-index: 1;
 }
 
 .card-course .up-link {
@@ -11816,6 +11852,24 @@ footer h2, footer .h2 {
 ul#filters {
 	overflow-x: auto;
 	white-space: nowrap;
+}
+
+ul#filters a i {
+	position: relative;
+	color: var(--bs-primary);
+	overflow: hidden;
+}
+
+ul#filters a i:after {
+	background: #fff;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	content: "";
+	right: 2px;
+	z-index: -1;
+	top: 2px;
 }
 
 @media (max-width: 767.98px) {

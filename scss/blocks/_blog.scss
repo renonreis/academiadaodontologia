@@ -1,6 +1,22 @@
 ul#filters{
     overflow-x: auto;
     white-space: nowrap;
+    a i {
+        position: relative;
+        color: var(--bs-primary);
+        overflow: hidden;
+        &:after {
+            background: #fff;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            content: "";
+            right: 2px;
+            z-index: -1;
+            top: 2px;
+        }
+    }
     @include media-breakpoint-down(md) { 
         a{
             display: flex;

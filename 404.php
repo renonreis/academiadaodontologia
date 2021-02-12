@@ -12,10 +12,10 @@ get_header();
 
 <main id="main" class="site-main">
   <section class="mt-5 py-5 mb-5 error-404 not-found">
-    <div class="container mt-5 mb-5">
+    <div class="container mb-5">
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <div class="ui-title">
+          <div class="ui-title py-3 py-md-4 py-lg-5">
             <header class="page-header">
               <h1 class="ui-title-main page-title">
                 <?php esc_html_e( 'Ops! Essa página não pode ser encontrada.', 'academiadaodontologia' ); ?>

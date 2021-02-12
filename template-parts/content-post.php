@@ -14,7 +14,7 @@ $author_id = get_the_author_meta( 'ID' );
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <section class="mt-5 py-5 mb-5 ">
-    <div class="container mt-5 mb-5">
+    <div class="container mb-5">
       <div class="d-flex align-items-center">
         <div class="flex-shrink-1 d-flex">
           <a href="<?php echo get_home_url(); ?>/blog" id="" class="return-page text-white fs-1 ff-primary"

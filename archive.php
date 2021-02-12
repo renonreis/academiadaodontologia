@@ -12,11 +12,11 @@ get_header();
 
 <main id="main" class="site-main">
   <section class="mt-5 py-5 mb-5">
-    <div class="container mt-5 mb-5">
+    <div class="container mb-5">
       <div class="row">
         <div class="col">
           <?php if ( have_posts() ) : ?>
-          <div class="ui-title">
+          <div class="ui-title py-3 py-md-4 py-lg-5">
             <header class="page-header">
               <?php
 								the_archive_title( '<h1 class="ui-title-main page-title">', '</h1>' );

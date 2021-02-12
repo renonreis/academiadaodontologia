@@ -4,8 +4,9 @@ ul#filters{
     @include media-breakpoint-down(md) { 
         a{
             display: flex;
-            border-radius: 0;
-            align-items: center;
+             align-items: center;
+             margin-bottom: 5px;
+
             i{margin-left: 5px;}
         }
     }

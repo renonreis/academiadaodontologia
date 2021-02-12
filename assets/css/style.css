@@ -11803,6 +11803,15 @@ footer h2, footer .h2 {
 	}
 }
 
+@media (min-width: 768px) {
+	.related-posts .col:first-child {
+		padding-left: 0;
+	}
+	.related-posts .col:last-child {
+		padding-right: 0;
+	}
+}
+
 .single__big-hero-image {
 	background-color: #1a1a1a;
 	background-repeat: no-repeat;
@@ -11822,7 +11831,6 @@ footer h2, footer .h2 {
 }
 
 .single__big-hero-image .info-text {
-	margin-top: 50px;
 	color: #979797;
 	font-family: 'Open Sans';
 	padding: 0;
@@ -11850,7 +11858,7 @@ footer h2, footer .h2 {
 		font-family: 'Raleway';
 		display: flex;
 		font-weight: bold;
-		margin: 0 auto;
+		margin: 0 auto 50px;
 	}
 }
 

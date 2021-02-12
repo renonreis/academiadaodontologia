@@ -1,163 +1,180 @@
-.return-page{
-    span {
-        transform: translateX(0px);
-        transition: all 0.2s linear;
-    }
-    &:hover span {
-        transform: translateX(-10px);
-    }
+.return-page {
+  span {
+    transform: translateX(0px);
+    transition: all 0.2s linear;
+  }
+  &:hover span {
+    transform: translateX(-10px);
+  }
 }
 
- 
-.entry-header{
-    padding: 3rem 1rem 1rem 1rem;
-    @include media-breakpoint-up(sm) {
-        padding: 3rem 3rem 1rem 3rem;
-    }
-    h1 { 
-        color: var(--bs-primary);
-        font-family: 'Raleway', sans-serif;
-        font-weight: 300;
-        // font-size: 48px;
-    }
-
-    &__badge{
-         padding: 0.5rem  1rem ;
-        font-weight: 600;
-        font-family: 'Raleway', sans-serif;
-        border-radius: 0;
-        font-size: 0.688rem;
-        &.primary{background-color: #ca5290 !important;}
-    }
-    time{
-        font-size: 16px; 
-    }
-}
-
-.content-entry{
-    @extend .entry-content
-}
-
-.entry-content{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
+.entry-header {
+  padding: 3rem 1rem 1rem 1rem;
+  @include media-breakpoint-up(sm) {
+    padding: 3rem 3rem 1rem 3rem;
+  }
+  h1 {
+    color: var(--bs-primary);
+    font-family: "Raleway", sans-serif;
     font-weight: 300;
-    padding: 1rem 1rem 3rem 1rem;
+    // font-size: 48px;
+  }
 
-    @include media-breakpoint-up(sm) { 
-        padding: 1rem 3rem 3rem 3rem;
-        font-size: 1.25rem;
+  &__badge {
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+    border-radius: 0;
+    font-size: 0.688rem;
+    &.primary {
+      background-color: #ca5290 !important;
     }
+  }
+  time {
+    font-size: 16px;
+  }
+}
 
-    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
-        font-family: 'Open Sans', sans-serif;
-    }
-    h2{
+.content-entry {
+  @extend .entry-content;
+}
+
+.entry-content {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 1rem 1rem 3rem 1rem;
+
+  @include media-breakpoint-up(sm) {
+    padding: 1rem 3rem 3rem 3rem;
+    font-size: 1.25rem;
+  }
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    font-family: "Open Sans", sans-serif;
+  }
+  h2 {
     font-size: 1.75rem;
     line-height: 1.25;
     margin-top: 2em;
     margin-bottom: 1em;
+  }
+  h3 {
+    font-size: 1.2rem;
+    line-height: 1.2173913043;
+    margin-top: 2.4347826087em;
+    margin-bottom: 1.2173913043em;
+    font-weight: 600;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1.3rem;
     }
-    h3{
-        font-size: 1.2rem;
-        line-height: 1.2173913043;
-        margin-top: 2.4347826087em;
-        margin-bottom: 1.2173913043em;
-        font-weight: 600;
-
-        @include media-breakpoint-up(sm) {
-            font-size: 1.3rem;
-        }
-        @include media-breakpoint-up(lg) {
-            font-size: 1.5rem;
-        }
+    @include media-breakpoint-up(lg) {
+      font-size: 1.5rem;
     }
+  }
 
-
-    .wp-block-image{
-        background: #e7e7e7;
-        display: flex;
-        margin: 0 auto 1.5rem auto;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        max-width: max-content;
-        img{ margin: 0;} 
-        figcaption{
-            margin-top: .5em;
-            margin-bottom: .5em;
-            font-size: 18px;
-         }
+  .wp-block-image {
+    background: #e7e7e7;
+    display: flex;
+    margin: 0 auto 1.5rem auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: max-content;
+    img {
+      margin: 0;
     }
+    figcaption {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      font-size: 18px;
+    }
+  }
 
-    /* == WordPress WYSIWYG Editor Styles == */
+  /* == WordPress WYSIWYG Editor Styles == */
 
-p{    
+  p {
     margin: 0 0 1.75em;
-    font-size: 1rem; 
+    font-size: 1rem;
     @include media-breakpoint-up(md) {
-        font-size: 1.25rem;
+      font-size: 1.25rem;
     }
-}
-address {
+  }
+  address {
     font-style: italic;
     margin: 0 0 1.75em;
-}
- pre{
+  }
+  pre {
     background: #000;
     color: #fff;
     padding: 2em;
- }
+  }
 
-img {
+  img {
     margin: 0 0 1.5em 0;
     max-width: 100%;
     height: auto;
-	}
-.alignleft, img.alignleft {
-	margin-right: 1.5em;
-	display: inline;
-	float: left;
-	}
-.alignright, img.alignright {
-	margin-left: 1.5em;
-	display: inline;
-	float: right;
-	}
-.aligncenter, img.aligncenter {
-	margin-right: auto;
-	margin-left: auto;
-	display: block;
-	clear: both;
-	}
-.alignnone, img.alignnone {
-	/* not sure about this one */
-	}
-.wp-caption {
-	margin-bottom: 1.5em;
-	text-align: center;
+  }
+  .alignleft,
+  img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
+  .alignright,
+  img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
+  .aligncenter,
+  img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
+  .alignnone,
+  img.alignnone {
+    /* not sure about this one */
+  }
+  .wp-caption {
+    margin-bottom: 1.5em;
+    text-align: center;
     padding-top: 5px;
     max-width: 100%;
-	}
-.wp-caption img {
-	border: 0 none;
-	padding: 0;
+  }
+  .wp-caption img {
+    border: 0 none;
+    padding: 0;
     margin: 0;
     max-width: 100%;
     height: auto;
-	}
-.wp-caption p.wp-caption-text {
-	line-height: 1.5;
-	font-size: 10px;
-	margin: 0;
-	}
-.wp-smiley {
-	margin: 0 !important;
-	max-height: 1em;
-    }
-    
- blockquote{
+  }
+  .wp-caption p.wp-caption-text {
+    line-height: 1.5;
+    font-size: 10px;
+    margin: 0;
+  }
+  .wp-smiley {
+    margin: 0 !important;
+    max-height: 1em;
+  }
+
+  blockquote {
     border: 0 solid #1a1a1a;
     border-left-width: 4px;
     color: #686868;
@@ -168,53 +185,62 @@ img {
     margin: 0 0 1.4736842105em;
     overflow: hidden;
     padding: 0 0 0 1.263157895em;
-    cite, small {
-        color: #1a1a1a;
-        display: block;
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 1.75;
-        &:before {
-            content: "\2014\00a0";
-        }
+    cite,
+    small {
+      color: #1a1a1a;
+      display: block;
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.75;
+      &:before {
+        content: "\2014\00a0";
+      }
     }
 
-    em, i, cite {
-        font-style: normal;
+    em,
+    i,
+    cite {
+      font-style: normal;
     }
+  }
 
-   
- }   
+  blockquote.left {
+    margin-right: 20px;
+    text-align: right;
+    margin-left: 0;
+    width: 33%;
+    float: left;
+  }
+  blockquote.right {
+    margin-left: 20px;
+    text-align: left;
+    margin-right: 0;
+    width: 33%;
+    float: right;
+  }
+  .gallery dl {
+  }
+  .gallery dt {
+  }
+  .gallery dd {
+  }
+  .gallery dl a {
+  }
+  .gallery dl img {
+  }
+  .gallery-caption {
+  }
 
- 
+  .size-full {
+  }
+  .size-large {
+  }
+  .size-medium {
+  }
+  .size-thumbnail {
+  }
 
-blockquote.left {
-	margin-right: 20px;
-	text-align: right;
-	margin-left: 0;
-	width: 33%;
-	float: left;
-	}
-blockquote.right {
-	margin-left: 20px;
-	text-align: left;
-	margin-right: 0;
-	width: 33%;
-	float: right;
-	}
-.gallery dl {}
-.gallery dt {}
-.gallery dd {}
-.gallery dl a {}
-.gallery dl img {}
-.gallery-caption {}
-
-.size-full {}
-.size-large {}
-.size-medium {}
-.size-thumbnail {}
-
-table {
+  table {
     --bs-table-bg: transparent;
     --bs-table-striped-color: #212529;
     --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
@@ -229,38 +255,54 @@ table {
     border-color: #dee2e6;
 
     > :not(caption) > * > * {
-        padding: 0.5rem 0.5rem;
-        background-color: var(--bs-table-bg);
-        background-image: linear-gradient(var(--bs-table-accent-bg), var(--bs-table-accent-bg));
-        border-bottom-width: 1px;
+      padding: 0.5rem 0.5rem;
+      background-color: var(--bs-table-bg);
+      background-image: linear-gradient(
+        var(--bs-table-accent-bg),
+        var(--bs-table-accent-bg)
+      );
+      border-bottom-width: 1px;
     }
-}
+  }
 
-
-.wp-caption .wp-caption-text {
+  .wp-caption .wp-caption-text {
     color: #686868;
     font-size: 13px;
     font-size: 0.8125rem;
     font-style: italic;
     line-height: 1.6153846154;
     padding-top: 0.5384615385em;
+  }
 }
 
+.author {
+  &__card {
+  }
 
- } 
+  &__descripion {
+    font-size: 1rem;
+    @media (min-width: 375px) {
+    }
+    @media (min-width: 425px) {
+    }
+    @media (min-width: 768px) {
+      font-size: 1.1rem;
+    }
+    @media (min-width: 1024px) {
+      font-size: 1.25rem;
+    }
+  }
+}
 
-
-
-
- .author{
-    &__card{}
-
-    &__descripion{
-        font-size: 1rem;
-        @media (min-width: 375px) {}
-        @media (min-width: 425px) {}
-        @media (min-width: 768px) { font-size: 1.1rem}
-        @media (min-width: 1024px) { font-size: 1.25rem}
-     }
-
- }
+@media (min-width: 768px) {
+  .related-posts {
+    .col {
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

@@ -49,15 +49,16 @@ $author_id = get_the_author_meta( 'ID' );
             </header><!-- .entry-header -->
             <ul class="list-inline pt-3">
               <li class="list-inline-item">
-                <img src="<?php echo get_avatar_url($user->ID, ['size' => '55']); ?>" class="border border-1 rounded-circle border-primarye"
-                  width="55px" height="55px" alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
+                <img src="<?php echo get_avatar_url($user->ID, ['size' => '55']); ?>"
+                  class="border border-1 rounded-circle border-primarye" width="55px" height="55px"
+                  alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
               </li>
               <li class="list-inline-item">
                 <?php echo get_the_author(); ?>
               </li>
             </ul>
             <span class="text-muted">
-              <time  class="ff-secondary fw-light"  datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished">
+              <time class="ff-secondary fw-light" datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished">
                 <?php echo get_the_date(); ?>
               </time>
             </span>
@@ -141,7 +142,7 @@ $author_id = get_the_author_meta( 'ID' );
           </div>
         </div> <!-- //col-->
       </section>
-      <section class="row position-relative py-5">
+      <section class="row position-relative py-5 related-posts">
         <?php
           $i = 0;
           $related = get_posts( array( 
@@ -190,7 +191,8 @@ $author_id = get_the_author_meta( 'ID' );
               </div>
               <div class="align-self-center">
                 <span class="text-muted">
-                  <time  class="ff-secondary fw-light"  datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished">
+                  <time class="ff-secondary fw-light" datetime="<?php echo get_the_date('c'); ?>"
+                    itemprop="datePublished">
                     <?php echo get_the_date(); ?>
                   </time>
                 </span>

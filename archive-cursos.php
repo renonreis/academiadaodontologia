@@ -64,26 +64,14 @@ get_header();
 					} 
 				endif;
 				?>">
-          <div class="card card-course  card-course_is-new"
+          <div
+            class="card card-course <?php if( get_field('course_is_new') === true ) { ?>card-course_is-new <?php } ?> "
             style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'medium_large'); ?>);">
-            <?php 
-              if( get_field('course_is_new') ) {
-                echo '';
-              } else {
-                echo '
-                <style>
-                  .card-course_is-new::after {
-                    display: none;
-                  }   
-                </style>';
-              }
-            ?>
-
-<?php  if(	$term->slug === 'sedacao') : ?>
-  <span class="card-course__plus">
-    <i class="fas fa-plus-circle"></i>
-  </span>
-  <?php endif;  ?>
+            <?php  if(	$term->slug === 'sedacao') : ?>
+            <span class="card-course__plus">
+              <i class="fas fa-plus-circle"></i>
+            </span>
+            <?php endif;  ?>
             <a class="card-course_all_height" href="<?php echo get_post_permalink(); ?>">
               <div class="card-course-content">
                 <div class="thumb-avatar" style="background-image: url(<?php

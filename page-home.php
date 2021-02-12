@@ -46,22 +46,22 @@ get_header();
           <ul class="list-invist text-center p-0">
             <li>
               <div>
-                  <div class>
-                      <span class="fs-2">+22</span> <span class="fs-3">cursos</span>
-                  </div>
+                <div class>
+                  <span class="fs-2">+22</span> <span class="fs-3">cursos</span>
+                </div>
               </div>
             </li>
             <li class="list-invist__item-center">
               <div>
                 <div>
-                   <span class="fs-2">14</span> <span class="fs-3">professores</span>
+                  <span class="fs-2">14</span> <span class="fs-3">professores</span>
                 </div>
               </div>
             </li>
             <li>
               <div>
                 <div>
-                   <span class="fs-2">540</span> <span class="fs-3">horas/aula</span>    
+                  <span class="fs-2">540</span> <span class="fs-3">horas/aula</span>
                 </div>
               </div>
             </li>
@@ -220,27 +220,15 @@ get_header();
 					} 
 				endif;
 				?>">
-          <div class="card card-course  card-course_is-new"
+          <div class="card card-course <?php if( get_field('course_is_new') === true ) { ?>card-course_is-new<?php } ?>"
             style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'medium_large'); ?>);">
-            <?php 
-              if( get_field('course_is_new') ) {
-                echo '';
-              } else {
-                echo '
-                <style>
-                  .card-course_is-new::after {
-                    display: none;
-                  }   
-                </style>';
-              }
-            ?>
             <?php  if(	$term->slug === 'sedacao') : ?>
             <span class="card-course__plus">
               <i class="fas fa-plus-circle"></i>
             </span>
             <?php endif;  ?>
             <a class="card-course_all_height" href="<?php echo get_post_permalink(); ?>">
-              <div class="card-course-content"> 
+              <div class="card-course-content">
                 <div class="thumb-avatar" style="background-image: url(<?php
                   foreach($post_terms as $term){     
                     the_field('image_teacher', $term);                  

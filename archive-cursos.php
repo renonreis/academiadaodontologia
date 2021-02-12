@@ -64,8 +64,7 @@ get_header();
 					} 
 				endif;
 				?>">
-          <div
-            class="card card-course <?php if( get_field('course_is_new') === true ) { ?>card-course_is-new <?php } ?> "
+          <div class="card card-course <?php if( get_field('course_is_new') === true ) { ?>card-course_is-new<?php } ?>"
             style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'medium_large'); ?>);">
             <?php  if(	$term->slug === 'sedacao') : ?>
             <span class="card-course__plus">

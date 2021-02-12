@@ -7,6 +7,11 @@
         transition: all 0.5s;
         z-index: 1;
       }
+    //   &.sedacao{
+    //       &::affter::before{
+    //         font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f055";
+    //       }
+    //   }
   }
   
  
@@ -16,6 +21,27 @@
         .card-course{ 
                 background-image: none !important;
                 min-height: 210px;
+                &:hover{
+                    background-color: #fff !important;
+                }
+                &::before{
+                    @include media-breakpoint-down(md) {  background-image: none !important } 
+                    &:hover{
+                        @include media-breakpoint-down(md) {  background-image: none  !important } 
+                    }
+                }
+                .card-course__plus{
+                    font-size: 29px;
+                    right: 10px;
+                    top: 5px;
+                    &:after{ 
+                        width: 1.1rem;
+                        height: 1.1rem; 
+                        right: 6px;
+                        top: 11px; 
+                    }
+
+                }
             } 
     
         .thumb-avatar{
@@ -52,6 +78,28 @@
             margin-left: 1.5rem !important;
         } 
 
+    .card-course__plus{
+        position: absolute;
+        right: 20px;
+        top: 8px;
+        font-size: 49px;
+        color: var(--bs-primary);
+
+        &:after{
+            content: "";
+            background: #fff;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 9px;
+            top: 21px;
+            z-index: 0;
+            border-radius: 50%;
+        }
+
+        i{     position: relative;
+            z-index: 1;}
+    }
 
     .up-link{
         z-index: 3000;
@@ -92,9 +140,7 @@
         &::before{ 
             transition: all 0.2s linear;
             background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
-            @include media-breakpoint-up(md) { 
                 background-image: linear-gradient(to top, rgba(255,255,255,1) 30%, rgba(0, 0, 0, 0) 80%); 
-            }
         }
         .card-course_all_height{
             color: black;
@@ -107,12 +153,11 @@
         width: 100%;
         position: absolute;
         z-index: 1;
-        transition: all 0.2s linear;
-        
-        @include media-breakpoint-up(md) {
-            background-image: linear-gradient(to top, rgba(0,0,0,1) 30%, rgba(0, 0, 0, 0) 80%); 
-        } 
+        transition: all 0.2s linear; 
+        background-image: linear-gradient(to top, rgba(0,0,0,1) 30%, rgba(0, 0, 0, 0) 80%);  
     }
+
+
 
     &_is-new::after{
         content: "NOVO";

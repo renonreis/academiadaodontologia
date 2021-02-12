@@ -35,7 +35,7 @@ get_header();
     <div class="container py-5">
       <div class="row">
         <div class="col-sm">
-          <div class="ui-title">
+          <div class="ui-title pb-4">
             <h2 class="ui-title-main ui-title-main--italic">Invista em conhecimento, invista em você</h2>
             <span class="ui-title-sub"> Conheça o nosso método de ensino</span>
           </div>
@@ -234,6 +234,11 @@ get_header();
                 </style>';
               }
             ?>
+            <?php  if(	$term->slug === 'sedacao') : ?>
+            <span class="card-course__plus">
+              <i class="fas fa-plus-circle"></i>
+            </span>
+            <?php endif;  ?>
             <a class="card-course_all_height" href="<?php echo get_post_permalink(); ?>">
               <div class="card-course-content"> 
                 <div class="thumb-avatar" style="background-image: url(<?php

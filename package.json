@@ -38,6 +38,7 @@
   },
   "scripts": {
     "watch": "node-sass scss/ -o ./assets/css --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "sync": "browser-sync start --proxy 'odonto.test' --files 'style.css' ",
     "compile:css": "node-sass scss/ -o ./assets/css && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",

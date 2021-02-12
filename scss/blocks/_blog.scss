@@ -1,11 +1,30 @@
 ul#filters{
     overflow-x: auto;
     white-space: nowrap;
+    a i {
+        position: relative;
+        color: var(--bs-primary);
+        overflow: hidden;
+        font-size: 23px;
+        vertical-align: text-bottom;
+        &:after {
+            background: #fff;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            content: "";
+            right: 2px;
+            z-index: -1;
+            top: 2px;
+        }
+    }
     @include media-breakpoint-down(md) { 
         a{
             display: flex;
-            border-radius: 0;
-            align-items: center;
+             align-items: center;
+             margin-bottom: 5px;
+
             i{margin-left: 5px;}
         }
     }

@@ -12,10 +12,10 @@ get_header();
 
 <main id="main" class="site-main">
   <section class="mt-5 py-5">
-    <div class="container mt-5 mb-5">
+    <div class="container mb-5">
       <div class="row">
         <div class="col">
-          <div class="ui-title pb-4">
+          <div class="ui-title py-3 py-md-4 py-lg-5">
             <h2 class="ui-title-main">Conheça nossos cursos</h2>
             <!-- <span class="ui-title-sub"> some subtitle</span> -->
           </div>
@@ -25,15 +25,15 @@ get_header();
         <div class="col-sm">
           <ul id="filters" class="list-inline text-center mb-5">
 
-            <a class="filters__btn btn active btn-lg btn-outline-light ms-2 border-gray-light"
+            <a class="filters__btn btn active btn-lg btn-outline-light ms-lg-2 border-gray-light"
               onclick="filterSelection('all')">Todos</a>
-            <a class="filters__btn btn btn-lg btn-outline-light ms-2 border-gray-light"
+            <a class="filters__btn btn btn-lg btn-outline-light ms-lg-2 border-gray-light"
               onclick="filterSelection('lancamentos')">Lançamentos</a>
-            <a class="filters__btn btn btn-lg btn-outline-light ms-2 border-gray-light"
+            <a class="filters__btn btn btn-lg btn-outline-light ms-lg-2 border-gray-light"
               onclick="filterSelection('mais-acessados')">Mais acessados</a>
-            <a class="filters__btn btn btn-lg btn-outline-light ms-2 border-gray-light"
+            <a class="filters__btn btn btn-lg btn-outline-light ms-lg-2 border-gray-light"
               onclick="filterSelection('semi-presenciais')">Semi-presenciais</a>
-            <a class="filters__btn btn btn-lg btn-outline-light ms-2 border-gray-light"
+            <a class="filters__btn btn btn-lg btn-outline-light ms-lg-2 border-gray-light"
               onclick="filterSelection('sedacao')">
               Sedação <i class="fas fa-plus-circle"></i>
             </a>
@@ -78,6 +78,12 @@ get_header();
                 </style>';
               }
             ?>
+
+<?php  if(	$term->slug === 'sedacao') : ?>
+  <span class="card-course__plus">
+    <i class="fas fa-plus-circle"></i>
+  </span>
+  <?php endif;  ?>
             <a class="card-course_all_height" href="<?php echo get_post_permalink(); ?>">
               <div class="card-course-content">
                 <div class="thumb-avatar" style="background-image: url(<?php

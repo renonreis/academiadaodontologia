@@ -10719,8 +10719,8 @@ header .menu-hamburger:hover, header .menu-hamburger:focus {
 
 header .navbar-brand {
 	background-image: url(../../assets/images/brand.png);
-	width: 60px;
-	height: 42px;
+	width: 230px;
+	height: 32px;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -11003,6 +11003,35 @@ footer h2, footer .h2 {
 		background-image: none !important;
 		min-height: 210px;
 	}
+	.home .card-course:hover {
+		background-color: #fff !important;
+	}
+}
+
+@media (max-width: 767.98px) and (max-width: 767.98px) {
+	.home .card-course::before {
+		background-image: none !important;
+	}
+}
+
+@media (max-width: 767.98px) and (max-width: 767.98px) {
+	.home .card-course::before:hover {
+		background-image: none  !important;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.home .card-course .card-course__plus {
+		font-size: 29px;
+		right: 10px;
+		top: 5px;
+	}
+	.home .card-course .card-course__plus:after {
+		width: 1.1rem;
+		height: 1.1rem;
+		right: 6px;
+		top: 11px;
+	}
 	.home .thumb-avatar {
 		display: none;
 	}
@@ -11036,6 +11065,31 @@ footer h2, footer .h2 {
 		margin-right: 1.5rem !important;
 		margin-left: 1.5rem !important;
 	}
+}
+
+.card-course .card-course__plus {
+	position: absolute;
+	right: 20px;
+	top: 8px;
+	font-size: 49px;
+	color: var(--bs-primary);
+}
+
+.card-course .card-course__plus:after {
+	content: "";
+	background: #fff;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 9px;
+	top: 21px;
+	z-index: 0;
+	border-radius: 50%;
+}
+
+.card-course .card-course__plus i {
+	position: relative;
+	z-index: 1;
 }
 
 .card-course .up-link {
@@ -11082,12 +11136,7 @@ footer h2, footer .h2 {
 .card-course:hover::before {
 	transition: all 0.2s linear;
 	background: linear-gradient(to top, white 0%, white 100%);
-}
-
-@media (min-width: 768px) {
-	.card-course:hover::before {
-		background-image: linear-gradient(to top, white 30%, rgba(0, 0, 0, 0) 80%);
-	}
+	background-image: linear-gradient(to top, white 30%, rgba(0, 0, 0, 0) 80%);
 }
 
 .card-course:hover .card-course_all_height {
@@ -11101,12 +11150,7 @@ footer h2, footer .h2 {
 	position: absolute;
 	z-index: 1;
 	transition: all 0.2s linear;
-}
-
-@media (min-width: 768px) {
-	.card-course::before {
-		background-image: linear-gradient(to top, black 30%, rgba(0, 0, 0, 0) 80%);
-	}
+	background-image: linear-gradient(to top, black 30%, rgba(0, 0, 0, 0) 80%);
 }
 
 .card-course_is-new::after {
@@ -11777,6 +11821,39 @@ footer h2, footer .h2 {
 	bottom: 0;
 }
 
+.single__big-hero-image .info-text {
+	margin-top: 50px;
+	color: #979797;
+	font-family: 'Open Sans';
+	padding: 0;
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+@media (min-width: 1024px) {
+	.single__big-hero-image .card-course-content .time {
+		margin-top: 25px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.single__big-hero-image .btn {
+		font-size: 24px;
+		padding-left: 50px !important;
+		padding-right: 50px !important;
+		width: 292px;
+		height: 65px;
+		text-align: center;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		font-family: 'Raleway';
+		display: flex;
+		font-weight: bold;
+		margin: 0 auto;
+	}
+}
+
 .single__big-hero-image .container {
 	z-index: 2;
 	position: relative;
@@ -11810,11 +11887,31 @@ ul#filters {
 	white-space: nowrap;
 }
 
+ul#filters a i {
+	position: relative;
+	color: var(--bs-primary);
+	overflow: hidden;
+	font-size: 23px;
+	vertical-align: text-bottom;
+}
+
+ul#filters a i:after {
+	background: #fff;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	content: "";
+	right: 2px;
+	z-index: -1;
+	top: 2px;
+}
+
 @media (max-width: 767.98px) {
 	ul#filters a {
 		display: flex;
-		border-radius: 0;
 		align-items: center;
+		margin-bottom: 5px;
 	}
 	ul#filters a i {
 		margin-left: 5px;

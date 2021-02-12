@@ -17,10 +17,10 @@ get_header();
 
 <main id="main" class="site-main">
   <section class="mt-5 py-5">
-    <div class="container mt-5 mb-5">
+    <div class="container mb-5">
       <div class="row">
         <div class="col">
-          <div class="ui-title">
+          <div class="ui-title py-3 py-md-4 py-lg-5">
             <h2 class="ui-title-main">O que dizem nossos alunos</h2>
             <!-- <span class="ui-title-sub"> some subtitle</span> -->
           </div>

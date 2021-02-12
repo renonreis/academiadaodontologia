@@ -20,11 +20,11 @@ get_header();
     <div class="container">
       <div class="row">
         <div class="col">
-          <div class="ui-title">
+          <div class="ui-title py-3 py-md-4 py-lg-5">
             <h2 class="ui-title-main">Quem somos</h2>
           </div>
           <div class="text-light fs-5 fw-lighter content-entry px-0">
-            <img class="float-lg-start me-5 mb-5 mw-100" src="<?php echo wp_get_attachment_image_url( 147, '' ); ?>"
+            <img class="float-lg-start me-lg-5 mb-lg-5 mw-100" src="<?php echo wp_get_attachment_image_url( 147, '' ); ?>"
               alt="">
             <p>A Academia da Odontologia foi criada em 2018 com o objetivo de oferecer uma plataforma completa e
               acessível para quem almeja se manter atualizado com o que há de novo na Odontopediatria e Ortodontia.

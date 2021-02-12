@@ -21,7 +21,7 @@ get_header();
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <div class="ui-title">
+          <div class="ui-title py-3 py-md-4 py-lg-5">
             <h2 class="ui-title-main">Contato</h2>
             <a class="ui-title-sub ff-secondary text-decoration-none text-lowercase"
               href="mailto:contato@academiadaodontologia.com.br"> contato@academiadaodontologia.com.br</a>

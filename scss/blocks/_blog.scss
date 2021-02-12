@@ -5,6 +5,8 @@ ul#filters{
         position: relative;
         color: var(--bs-primary);
         overflow: hidden;
+        font-size: 23px;
+        vertical-align: text-bottom;
         &:after {
             background: #fff;
             border-radius: 50%;

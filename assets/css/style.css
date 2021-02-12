@@ -11821,6 +11821,39 @@ footer h2, footer .h2 {
 	bottom: 0;
 }
 
+.single__big-hero-image .info-text {
+	margin-top: 50px;
+	color: #979797;
+	font-family: 'Open Sans';
+	padding: 0;
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+@media (min-width: 1024px) {
+	.single__big-hero-image .card-course-content .time {
+		margin-top: 25px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.single__big-hero-image .btn {
+		font-size: 24px;
+		padding-left: 50px !important;
+		padding-right: 50px !important;
+		width: 292px;
+		height: 65px;
+		text-align: center;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		font-family: 'Raleway';
+		display: flex;
+		font-weight: bold;
+		margin: 0 auto;
+	}
+}
+
 .single__big-hero-image .container {
 	z-index: 2;
 	position: relative;
@@ -11858,6 +11891,8 @@ ul#filters a i {
 	position: relative;
 	color: var(--bs-primary);
 	overflow: hidden;
+	font-size: 23px;
+	vertical-align: text-bottom;
 }
 
 ul#filters a i:after {

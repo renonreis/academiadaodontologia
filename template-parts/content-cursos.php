@@ -25,7 +25,7 @@ $course_video = get_field('course_video');
           <h2 class="ui-title-main"><?php the_title(); ?></h2>
         </div>
       </div> <!-- //col -->
-      <div class="col-lg-6 mb-5">
+      <div class="col-lg-7">
         <div class="card-course-content text-white text-center">
         <div class="thumb-avatar thumb-avatar--large mb-4" style="background-image: url(<?php
                   foreach($post_terms as $term){     
@@ -42,6 +42,9 @@ $course_video = get_field('course_video');
           <a href="<?php echo $course_link['link']; ?>" <?php if( $course_link['new_window'] ) { echo 'target="_blank"' ; }
                 else { echo '' ; } ?> class="btn btn-lg btn-primary px-4"><?php echo $course_link['text']; ?></a>
           <?php } ?>
+
+            <p class="info-text">Este curso não faz parte dos pacotes Odontopediatria Premium 
+                ou Odontopediatria Plus e, portanto, é vendido separadamente.</p>
         </div>
       </div>
     </div>
@@ -51,7 +54,7 @@ $course_video = get_field('course_video');
 <section>
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-8 mt-5">
+      <div class="col-lg-8 mt-3">
         <div>
           <div class="videoWrapper">
             <?php if( $course_video ){ ?>

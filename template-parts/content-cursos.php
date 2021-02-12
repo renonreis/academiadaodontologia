@@ -20,7 +20,7 @@ $course_video = get_field('course_video');
   style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>">
   <div class="container pt-5">
     <div class="row justify-content-center pt-5">
-      <div class="col-lg-12">
+      <div class="col-lg-10">
         <div class="ui-title pb-4 w-100">
           <h2 class="ui-title-main"><?php the_title(); ?></h2>
         </div>

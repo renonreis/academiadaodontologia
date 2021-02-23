@@ -12123,6 +12123,10 @@ ul#filters a i:after {
 	}
 }
 
+.list-invist li {
+	position: relative;
+}
+
 @media (min-width: 1024px) {
 	.list-invist li {
 		height: 33%;
@@ -12138,7 +12142,6 @@ ul#filters a i:after {
 .list-invist li > div {
 	border-left: 3px solid #e71d7c;
 	color: #fff;
-	position: relative;
 	overflow: hidden;
 	font-weight: 700;
 	background-color: #131313;

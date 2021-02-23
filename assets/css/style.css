@@ -11422,6 +11422,10 @@ footer h2, footer .h2 {
 	color: #979797;
 }
 
+.ui-plan__footer {
+	margin-top: 45px;
+}
+
 .ui-plan__list {
 	font-size: 15px;
 	font-weight: 600;
@@ -11457,6 +11461,8 @@ footer h2, footer .h2 {
 
 .ui-plan__list li {
 	padding-left: 30px;
+	padding-bottom: 12px;
+	padding-top: 12px;
 }
 
 @media (min-width: 768px) {
@@ -11468,7 +11474,8 @@ footer h2, footer .h2 {
 .ui-plan__list li i {
 	position: absolute;
 	left: 0;
-	top: 13px;
+	top: 50%;
+	margin-top: -9px;
 }
 
 .ui-plan .ribbon {
@@ -11547,14 +11554,14 @@ footer h2, footer .h2 {
 
 .entry-header h1, .entry-header .h1 {
 	color: var(--bs-primary);
-	font-family: 'Raleway', sans-serif;
+	font-family: "Raleway", sans-serif;
 	font-weight: 300;
 }
 
 .entry-header__badge {
-	padding: 0.5rem  1rem;
+	padding: 0.5rem 1rem;
 	font-weight: 600;
-	font-family: 'Raleway', sans-serif;
+	font-family: "Raleway", sans-serif;
 	border-radius: 0;
 	font-size: 0.688rem;
 }
@@ -11568,7 +11575,7 @@ footer h2, footer .h2 {
 }
 
 .entry-content, .content-entry {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
 	padding: 1rem 1rem 3rem 1rem;
@@ -11582,18 +11589,58 @@ footer h2, footer .h2 {
 	}
 }
 
-.entry-content h1, .content-entry h1, .entry-content .h1, .content-entry .h1, .entry-content .h1, .content-entry .h1, .entry-content h2, .content-entry h2, .entry-content .h2, .content-entry .h2, .entry-content .h2, .content-entry .h2, .entry-content h3, .content-entry h3, .entry-content .h3, .content-entry .h3, .entry-content .h3, .content-entry .h3, .entry-content h4, .content-entry h4, .entry-content .h4, .content-entry .h4, .entry-content .h4, .content-entry .h4, .entry-content h5, .content-entry h5, .entry-content .h5, .content-entry .h5, .entry-content .h5, .content-entry .h5, .entry-content h6, .content-entry h6, .entry-content .h6, .content-entry .h6, .entry-content .h6, .content-entry .h6 {
-	font-family: 'Open Sans', sans-serif;
+.entry-content h1, .content-entry h1, .entry-content .h1, .content-entry .h1,
+.entry-content .h1,
+.content-entry .h1,
+.entry-content h2,
+.content-entry h2,
+.entry-content .h2,
+.content-entry .h2,
+.entry-content .h2,
+.content-entry .h2,
+.entry-content h3,
+.content-entry h3,
+.entry-content .h3,
+.content-entry .h3,
+.entry-content .h3,
+.content-entry .h3,
+.entry-content h4,
+.content-entry h4,
+.entry-content .h4,
+.content-entry .h4,
+.entry-content .h4,
+.content-entry .h4,
+.entry-content h5,
+.content-entry h5,
+.entry-content .h5,
+.content-entry .h5,
+.entry-content .h5,
+.content-entry .h5,
+.entry-content h6,
+.content-entry h6,
+.entry-content .h6,
+.content-entry .h6,
+.entry-content .h6,
+.content-entry .h6 {
+	font-family: "Open Sans", sans-serif;
 }
 
-.entry-content h2, .content-entry h2, .entry-content .h2, .content-entry .h2 {
+
+.entry-content h2,
+.content-entry h2,
+.entry-content .h2,
+.content-entry .h2 {
 	font-size: 1.75rem;
 	line-height: 1.25;
 	margin-top: 2em;
 	margin-bottom: 1em;
 }
 
-.entry-content h3, .content-entry h3, .entry-content .h3, .content-entry .h3 {
+
+.entry-content h3,
+.content-entry h3,
+.entry-content .h3,
+.content-entry .h3 {
 	font-size: 1.2rem;
 	line-height: 1.2173913043;
 	margin-top: 2.4347826087em;
@@ -11602,13 +11649,21 @@ footer h2, footer .h2 {
 }
 
 @media (min-width: 576px) {
-	.entry-content h3, .content-entry h3, .entry-content .h3, .content-entry .h3 {
+	
+	.entry-content h3,
+	.content-entry h3,
+	.entry-content .h3,
+	.content-entry .h3 {
 		font-size: 1.3rem;
 	}
 }
 
 @media (min-width: 992px) {
-	.entry-content h3, .content-entry h3, .entry-content .h3, .content-entry .h3 {
+	
+	.entry-content h3,
+	.content-entry h3,
+	.entry-content .h3,
+	.content-entry .h3 {
 		font-size: 1.5rem;
 	}
 }
@@ -11629,8 +11684,8 @@ footer h2, footer .h2 {
 }
 
 .entry-content .wp-block-image figcaption, .content-entry .wp-block-image figcaption {
-	margin-top: .5em;
-	margin-bottom: .5em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 	font-size: 18px;
 }
 
@@ -11662,26 +11717,34 @@ footer h2, footer .h2 {
 	height: auto;
 }
 
-.entry-content .alignleft, .content-entry .alignleft, .entry-content img.alignleft, .content-entry img.alignleft {
+.entry-content .alignleft, .content-entry .alignleft,
+.entry-content img.alignleft,
+.content-entry img.alignleft {
 	margin-right: 1.5em;
 	display: inline;
 	float: left;
 }
 
-.entry-content .alignright, .content-entry .alignright, .entry-content img.alignright, .content-entry img.alignright {
+.entry-content .alignright, .content-entry .alignright,
+.entry-content img.alignright,
+.content-entry img.alignright {
 	margin-left: 1.5em;
 	display: inline;
 	float: right;
 }
 
-.entry-content .aligncenter, .content-entry .aligncenter, .entry-content img.aligncenter, .content-entry img.aligncenter {
+.entry-content .aligncenter, .content-entry .aligncenter,
+.entry-content img.aligncenter,
+.content-entry img.aligncenter {
 	margin-right: auto;
 	margin-left: auto;
 	display: block;
 	clear: both;
 }
 
-.entry-content .alignnone, .content-entry .alignnone, .entry-content img.alignnone, .content-entry img.alignnone {
+.entry-content .alignnone, .content-entry .alignnone,
+.entry-content img.alignnone,
+.content-entry img.alignnone {
 	/* not sure about this one */
 }
 
@@ -11724,7 +11787,11 @@ footer h2, footer .h2 {
 	padding: 0 0 0 1.263157895em;
 }
 
-.entry-content blockquote cite, .content-entry blockquote cite, .entry-content blockquote small, .content-entry blockquote small, .entry-content blockquote .small, .content-entry blockquote .small {
+.entry-content blockquote cite, .content-entry blockquote cite,
+.entry-content blockquote small,
+.content-entry blockquote small,
+.entry-content blockquote .small,
+.content-entry blockquote .small {
 	color: #1a1a1a;
 	display: block;
 	font-size: 16px;
@@ -11732,11 +11799,17 @@ footer h2, footer .h2 {
 	line-height: 1.75;
 }
 
-.entry-content blockquote cite:before, .content-entry blockquote cite:before, .entry-content blockquote small:before, .content-entry blockquote small:before, .entry-content blockquote .small:before, .content-entry blockquote .small:before {
+.entry-content blockquote cite:before, .content-entry blockquote cite:before,
+.entry-content blockquote small:before,
+.content-entry blockquote small:before,
+.entry-content blockquote .small:before,
+.content-entry blockquote .small:before {
 	content: "\2014\00a0";
 }
 
-.entry-content blockquote em, .content-entry blockquote em, .entry-content blockquote i, .content-entry blockquote i, .entry-content blockquote cite, .content-entry blockquote cite {
+.entry-content blockquote em, .content-entry blockquote em,
+.entry-content blockquote i,
+.content-entry blockquote i, .entry-content blockquote cite, .content-entry blockquote cite {
 	font-style: normal;
 }
 

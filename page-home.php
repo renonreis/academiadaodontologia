@@ -130,7 +130,7 @@ get_header();
                 </li>
               </ul>
             </div>
-            <div class="mt-3 p-3 bg-secondary"></div>
+            <div class="ui-plan__footer p-3 bg-secondary"></div>
           </div> <!-- //ui-plan -->
         </div> <!-- //col  -->
         <div class="col">
@@ -181,7 +181,7 @@ get_header();
                 </li>
               </ul>
             </div>
-            <div class="mt-3 p-3 bg-primary"></div>
+            <div class="ui-plan__footer p-3 bg-primary"></div>
           </div> <!-- //ui-plan -->
         </div> <!-- //col  -->
       </div> <!-- //row -->
@@ -198,7 +198,7 @@ get_header();
         </div>
       </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3 g-lg-4">
-        <?php           
+        <?php
           $args = array(
           'numberposts'	=> -1,
           'posts_per_page'=> 4,
@@ -206,18 +206,18 @@ get_header();
           'orderby' => 'date',
           'order'     => 'DESC',
           );
-          $the_query = new WP_Query( $args );          
-          if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); 
-          
+          $the_query = new WP_Query( $args );
+          if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID();
+
           $terms = get_terms('curso_category');
-          $post_terms = get_the_terms( get_the_ID(), 'curso_category' ); 
-          $post_cat = get_the_terms( get_the_ID(), 'categoria-cursos' ); 
+          $post_terms = get_the_terms( get_the_ID(), 'curso_category' );
+          $post_cat = get_the_terms( get_the_ID(), 'categoria-cursos' );
         ?>
-        <div class="col <?php 
-				if ( $post_cat && ! is_wp_error( $post_cat ) ) : 
+        <div class="col <?php
+				if ( $post_cat && ! is_wp_error( $post_cat ) ) :
 					foreach ( $post_cat as $term ) {
-						echo $term->slug . ' '; 
-					} 
+						echo $term->slug . ' ';
+					}
 				endif;
 				?>">
           <div class="card card-course <?php if( get_field('course_is_new') === true ) { ?>card-course_is-new<?php } ?>"
@@ -230,8 +230,8 @@ get_header();
             <a class="card-course_all_height" href="<?php echo get_post_permalink(); ?>">
               <div class="card-course-content">
                 <div class="thumb-avatar" style="background-image: url(<?php
-                  foreach($post_terms as $term){     
-                    the_field('image_teacher', $term);                  
+                  foreach($post_terms as $term){
+                    the_field('image_teacher', $term);
                   }
                 ?>)"></div>
                 <h3 title="<?php echo $post_terms[0]->name; ?>"><?php echo $post_terms[0]->name; ?></h3>
@@ -268,7 +268,7 @@ get_header();
     </div>
     <div class="container-fluid pb-5">
       <div class="row">
-        <?php 
+        <?php
           $i = 0;
 					$args = array(
 					'numberposts'	=> -1,
@@ -349,7 +349,7 @@ get_header();
             <h2 class="ui-title-main">Perguntas frequentes</h2>
           </div>
           <div class="ui-accordion accordion" id="accordionFaq">
-            <?php 
+            <?php
               $i = 0;
               $args = array(
               'numberposts'	=> -1,
@@ -359,7 +359,7 @@ get_header();
               'order'     => 'ASC',
               );
               $the_query = new WP_Query( $args );
-              if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); 
+              if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID();
             ?>
             <div class="accordion-item">
               <h2 class="accordion-header" id="heading-<?php echo $i; ?>">

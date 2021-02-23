@@ -10,17 +10,17 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <section class="mt-5 py-5 mb-5 ">
-    <div class="container mb-5">
+  <section class="mt-5 py-5 mb-lg-5 ">
+    <div class="container mb-lg-5">
       <div class="row justify-content-center">
         <div class="col-lg-11">
-          <div class="ui-title">
+          <div class="ui-title py-3 py-md-4 pt-lg-5 w-100">
             <header class="page-header">
               <?php the_title( '<h2 class="ui-title-main page-title">', '</h2>' ); ?>
             </header><!-- .entry-header -->
           </div>
           <?php academiadaodontologia_post_thumbnail(); ?>
-          <div class="text-light fs-5 fw-lighter content-entry entry-content">
+          <div class="text-light fs-5 fw-lighter content-entry entry-content mt-0">
             <?php
 							the_content();
 

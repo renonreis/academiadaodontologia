@@ -10990,7 +10990,7 @@ footer .has_menu-footer ul li a {
 footer .has_menu-footer ul li a:hover {
 	text-decoration: underline;
 	opacity: 0.7;
-	color: var(--bs-primary) !important;
+	color: #53bdd7 !important;
 }
 
 footer h2, footer .h2 {
@@ -11220,7 +11220,7 @@ footer h2, footer .h2 {
 
 .card-course-content h3, .card-course-content .h3 {
 	font-weight: 100;
-	font-size: 22px;
+	font-size: 18px;
 	text-transform: uppercase;
 	margin-bottom: 5px;
 	overflow: hidden;
@@ -11230,12 +11230,18 @@ footer h2, footer .h2 {
 	padding-right: 20px;
 }
 
+@media (min-width: 768px) {
+	.card-course-content h3, .card-course-content .h3 {
+		font-size: 22px;
+	}
+}
+
 .card-course-content h3.h3--large, .card-course-content .h3--large.h3 {
 	font-size: 30px;
 }
 
 .card-course-content p {
-	font-size: 16px;
+	font-size: 14px;
 	margin: 20px 30px 30px 30px;
 }
 
@@ -11250,6 +11256,13 @@ footer h2, footer .h2 {
 	display: block;
 	font-family: 'Open sans', sans-serif;
 	font-weight: 100;
+	font-size: 14px;
+}
+
+@media (min-width: 768px) {
+	.card-course-content .time {
+		font-size: 16px;
+	}
 }
 
 .card-post {
@@ -11594,6 +11607,11 @@ footer h2, footer .h2 {
 	}
 }
 
+.entry-content a, .content-entry a {
+	color: #53bdd7;
+	overflow-wrap: anywhere;
+}
+
 .entry-content h1, .content-entry h1, .entry-content .h1, .content-entry .h1,
 .entry-content .h1,
 .content-entry .h1,
@@ -11648,7 +11666,7 @@ footer h2, footer .h2 {
 .content-entry .h3 {
 	font-size: 1.2rem;
 	line-height: 1.2173913043;
-	margin-top: 2.4347826087em;
+	margin-top: 0.8em;
 	margin-bottom: 1.2173913043em;
 	font-weight: 600;
 }
@@ -11670,6 +11688,7 @@ footer h2, footer .h2 {
 	.entry-content .h3,
 	.content-entry .h3 {
 		font-size: 1.5rem;
+		margin-top: 1em;
 	}
 }
 

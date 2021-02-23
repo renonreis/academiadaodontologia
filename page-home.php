@@ -250,7 +250,7 @@ get_header();
       <div class="row text-center">
         <div class="col">
           <a href="<?php echo get_home_url(); ?>/cursos"
-            class="btn btn-md btn-outline-light py-3 px-4 mt-4 text-uppercase fw-600 border-2">
+            class="btn btn-md btn-outline-light py-3 px-4 mt-4 text-uppercase fw-600 border-1">
             Ver todos os cursos
           </a>
         </div>

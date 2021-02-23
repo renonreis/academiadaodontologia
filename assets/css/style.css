@@ -10383,8 +10383,8 @@ fieldset:disabled .btn {
 }
 
 .picture-person {
-	width: 292px;
-	height: 292px;
+	width: 160px;
+	height: 160px;
 	max-width: 100%;
 	background-position: center center;
 	background-size: cover;
@@ -10392,11 +10392,10 @@ fieldset:disabled .btn {
 	margin: 15px !important;
 }
 
-@media (max-width: 991.98px) {
+@media (min-width: 992px) {
 	.picture-person {
-		margin: 15px auto 35px auto !important;
-		width: 232px;
-		height: 232px;
+		width: 292px;
+		height: 292px;
 	}
 }
 
@@ -10419,15 +10418,25 @@ fieldset:disabled .btn {
 
 .picture-person:before {
 	content: "";
-	width: 172px;
-	height: 172px;
 	position: absolute;
-	right: -15px;
+	width: 92px;
+	height: 92px;
+	right: -8px;
+	bottom: -9px;
+	border-width: 0 0 100px 100px;
 	z-index: -1;
-	bottom: -15px;
 	border-style: solid;
-	border-width: 0 0 172px 172px;
 	border-color: transparent transparent var(--bs-primary) transparent;
+}
+
+@media (min-width: 768px) {
+	.picture-person:before {
+		width: 172px;
+		height: 172px;
+		right: -15px;
+		bottom: -15px;
+		border-width: 0 0 172px 172px;
+	}
 }
 
 .carousel-indicators {

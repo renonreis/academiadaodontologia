@@ -10524,6 +10524,8 @@ fieldset:disabled .btn {
 
 .hero-button {
 	border: 2px solid var(--bs-primary);
+	font-size: 24px;
+	font-weight: 700;
 }
 
 .hero-button:hover {

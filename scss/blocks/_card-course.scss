@@ -13,37 +13,37 @@
     //       }
     //   }
   }
-  
- 
+
+
 
 .home{
-    @include media-breakpoint-down(md) { 
-        .card-course{ 
+    @include media-breakpoint-down(md) {
+        .card-course{
                 background-image: none !important;
                 min-height: 210px;
                 &:hover{
                     background-color: #fff !important;
                 }
                 &::before{
-                    @include media-breakpoint-down(md) {  background-image: none !important } 
+                    @include media-breakpoint-down(md) {  background-image: none !important }
                     &:hover{
-                        @include media-breakpoint-down(md) {  background-image: none  !important } 
+                        @include media-breakpoint-down(md) {  background-image: none  !important }
                     }
                 }
                 .card-course__plus{
                     font-size: 29px;
                     right: 10px;
                     top: 5px;
-                    &:after{ 
+                    &:after{
                         width: 1.1rem;
-                        height: 1.1rem; 
+                        height: 1.1rem;
                         right: 6px;
-                        top: 11px; 
+                        top: 11px;
                     }
 
                 }
-            } 
-    
+            }
+
         .thumb-avatar{
             display: none;
         }
@@ -62,7 +62,7 @@
     // margin-bottom: 20px;
     border-radius: 0;
     text-align: center;
-    background: #141414;
+    background: #171717;
     color: #fff;
     justify-content: flex-end;
     font-family: 'Raleway', sans-serif;
@@ -71,12 +71,12 @@
     position: relative !important;
     background-repeat: no-repeat;
     border: 0;
-    transition: all 0.2s linear; 
-   
-        @include media-breakpoint-down(sm) { 
-            margin-right: 1.5rem !important;
-            margin-left: 1.5rem !important;
-        } 
+    transition: all 0.2s linear;
+
+        @include media-breakpoint-down(sm) {
+            // margin-right: 1.5rem !important;
+            // margin-left: 1.5rem !important;
+        }
 
     .card-course__plus{
         position: absolute;
@@ -129,18 +129,18 @@
          outline-offset: 1px;
          transition: all 0.2s linear
     }
-    
+
     &:hover{
         box-shadow: 0 18px 32px 0 rgba(0, 0, 0, 0.5);
         transition: all 0.2s linear;
         transform: translateY(-10px);
-        @include media-breakpoint-down(sm) { 
+        @include media-breakpoint-down(sm) {
             background-color: #fff;
         }
-        &::before{ 
+        &::before{
             transition: all 0.2s linear;
             background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
-                background-image: linear-gradient(to top, rgba(255,255,255,1) 30%, rgba(0, 0, 0, 0) 80%); 
+                background-image: linear-gradient(to top, rgba(255,255,255,1) 30%, rgba(0, 0, 0, 0) 80%);
         }
         .card-course_all_height{
             color: black;
@@ -153,8 +153,8 @@
         width: 100%;
         position: absolute;
         z-index: 1;
-        transition: all 0.2s linear; 
-        background-image: linear-gradient(to top, rgba(0,0,0,1) 30%, rgba(0, 0, 0, 0) 80%);  
+        transition: all 0.2s linear;
+        background-image: linear-gradient(to top, rgba(0,0,0,1) 30%, rgba(0, 0, 0, 0) 80%);
     }
 
 
@@ -178,7 +178,7 @@
         justify-content: center;
         font-family: 'Open Sans', sans-serif;
     }
-    
+
     &-content{
         z-index: 2;
         width: 100%;
@@ -189,20 +189,20 @@
             border-radius: 50%;
             margin-bottom: 15px;
        }
-       
-       .thumb-avatar{   
+
+       .thumb-avatar{
         width: 111px;
         height: 111px;
         margin: auto;
         background-size: cover;
         background-color: #222;
         background-repeat: no-repeat;
-        background-position: center center; 
+        background-position: center center;
         border-radius: 50%;
         margin-bottom: 15px;
             &--large{
                  width: 160px;
-                 height: 160px;  
+                 height: 160px;
                 @media (min-width: 375px) {}
                 @media (min-width: 425px) {}
                 @media (min-width: 768px) {}
@@ -217,13 +217,13 @@
         &--small{
             @extend .line;
             max-width: 320px;
-            
+
         }
        }
-       
+
        h3{
-        font-weight: 300;
-        font-size: 24px;
+        font-weight: 100;
+        font-size: 22px;
         text-transform: uppercase;
         margin-bottom: 5px;
         overflow: hidden;
@@ -235,14 +235,15 @@
        }
 
        p{
-           font-size: 18px;
-           margin: 0 30px 30px 30px;
-       } 
+           font-size: 16px;
+           @media (min-width: 768px) {font-size: 18px;}
+           margin: 20px 30px 30px 30px;
+       }
        .time{
         margin-bottom: 25px;
         display: block;
-        font-family: 'Open sans', sans-serif; 
-        font-weight: 300;
+        font-family: 'Open sans', sans-serif;
+        font-weight: 100;
        }
     }
 }

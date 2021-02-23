@@ -11050,7 +11050,7 @@ footer h2, footer .h2 {
 	min-height: 600px;
 	border-radius: 0;
 	text-align: center;
-	background: #141414;
+	background: #171717;
 	color: #fff;
 	justify-content: flex-end;
 	font-family: 'Raleway', sans-serif;
@@ -11060,13 +11060,6 @@ footer h2, footer .h2 {
 	background-repeat: no-repeat;
 	border: 0;
 	transition: all 0.2s linear;
-}
-
-@media (max-width: 575.98px) {
-	.card-course {
-		margin-right: 1.5rem !important;
-		margin-left: 1.5rem !important;
-	}
 }
 
 .card-course .card-course__plus {
@@ -11217,8 +11210,8 @@ footer h2, footer .h2 {
 }
 
 .card-course-content h3, .card-course-content .h3 {
-	font-weight: 300;
-	font-size: 24px;
+	font-weight: 100;
+	font-size: 22px;
 	text-transform: uppercase;
 	margin-bottom: 5px;
 	overflow: hidden;
@@ -11233,15 +11226,21 @@ footer h2, footer .h2 {
 }
 
 .card-course-content p {
-	font-size: 18px;
-	margin: 0 30px 30px 30px;
+	font-size: 16px;
+	margin: 20px 30px 30px 30px;
+}
+
+@media (min-width: 768px) {
+	.card-course-content p {
+		font-size: 18px;
+	}
 }
 
 .card-course-content .time {
 	margin-bottom: 25px;
 	display: block;
 	font-family: 'Open sans', sans-serif;
-	font-weight: 300;
+	font-weight: 100;
 }
 
 .card-post {

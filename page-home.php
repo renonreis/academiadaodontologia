@@ -260,7 +260,7 @@ get_header();
   <section class="py-5 bg-dark">
     <div class="container pt-5">
       <div class="row">
-        <div class="ui-title">
+        <div class="ui-title pb-3 pb-lg-5">
           <h2 class="ui-title-main">O que dizem nossos alunos</h2>
         </div>
       </div> <!-- //row -->
@@ -301,7 +301,7 @@ get_header();
                     <blockquote class="blockquote">
                       <p><?php echo esc_html( $testimonials['testimonial_text'] ); ?></p>
                     </blockquote>
-                    <figcaption class="blockquote-footer mt-4 text-light">
+                    <figcaption class="blockquote-footer mt-lg-4 text-light">
                       <strong class="fs-6">
                         <?php echo esc_html( $testimonials['testimonial_author'] ); ?>
                       </strong>

@@ -11193,7 +11193,12 @@ footer h2, footer .h2 {
 .card-course-content {
 	z-index: 2;
 	width: 100%;
-	padding-top: 40px;
+}
+
+@media (min-width: 1024px) {
+	.card-course-content {
+		padding-top: 40px;
+	}
 }
 
 .card-course-content img {
@@ -11215,13 +11220,15 @@ footer h2, footer .h2 {
 	margin-bottom: 15px;
 }
 
-.card-course-content .thumb-avatar--large {
-	width: 160px;
-	height: 160px;
+@media (min-width: 768px) {
+	.card-course-content .thumb-avatar--large {
+		width: 160px;
+		height: 160px;
+	}
 }
 
 .card-course-content .line, .card-course-content .line--small {
-	width: 80%;
+	width: 40%;
 	height: 1px;
 	background: var(--bs-primary);
 	margin-bottom: 15px;
@@ -11230,6 +11237,12 @@ footer h2, footer .h2 {
 .card-course-content .line--small {
 	margin-top: 20px;
 	max-width: 220px;
+}
+
+@media (min-width: 992px) {
+	.card-course-content .line--small {
+		width: 80%;
+	}
 }
 
 .card-course-content h3, .card-course-content .h3 {
@@ -11251,8 +11264,14 @@ footer h2, footer .h2 {
 }
 
 .card-course-content h3.h3--large, .card-course-content .h3--large.h3 {
-	font-size: 30px;
+	font-size: 19px;
 	position: relative;
+}
+
+@media (min-width: 992px) {
+	.card-course-content h3.h3--large, .card-course-content .h3--large.h3 {
+		font-size: 30px;
+	}
 }
 
 .card-course-content p {
@@ -11949,10 +11968,23 @@ footer h2, footer .h2 {
 
 .single__big-hero-image .info-text {
 	color: #979797;
-	font-family: 'Open Sans';
-	padding: 0;
-	font-size: 18px;
-	font-weight: lighter;
+	font-family: 'Raleway', sans-serif;
+	font-size: 13px;
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (min-width: 768px) {
+	.single__big-hero-image .info-text {
+		font-size: 13px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.single__big-hero-image .info-text {
+		font-size: 14px;
+	}
 }
 
 @media (min-width: 1024px) {
@@ -11975,7 +12007,7 @@ footer h2, footer .h2 {
 		font-family: 'Raleway';
 		display: flex;
 		font-weight: bold;
-		margin: 0 auto 50px;
+		margin: 0 auto 30px;
 	}
 }
 
@@ -11986,18 +12018,12 @@ footer h2, footer .h2 {
 
 .single__big-hero-image .ui-title-main {
 	text-transform: inherit;
-	font-size: 2.7rem;
-}
-
-@media (min-width: 425px) {
-	.single__big-hero-image .ui-title-main {
-		font-size: 2.7rem;
-	}
+	font-size: 2rem;
 }
 
 @media (min-width: 768px) {
 	.single__big-hero-image .ui-title-main {
-		font-size: 3.7rem;
+		font-size: 2.7rem;
 	}
 }
 

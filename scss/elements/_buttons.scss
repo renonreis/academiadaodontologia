@@ -3,10 +3,15 @@
     border:none;
     text-transform: uppercase;
     color: #fff;
+    font-family: 'Raleway', sans-serif;
     &:hover{
         color: #fff
     }
 }
 .border-gray-light{
     border: 1px solid #535353;
+}
+
+.btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.52);
 }

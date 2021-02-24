@@ -10454,6 +10454,7 @@ fieldset:disabled .btn {
 	border: none;
 	text-transform: uppercase;
 	color: #fff;
+	font-family: 'Raleway', sans-serif;
 }
 
 .btn-primary:hover, .btn-seconday:hover {
@@ -10462,6 +10463,10 @@ fieldset:disabled .btn {
 
 .border-gray-light {
 	border: 1px solid #535353;
+}
+
+.btn-outline-light {
+	border-color: rgba(255, 255, 255, 0.52);
 }
 
 .pagination, .blog-pagination .page-numbers {
@@ -10623,7 +10628,7 @@ fieldset:disabled .btn {
 .banner-info .lead {
 	font-family: 'Raleway', sans-serif;
 	font-size: 18px;
-	font-weight: 400;
+	font-weight: 300;
 	margin-top: 1.2rem;
 }
 
@@ -10634,18 +10639,19 @@ fieldset:disabled .btn {
 }
 
 .banner-info .btn {
-	font-weight: 700;
+	font-weight: 400;
 	border-radius: 3px;
 	text-transform: uppercase;
 	font-size: 16px;
 	margin-bottom: 20px;
 	border: 2px solid;
-	padding: 0.7rem 2rem;
+	padding: 0.7rem 2.7rem;
 	margin-top: 1.3rem;
 	transition: background-color 0.2s linear;
-	border: 2px solid;
+	font-family: 'Raleway', sans-serif;
+	border: 1px solid;
 	background-color: rgba(255, 255, 255, 0);
-	border-color: white;
+	border-color: rgba(255, 255, 255, 0.52);
 }
 
 @media (min-width: 576px) {
@@ -10660,10 +10666,17 @@ fieldset:disabled .btn {
 	}
 }
 
+@media (min-width: 992px) {
+	.banner-info .btn {
+		font-weight: 700;
+		font-size: 16px;
+	}
+}
+
 .banner-info .btn:hover {
 	background-color: white;
 	color: var(--bs-primary);
-	border-color: var(--bs-primary);
+	border-color: transparent;
 }
 
 /* case to have admin-bar*/
@@ -11215,7 +11228,8 @@ footer h2, footer .h2 {
 }
 
 .card-course-content .line--small {
-	max-width: 320px;
+	margin-top: 20px;
+	max-width: 220px;
 }
 
 .card-course-content h3, .card-course-content .h3 {
@@ -11238,6 +11252,7 @@ footer h2, footer .h2 {
 
 .card-course-content h3.h3--large, .card-course-content .h3--large.h3 {
 	font-size: 30px;
+	position: relative;
 }
 
 .card-course-content p {
@@ -11574,6 +11589,11 @@ footer h2, footer .h2 {
 	color: var(--bs-primary);
 	font-family: "Raleway", sans-serif;
 	font-weight: 300;
+}
+
+.entry-header .author__name {
+	font-size: 18px;
+	font-weight: 400;
 }
 
 .entry-header__badge {

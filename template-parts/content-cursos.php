@@ -9,16 +9,16 @@
 
 get_header();
 
-$post_terms = get_the_terms( get_the_ID(), 'curso_category' ); 
+$post_terms = get_the_terms( get_the_ID(), 'curso_category' );
 $course_link = get_field('course_link');
 $course_video = get_field('course_video');
 
 ?>
 
 
-<aside class="single__big-hero-image pt-5"
+<aside class="single__big-hero-image pt-lg-5"
   style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>">
-  <div class="container pt-5">
+  <div class="container pt-lg-5">
     <div class="row justify-content-center pt-5">
       <div class="col-lg-10">
         <div class="ui-title pb-4 w-100">
@@ -27,9 +27,9 @@ $course_video = get_field('course_video');
       </div> <!-- //col -->
       <div class="col-lg-7">
         <div class="card-course-content text-white text-center">
-          <div class="thumb-avatar thumb-avatar--large mb-4" style="background-image: url(<?php
-                  foreach($post_terms as $term){     
-                    the_field('image_teacher', $term);                  
+          <div class="thumb-avatar thumb-avatar--large mb-lg-4" style="background-image: url(<?php
+                  foreach($post_terms as $term){
+                    the_field('image_teacher', $term);
                   }
                 ?>)"></div> <!-- //thumb-avatar -->
           <h3 class='h3--large'><?php echo $post_terms[0]->name; ?></h3>
@@ -42,7 +42,7 @@ $course_video = get_field('course_video');
           <a href="<?php echo $course_link['link']; ?>" <?php if( $course_link['new_window'] ) { echo 'target="_blank"' ; }
                 else { echo '' ; } ?> class="btn btn-lg btn-primary px-4"><?php echo $course_link['text']; ?></a>
           <?php } ?>
-          <?php 
+          <?php
             if( get_field('course_separate') ) {
           ?>
           <p class="info-text">
@@ -59,7 +59,7 @@ $course_video = get_field('course_video');
 <section>
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-8 mt-3">
+      <div class="col-lg-8 mt-5">
         <div>
           <div class="videoWrapper">
             <?php if( $course_video ){ ?>
@@ -87,7 +87,7 @@ $course_video = get_field('course_video');
     </div><!-- // row -->
   </div> <!-- // container -->
 </section>
-<?php 
+<?php
   if( get_field('course_separate') ) {
 ?>
 <section class="py-5">
@@ -98,11 +98,11 @@ $course_video = get_field('course_video');
           <?php $information = get_field('information'); if( $information ): ?>
           <h6 class="ui-plan__price mb-0 "><?php echo esc_html( $information['installment'] ); ?>x R$
             <span>
-              <?php 
+              <?php
                 $installment = $information['amount']/$information['installment'];
                 $installment_value = number_format($installment, 2, '.', '');
-                
-                echo esc_html( $installment_value ); 
+
+                echo esc_html( $installment_value );
               ?>
             </span> /mês
           </h6>
@@ -132,7 +132,7 @@ $course_video = get_field('course_video');
   </div>
   <div class="container-fluid pb-5">
     <div class="row">
-      <?php 
+      <?php
         $i = 0;
         $args = array(
         'numberposts'	=> -1,

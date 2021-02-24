@@ -30,10 +30,10 @@ get_header();
       <div class="row">
         <div class="col-lg-8 mb-md-0 mb-3">
           <!--init postlist -->
-          <div class="row row-cols-1 row-cols-md-2 g-3" data-masonry='{"percentPosition": false }'>
-            <?php           
+          <div class="row row-cols-1 row-cols-md-2 g-3">
+            <?php
               $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-              
+
               $args = array(
               'numberposts'	=> -1,
               'posts_per_page'=> 8,
@@ -42,8 +42,8 @@ get_header();
               'orderby' => 'date',
               'order'     => 'DESC',
               );
-              $the_query = new WP_Query( $args );                       
-              if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); 
+              $the_query = new WP_Query( $args );
+              if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID();
 
               $user = wp_get_current_user();
               $author_id = get_the_author_meta( 'ID' );
@@ -95,12 +95,12 @@ get_header();
                 </div>
               </div> <!-- // card-curso -->
             </div>
-            <?php 
-              endwhile;  
+            <?php
+              endwhile;
             ?>
           </div> <!-- //row  -->
           <div class="blog-pagination">
-            <?php 
+            <?php
                 echo paginate_links( array (
                   'base'         => str_replace( 9, '%#%', esc_url( get_pagenum_link( 9 ) ) ),
                   'total'        => $the_query->max_num_pages,

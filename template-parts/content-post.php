@@ -47,14 +47,16 @@ $author_id = get_the_author_meta( 'ID' );
             <header class="page-header">
               <?php the_title( '<h1 class="entry-title display-2">', '</h1>' ); ?>
             </header><!-- .entry-header -->
-            <ul class="list-inline pt-3">
+            <ul class="list-inline author pt-3">
               <li class="list-inline-item">
                 <img src="<?php echo get_avatar_url($user->ID, ['size' => '55']); ?>"
-                  class="border border-1 rounded-circle border-primarye" width="55px" height="55px"
+                  class="author__thumb border border-2 rounded-circle border-primary" width="55px" height="55px"
                   alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
               </li>
               <li class="list-inline-item">
-                <?php echo get_the_author(); ?>
+                <span class="author__name">
+                  <?php echo get_the_author(); ?>
+                </span>
               </li>
             </ul>
             <span class="text-muted">
@@ -94,7 +96,7 @@ $author_id = get_the_author_meta( 'ID' );
                 <?php echo get_the_author_meta( 'last_name', $author_id ); ?>
               </h3>
               <div class="fw-lighter fs-5">
-                <?php 
+                <?php
                   echo wpautop( get_the_author_meta( 'description' ) );
                 ?>
               </div>
@@ -145,12 +147,12 @@ $author_id = get_the_author_meta( 'ID' );
       <section class="row position-relative py-5 related-posts">
         <?php
           $i = 0;
-          $related = get_posts( array( 
-            'category__in' => wp_get_post_categories($post->ID), 
-            'numberposts' => 3, 
+          $related = get_posts( array(
+            'category__in' => wp_get_post_categories($post->ID),
+            'numberposts' => 3,
             'post__not_in' => array($post->ID) ) );
           if( $related ) foreach( $related as $post ) {
-          setup_postdata($post); 
+          setup_postdata($post);
         ?>
         <div class="col">
           <div class="card card-post rounded-0 border-0 p-0 h-100" data-aos="fade-up">
@@ -201,7 +203,7 @@ $author_id = get_the_author_meta( 'ID' );
           </div> <!-- // card-curso -->
         </div>
         <?php }
-          wp_reset_postdata(); 
+          wp_reset_postdata();
         ?>
       </section>
     </div>

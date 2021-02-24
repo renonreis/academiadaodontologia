@@ -44,9 +44,8 @@
         <h2 class="h6 mb-3">Inscreva-se em nossa newsletter</h2>
         <?php echo do_shortcode( '[wpforms id="161"]'); ?>
         <p class="text-muted lh-1">
-          <small>The information you provide on this form will only be used to provide you
-            with
-            Dropsmith's updates and special offers for personalized marketing. Your privacy is important for us!
+          <small>
+            Os dados inseridos aqui são usados apenas para fins de atualizações e informações promocionais da Academia da Odontologia. A sua privacidade é importante para nós!
           </small>
         </p>
         <ul class="list-inline fs-5">

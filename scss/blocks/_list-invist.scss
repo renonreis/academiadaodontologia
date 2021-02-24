@@ -1,32 +1,34 @@
 .list-invist{
-    list-style: none; 
+    list-style: none;
     margin-bottom: 20px;
     @media (min-width: 992px) {
         height: 100%;
     }
 
-    .list-invist__item-center{ 
+    .list-invist__item-center{
         padding: 3% 0;
         @media (min-width: 425px) { padding: 2% 0;}
         @media (min-width: 768px) { padding: 1% 0;}
         @media (min-width: 992px) { padding: 3.1% 0;}
     }
 
-   li { 
+   li {
+    position: relative;
         @media (min-width: 375px) {}
         @media (min-width: 425px) {}
         @media (min-width: 768px) {}
         @media (min-width: 992px) {}
         @media (min-width: 1024px) {height: 33%;}
         @media (min-width: 1440px) {height: 33.6%;}
-        
+
       >  div{
+
             border-left: 3px solid #e71d7c;
             color: #fff;
-            position: relative;
+
             overflow: hidden;
-            font-weight: 700; 
-            background-color: #131313; 
+            font-weight: 700;
+            background-color: #131313;
             padding: 1.86rem;
             height: 100%;
 
@@ -38,8 +40,8 @@
             > div{}
         }
 
-       
- 
+
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -48,10 +50,10 @@
             position: relative;
         }
         &__text{ font-size: 24px;
-            
+
             .number{  font-size: 36px;}
         }
-        
+
         &:hover{
             &:after{
                 width: 100%;

@@ -11312,13 +11312,14 @@ footer h2, footer .h2 {
 }
 
 .card-course-content .line, .card-course-content .line--small {
-	width: 40%;
+	width: 80%;
 	height: 1px;
 	background: var(--bs-primary);
 	margin-bottom: 15px;
 }
 
 .card-course-content .line--small {
+	width: 40%;
 	margin-top: 20px;
 	max-width: 220px;
 }

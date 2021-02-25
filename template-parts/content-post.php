@@ -76,9 +76,7 @@ $author_id = get_the_author_meta( 'ID' );
       <section class="row">
         <div class="banner-info banner-info--center position-relative py-5">
           <div class="col py-3">
-            <h2>Invista em conhecimento, invista em você</h2>
-            <p class="lead">A comodidade do Ensino On-line aliada à interação com o professor possível no Ensino
-              Presencial.</p>
+            <h2>A comodidade do Ensino On-line aliada à interação com o professor possível no Ensino Presencial.</h2>
             <a href="#" class="btn btn-lg btn-outline-light  stretched-link"> junte-se a nós</a>
           </div>
         </div>

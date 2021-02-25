@@ -42,7 +42,7 @@ get_header();
         </div>
       </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-        <?php           
+        <?php
           $args = array(
           'numberposts'	=> -1,
           'posts_per_page'=> -1,
@@ -50,18 +50,18 @@ get_header();
           'orderby' => 'date',
           'order'     => 'DESC',
           );
-          $the_query = new WP_Query( $args );          
-          if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); 
-          
+          $the_query = new WP_Query( $args );
+          if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID();
+
           $terms = get_terms('curso_category');
-          $post_terms = get_the_terms( get_the_ID(), 'curso_category' ); 
-          $post_cat = get_the_terms( get_the_ID(), 'categoria-cursos' ); 
+          $post_terms = get_the_terms( get_the_ID(), 'curso_category' );
+          $post_cat = get_the_terms( get_the_ID(), 'categoria-cursos' );
         ?>
-        <div class="col list-courses <?php 
-				if ( $post_cat && ! is_wp_error( $post_cat ) ) : 
+        <div class="col list-courses <?php
+				if ( $post_cat && ! is_wp_error( $post_cat ) ) :
 					foreach ( $post_cat as $term ) {
-						echo $term->slug . ' '; 
-					} 
+						echo $term->slug . ' ';
+					}
 				endif;
 				?>">
           <div class="card card-course <?php if( get_field('course_is_new') === true ) { ?>card-course_is-new<?php } ?>"
@@ -74,8 +74,8 @@ get_header();
             <a class="card-course_all_height" href="<?php echo get_post_permalink(); ?>">
               <div class="card-course-content">
                 <div class="thumb-avatar" style="background-image: url(<?php
-                  foreach($post_terms as $term){     
-                    the_field('image_teacher', $term);                  
+                  foreach($post_terms as $term){
+                    the_field('image_teacher', $term);
                   }
                 ?>)"></div> <!-- //thumb-avatar -->
                 <h3><?php echo $post_terms[0]->name; ?></h3>
@@ -97,9 +97,7 @@ get_header();
     <div class="container">
       <div class="row">
         <div>
-          <h2>Invista em conhecimento, invista em você</h2>
-          <p class="lead">A comodidade do Ensino On-line aliada à interação com o professor possível no Ensino
-            Presencial.</p>
+          <h2>A comodidade do Ensino On-line aliada à interação com o professor possível no Ensino Presencial.</h2>
           <a href="#call" class="btn btn-lg btn-outline-light stretched-link"> junte-se a nós</a>
         </div>
       </div>

@@ -55,7 +55,10 @@ $author_id = get_the_author_meta( 'ID' );
               </li>
               <li class="list-inline-item">
                 <span class="author__name">
-                  <?php echo get_the_author(); ?>
+                  <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"
+                    title="<?php echo esc_attr( get_the_author() ); ?>">
+                    <?php echo get_the_author(); ?>
+                  </a>
                 </span>
               </li>
             </ul>

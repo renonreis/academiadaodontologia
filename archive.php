@@ -19,11 +19,12 @@ get_header();
           <div class="ui-title py-3 py-md-4 py-lg-5">
             <header class="page-header">
               <?php
-								the_archive_title( '<h1 class="ui-title-main page-title">', '</h1>' );
-								the_archive_description( '<div class="ui-title-main archive-description">', '</div>' );
-							?>
+								the_archive_title( '<h1 class="ui-title-main page-title">', '</h1>' );	
+							  the_archive_description( '<div class="text-white archive-description">', '</div>' ); 
+              ?>
             </header><!-- .page-header -->
           </div>
+
         </div>
       </div>
       <div class="row">

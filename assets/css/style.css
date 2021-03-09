@@ -10533,20 +10533,50 @@ fieldset:disabled .btn {
 	height: 10px;
 }
 
-.btn-primary, .btn-seconday {
+.btn-primary,
+.btn-seconday {
 	font-weight: 600;
 	border: none;
 	text-transform: uppercase;
 	color: #fff;
-	font-family: 'Raleway', sans-serif;
+	font-family: "Raleway", sans-serif;
 }
 
-.btn-primary:hover, .btn-seconday:hover {
+.btn-primary:hover,
+.btn-seconday:hover {
 	color: #fff;
 }
 
 .border-gray-light {
 	border: 1px solid #535353;
+}
+
+.border-gray-premium {
+	border: 1px solid #623779;
+	color: #623779;
+}
+
+.border-gray-premium:hover {
+	background-color: #623779;
+	color: #fff;
+}
+
+.border-gray-plus {
+	border: 1px solid #e71d7c;
+	color: #e71d7c;
+}
+
+.border-gray-plus:hover {
+	background-color: #e71d7c;
+	color: #fff;
+}
+
+.border-gray-premium,
+.border-gray-plus {
+	font-weight: 700;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding: 0.7rem 2.7rem;
 }
 
 .btn-outline-light {
@@ -12134,8 +12164,8 @@ ul#filters a i {
 ul#filters a i:after {
 	background: #fff;
 	border-radius: 50%;
-	width: 15px;
-	height: 15px;
+	width: 17px;
+	height: 17px;
 	position: absolute;
 	content: "";
 	right: 2px;

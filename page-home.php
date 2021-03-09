@@ -26,7 +26,8 @@ get_header();
       <div class="d-flex align-items-end">
         <div class="w-100 text-white text-center text-sm-start">
           <h1 class="display-1">Sua atualização online <span class="br"> em Odontopediatria</h1>
-          <a href="#" class="hero-button btn btn-primary btn-lg py-3 px-5 mt-4 ff-primary fw-700 ">Comece agora!</a>
+          <a href="#escolha-o-seu-plano"
+            class="hero-button btn btn-primary btn-lg py-3 px-5 mt-4 ff-primary fw-700 ">Comece agora!</a>
         </div>
       </div>
     </div>
@@ -79,7 +80,7 @@ get_header();
       </div>
     </div><!-- // container -->
   </section>
-  <section class="mt-5 pt-2 pb-2">
+  <section id="escolha-o-seu-plano" class="pt-5 pt-2 pb-2">
     <div class="container">
       <div class="row">
         <div class="col-sm">
@@ -129,6 +130,11 @@ get_header();
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Material impresso exclusivo
                 </li>
               </ul>
+              <div class="pt-4 text-center">
+                <a href="<?php echo get_home_url(); ?>/cursos" class="btn btn-lg border-gray-premium">
+                  Saiba mais
+                </a>
+              </div>
             </div>
             <div class="ui-plan__footer p-3 bg-secondary"></div>
           </div> <!-- //ui-plan -->
@@ -180,6 +186,11 @@ get_header();
                   <i class="mx-2 fas fa-plus-circle"></i> Aulas sedação AO VIVO bimestrais
                 </li>
               </ul>
+              <div class="pt-4 text-center">
+                <a href="<?php echo get_home_url(); ?>/cursos" class="btn btn-lg border-gray-plus">
+                  Saiba mais
+                </a>
+              </div>
             </div>
             <div class="ui-plan__footer p-3 bg-primary"></div>
           </div> <!-- //ui-plan -->
@@ -334,7 +345,7 @@ get_header();
       <div class="row py-4">
         <div>
           <h2>A comodidade do Ensino On-line aliada à interação com o professor possível no Ensino Presencial.</h2>
-          <a href="#" class="btn btn-lg btn-outline-light  stretched-link"> junte-se a nós</a>
+          <a href="#escolha-o-seu-plano" class="btn btn-lg btn-outline-light stretched-link">Comece agora</a>
         </div>
       </div>
     </div>

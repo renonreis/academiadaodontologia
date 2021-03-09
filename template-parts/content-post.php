@@ -49,9 +49,7 @@ $author_id = get_the_author_meta( 'ID' );
             </header><!-- .entry-header -->
             <ul class="list-inline author pt-3">
               <li class="list-inline-item">
-                <img src="<?php echo get_avatar_url($user->ID, ['size' => '55']); ?>"
-                  class="author__thumb border border-2 rounded-circle border-primary" width="55px" height="55px"
-                  alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
+                <?php echo get_avatar( get_the_author_meta( 'ID' ), 55, '', '', array('class' => 'author__thumb border border-2 rounded-circle border-primary') ); ?>
               </li>
               <li class="list-inline-item">
                 <span class="author__name">
@@ -80,7 +78,8 @@ $author_id = get_the_author_meta( 'ID' );
         <div class="banner-info banner-info--center position-relative py-5">
           <div class="col py-3">
             <h2>A comodidade do Ensino On-line aliada à interação com o professor possível no Ensino Presencial.</h2>
-            <a href="#" class="btn btn-lg btn-outline-light  stretched-link"> junte-se a nós</a>
+            <a href="<?php echo get_home_url(); ?>/#escolha-o-seu-plano"
+              class="btn btn-lg btn-outline-light stretched-link">Comece agora</a>
           </div>
         </div>
       </section>

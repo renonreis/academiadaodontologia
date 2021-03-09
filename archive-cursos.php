@@ -28,14 +28,10 @@ get_header();
             <a class="filters__btn btn active btn-lg btn-outline-light ms-lg-2 border-gray-light"
               onclick="filterSelection('all')">Todos</a>
             <a class="filters__btn btn btn-lg btn-outline-light ms-lg-2 border-gray-light"
-              onclick="filterSelection('lancamentos')">Lançamentos</a>
+              onclick="filterSelection('odontopediatria-premium')">Odontopediatria Premium</a>
             <a class="filters__btn btn btn-lg btn-outline-light ms-lg-2 border-gray-light"
-              onclick="filterSelection('mais-acessados')">Mais acessados</a>
-            <a class="filters__btn btn btn-lg btn-outline-light ms-lg-2 border-gray-light"
-              onclick="filterSelection('semi-presenciais')">Semi-presenciais</a>
-            <a class="filters__btn btn btn-lg btn-outline-light ms-lg-2 border-gray-light"
-              onclick="filterSelection('sedacao')">
-              Sedação <i class="fas fa-plus-circle"></i>
+              onclick="filterSelection('odontopediatria-plus')">
+              Odontopediatria Plus <i class="fas fa-plus-circle"></i>
             </a>
 
           </ul>
@@ -56,6 +52,7 @@ get_header();
           $terms = get_terms('curso_category');
           $post_terms = get_the_terms( get_the_ID(), 'curso_category' );
           $post_cat = get_the_terms( get_the_ID(), 'categoria-cursos' );
+          
         ?>
         <div class="col list-courses <?php
 				if ( $post_cat && ! is_wp_error( $post_cat ) ) :
@@ -98,7 +95,8 @@ get_header();
       <div class="row">
         <div>
           <h2>A comodidade do Ensino On-line aliada à interação com o professor possível no Ensino Presencial.</h2>
-          <a href="#call" class="btn btn-lg btn-outline-light stretched-link"> junte-se a nós</a>
+          <a href="<?php echo get_home_url(); ?>/#escolha-o-seu-plano"
+            class="btn btn-lg btn-outline-light stretched-link">Comece agora</a>
         </div>
       </div>
     </div>

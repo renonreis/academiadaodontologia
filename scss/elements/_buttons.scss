@@ -1,17 +1,44 @@
-.btn-primary, .btn-seconday{
-    font-weight: 600;
-    border:none;
-    text-transform: uppercase;
+.btn-primary,
+.btn-seconday {
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  &:hover {
     color: #fff;
-    font-family: 'Raleway', sans-serif;
-    &:hover{
-        color: #fff
+  }
+}
+.border-gray-light {
+  border: 1px solid #535353;
+}
+
+.border-gray-premium {
+    border: 1px solid $secondary;
+    color: $secondary;
+    &:hover {
+        background-color: $secondary;
+        color: $white;
     }
 }
-.border-gray-light{
-    border: 1px solid #535353;
+
+.border-gray-plus {
+    border: 1px solid $primary;
+    color: $primary;    
+    &:hover {
+        background-color: $primary;
+        color: $white;
+    }
+}
+
+.border-gray-premium,
+.border-gray-plus {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 0.7rem 2.7rem;
 }
 
 .btn-outline-light {
-    border-color: rgba(255, 255, 255, 0.52);
+  border-color: rgba(255, 255, 255, 0.52);
 }

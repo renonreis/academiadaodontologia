@@ -28,10 +28,13 @@ get_header();
             <a class="filters__btn btn active btn-lg btn-outline-light ms-lg-2 border-gray-light"
               onclick="filterSelection('all')">Todos</a>
             <a class="filters__btn btn btn-lg btn-outline-light ms-lg-2 border-gray-light"
-              onclick="filterSelection('odontopediatria-premium')">Odontopediatria Premium</a>
+              onclick="filterSelection('odontopediatria-premium')">
+              Odontopediatria Premium
+            </a>
             <a class="filters__btn btn btn-lg btn-outline-light ms-lg-2 border-gray-light"
               onclick="filterSelection('odontopediatria-plus')">
-              Odontopediatria Plus <i class="fas fa-plus-circle"></i>
+              Odontopediatria Plus
+              <i class="fas fa-plus-circle"></i>
             </a>
 
           </ul>
@@ -52,7 +55,7 @@ get_header();
           $terms = get_terms('curso_category');
           $post_terms = get_the_terms( get_the_ID(), 'curso_category' );
           $post_cat = get_the_terms( get_the_ID(), 'categoria-cursos' );
-          
+
         ?>
         <div class="col list-courses <?php
 				if ( $post_cat && ! is_wp_error( $post_cat ) ) :
@@ -63,7 +66,7 @@ get_header();
 				?>">
           <div class="card card-course <?php if( get_field('course_is_new') === true ) { ?>card-course_is-new<?php } ?>"
             style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'medium_large'); ?>);">
-            <?php  if(	$term->slug === 'sedacao') : ?>
+            <?php  if(	$term->slug === 'odontopediatria-plus') : ?>
             <span class="card-course__plus">
               <i class="fas fa-plus-circle"></i>
             </span>

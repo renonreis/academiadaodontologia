@@ -103,6 +103,9 @@ get_header();
               </div>
               <ul class="ui-plan__list list-group list-group-flush">
                 <li class="list-group-item">
+                  <i class="mx-2 far fa-check-circle text-black-50"></i> Acesso imediato a + de 22 cursos
+                </li>
+                <li class="list-group-item">
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Plano de ensino personalizado
                 </li>
                 <li class="list-group-item">
@@ -116,9 +119,6 @@ get_header();
                 </li>
                 <li class="list-group-item">
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Ebooks, gráficos, informativos
-                </li>
-                <li class="list-group-item">
-                  <i class="mx-2 far fa-check-circle text-black-50"></i> Acesso imediato a + de 22 cursos
                 </li>
                 <li class="list-group-item">
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Cursos novos mensais
@@ -153,6 +153,9 @@ get_header();
               </div>
               <ul class="ui-plan__list list-group list-group-flush">
                 <li class="list-group-item">
+                  <i class="mx-2 far fa-check-circle text-black-50"></i> Acesso imediato a + de 22 cursos
+                </li>
+                <li class="list-group-item">
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Plano de ensino personalizado
                 </li>
                 <li class="list-group-item">
@@ -166,9 +169,6 @@ get_header();
                 </li>
                 <li class="list-group-item">
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Ebooks, gráficos, informativos
-                </li>
-                <li class="list-group-item">
-                  <i class="mx-2 far fa-check-circle text-black-50"></i> Acesso imediato a + de 22 cursos
                 </li>
                 <li class="list-group-item">
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Cursos novos mensais

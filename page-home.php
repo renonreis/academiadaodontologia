@@ -27,7 +27,8 @@ get_header();
         <div class="w-100 text-white text-center text-sm-start">
           <h1 class="display-1">Sua atualização online <span class="br"> em Odontopediatria</h1>
           <a href="#escolha-o-seu-plano"
-            class="hero-button btn btn-primary btn-lg py-3 px-5 mt-4 ff-primary fw-700 ">Comece agora!</a>
+            class="hero-button btn btn-primary btn-lg py-3 px-5 mt-4 ff-primary fw-700 ">Comece
+            agora!</a>
         </div>
       </div>
     </div>
@@ -214,8 +215,8 @@ get_header();
           'numberposts'	=> -1,
           'posts_per_page'=> 4,
           'post_type'		=> 'cursos',
-          'orderby' => 'date',
-          'order'     => 'DESC',
+          'orderby' => 'menu_order',
+          'order'     => 'ASC',
           );
           $the_query = new WP_Query( $args );
           if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID();
@@ -249,8 +250,17 @@ get_header();
                 <div class="line"></div>
                 <p><?php the_title(); ?></p>
                 <span class="time">
-                  <i class="far fa-clock"></i>
-                  <?php the_field('course_length'); ?>h/aula
+                  <?php
+                    if( have_rows('course_length') ):
+                      while( have_rows('course_length') ): the_row();
+                      $hour = get_sub_field('hour');
+                      $minutes = get_sub_field('minutes');
+                        if($hour) {
+                          echo '<i class="far fa-clock" aria-hidden="true"></i> ' . $hour . 'h' . $minutes . '' ;
+                        }
+                      endwhile;
+                    endif;
+                  ?>
                 </span>
               </div>
             </a>

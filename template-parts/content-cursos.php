@@ -28,15 +28,24 @@ $course_video = get_field('course_video');
       <div class="col-lg-7">
         <div class="card-course-content text-white text-center">
           <div class="thumb-avatar thumb-avatar--large mb-lg-4" style="background-image: url(<?php
-                  foreach($post_terms as $term){
-                    the_field('image_teacher', $term);
-                  }
-                ?>)"></div> <!-- //thumb-avatar -->
+            foreach($post_terms as $term){
+              the_field('image_teacher', $term);
+            }
+          ?>)"></div> <!-- //thumb-avatar -->
           <h3 class='h3--large'><?php echo $post_terms[0]->name; ?></h3>
           <div class="line--small mx-auto"></div>
           <span class="time">
-            <i class="far fa-clock" aria-hidden="true"></i>
-            <?php the_field('course_length'); ?>h
+            <?php
+              if( have_rows('course_length') ):
+                while( have_rows('course_length') ): the_row();
+                $hour = get_sub_field('hour');
+                $minutes = get_sub_field('minutes');
+                  if($hour) {
+                    echo '<i class="far fa-clock" aria-hidden="true"></i> ' . $hour . 'h' . $minutes . '' ;
+                  }
+                endwhile;
+              endif;
+            ?>
           </span>
           <?php if( $course_link ){ ?>
           <a href="<?php echo $course_link['link']; ?>" <?php if( $course_link['new_window'] ) { echo 'target="_blank"' ; }
@@ -107,10 +116,10 @@ $course_video = get_field('course_video');
             </span> /mês
           </h6>
           <strong>ou a vista por R$ <?php echo esc_html( $information['cash_value'] ); ?></strong>
-          <div>
-            <a href="<?php echo esc_html( $information['link_button'] ); ?>" target="_blank"
-              class="btn btn-lg btn-primary my-4 fs-4 px-4 ff-primary">
-              <?php echo esc_html( $information['text_button'] ); ?>
+          <div class="btn-courses">
+            <a href="<?php echo $course_link['link']; ?>" <?php if( $course_link['new_window'] ) { echo 'target="_blank"' ; }
+            else { echo '' ; } ?> class="btn btn-lg btn-primary my-4 fs-4 px-4">
+              <?php echo $course_link['text']; ?>
             </a>
           </div>
           <p class="ui-plan__info"><?php echo esc_html( $information['comments'] ); ?></p>
@@ -120,7 +129,19 @@ $course_video = get_field('course_video');
     </div> <!-- //row -->
   </div> <!-- // container -->
 </section>
-<?php } ?>
+<?php }
+  else {
+    if( $course_link ){ ?>
+<div class="btn-courses">
+  <a href="<?php echo $course_link['link']; ?>" <?php if( $course_link['new_window'] ) { echo 'target="_blank"' ; }
+            else { echo '' ; } ?> class="btn btn-lg btn-primary px-4">
+    <?php echo $course_link['text']; ?>
+  </a>
+</div>
+<?php
+    }
+  }
+?>
 <section class="py-5 bg-dark">
   <div class="container pt-5">
     <div class="row">

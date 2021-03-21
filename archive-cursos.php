@@ -46,8 +46,8 @@ get_header();
           'numberposts'	=> -1,
           'posts_per_page'=> -1,
           'post_type'		=> 'cursos',
-          'orderby' => 'date',
-          'order'     => 'DESC',
+          'orderby' => 'menu_order',
+          'order'     => 'ASC',
           );
           $the_query = new WP_Query( $args );
           if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID();
@@ -82,8 +82,17 @@ get_header();
                 <div class="line"></div>
                 <p><?php the_title(); ?></p>
                 <span class="time">
-                  <i class="far fa-clock"></i>
-                  <?php the_field('course_length'); ?>h/aula
+                  <?php
+                    if( have_rows('course_length') ):
+                      while( have_rows('course_length') ): the_row();
+                      $hour = get_sub_field('hour');
+                      $minutes = get_sub_field('minutes');
+                        if($hour) {
+                          echo '<i class="far fa-clock" aria-hidden="true"></i> ' . $hour . 'h' . $minutes . '' ;
+                        }
+                      endwhile;
+                    endif;
+                  ?>
                 </span>
               </div>
             </a>

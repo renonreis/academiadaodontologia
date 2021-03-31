@@ -54,10 +54,14 @@ $course_video = get_field('course_video');
           <?php
             if( get_field('course_separate') ) {
           ?>
+          <?php
+            $information = get_field('information');
+            if( $information ):
+          ?>
           <p class="info-text">
-            Este curso não faz parte dos pacotes Odontopediatria Premium ou Odontopediatria Plus e, portanto, é vendido
-            separadamente.
+            <?php echo esc_html( $information['comments'] ); ?>
           </p>
+          <?php endif; ?>
           <?php } ?>
         </div>
       </div>
@@ -73,12 +77,12 @@ $course_video = get_field('course_video');
           <div class="videoWrapper">
             <?php if( $course_video ){ ?>
             <?php if( $course_video['embed'] == 'youtube' ) { ?>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $course_video['id']; ?>"
-              frameborder="0"
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/<?php echo $course_video['id']; ?>?autoplay=1" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
             <?php } else { ?><iframe width="560" height="315"
-              src="https://player.vimeo.com/video/<?php echo $course_video['id']; ?>?title=0&byline=0&portrait=0"
+              src="https://player.vimeo.com/video/<?php echo $course_video['id']; ?>?autoplay=1?title=0&byline=0&portrait=0"
               frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
             </iframe>
             <?php } ?>
@@ -104,7 +108,10 @@ $course_video = get_field('course_video');
     <div class="row justify-content-center">
       <div class="col-lg-6 text-white text-center">
         <div class="d-flex flex-column">
-          <?php $information = get_field('information'); if( $information ): ?>
+          <?php
+            $information = get_field('information');
+            if( $information ):
+          ?>
           <h6 class="ui-plan__price mb-0 "><?php echo esc_html( $information['installment'] ); ?>x R$
             <span>
               <?php
@@ -122,7 +129,7 @@ $course_video = get_field('course_video');
               <?php echo $course_link['text']; ?>
             </a>
           </div>
-          <p class="ui-plan__info"><?php echo esc_html( $information['comments'] ); ?></p>
+          <p class="info-text"><?php echo esc_html( $information['comments'] ); ?></p>
           <?php endif; ?>
         </div> <!-- //d-flex -->
       </div> <!-- //col -->

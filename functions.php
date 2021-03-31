@@ -103,7 +103,7 @@ if ( ! function_exists( 'academiadaodontologia_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
-	}	
+	}
 endif;
 add_action( 'after_setup_theme', 'academiadaodontologia_setup' );
 
@@ -189,10 +189,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /* Add custom classes to list item "li" */
-function _namespace_menu_item_class( $classes, $item ) {       
+function _namespace_menu_item_class( $classes, $item ) {
 	$classes[] = "nav-item"; // you can add multiple classes here
 	return $classes;
-} 
+}
 add_filter( 'nav_menu_css_class' , '_namespace_menu_item_class' , 10, 2 );
 
 /* Add custom class to link in menu */
@@ -202,7 +202,7 @@ function _namespace_modify_menuclass($ulclass) {
 add_filter('wp_nav_menu', '_namespace_modify_menuclass');
 
 function custom_post_type() {
-	
+
 	register_post_type('depoimentos',
 		array(
 			'labels'      => array(
@@ -212,13 +212,13 @@ function custom_post_type() {
 			'exclude_from_search' => true,
 			'has_archive' => false,
 			'menu_icon' => 'dashicons-testimonial',
-			'menu_position'	=> 40,					
+			'menu_position'	=> 40,
 			'public'      => true,
 			'publicly_queryable'  => false,
 			'show_in_nav_menus' => false,
 		)
 	);
-	
+
 	register_post_type('faq',
 		array(
 			'labels'      => array(
@@ -234,7 +234,7 @@ function custom_post_type() {
 			'show_in_nav_menus' => false,
 		)
 	);
-	
+
 	register_post_type('cursos',
 		array(
 			'labels'      => array(
@@ -247,6 +247,7 @@ function custom_post_type() {
 			'post_type' => 'cursos',
 			'public'      => true,
 			'publicly_queryable'  => true,
+			'exclude_from_search' => true,
 			'supports' => array(
 				'title',
 				'editor',
@@ -256,32 +257,32 @@ function custom_post_type() {
 	);
 
 	register_taxonomy(
-		'categoria-cursos', 
+		'categoria-cursos',
 		'cursos', array(
-			'hierarchical' => true, 
-			'label' => 'Categorias', 			
-			'singular_name' => 'Categoria', 
-			'rewrite' => true, 
+			'hierarchical' => true,
+			'label' => 'Categorias',
+			'singular_name' => 'Categoria',
+			'rewrite' => true,
 			'query_var' => true,
 			'public'      => true,
 			'publicly_queryable'  => false,
 			'show_in_nav_menus' => false,
 		)
 	);
-		
+
 	register_taxonomy(
-		'curso_category', 
+		'curso_category',
 		'cursos', array(
-			'hierarchical' => true, 
-			'label' => 'Professores', 			
-			'singular_name' => 'Professor', 
-			'rewrite' => true, 
+			'hierarchical' => true,
+			'label' => 'Professores',
+			'singular_name' => 'Professor',
+			'rewrite' => true,
 			'query_var' => true,
 			'publicly_queryable'  => false,
 			'show_in_nav_menus' => false,
 		)
 	);
-	
+
 }
 add_action('init', 'custom_post_type');
 
@@ -431,8 +432,8 @@ function academia_wp_list_categories( $args = '' ) {
 	}
 }
 
-class Walker_Category_Custom extends Walker_Category {	
-	 
+class Walker_Category_Custom extends Walker_Category {
+
 	function start_el( &$output, $category, $depth = 0, $args = array(), $id = 0 ) {
 		/** This filter is documented in wp-includes/category-template.php */
 		$cat_name = apply_filters( 'list_cats', esc_attr( $category->name ), $category );
@@ -440,7 +441,7 @@ class Walker_Category_Custom extends Walker_Category {
 		$atts         = array();
 		$atts['href'] = get_term_link( $category );
 
-		
+
 		$atts = apply_filters( 'category_list_link_attributes', $atts, $category, $depth, $args, $id );
 
 		$attributes = '';
@@ -470,11 +471,11 @@ class Walker_Category_Custom extends Walker_Category {
 		} else {
 			$output .= "\t$link<br />\n";
 		}
-	}	
+	}
 }
 
 if( function_exists('acf_add_options_page') ) {
-	
+
 	acf_add_options_page(array(
 		'page_title' 	=> 'Opções do Tema',
 		'menu_title'	=> 'Opções do Tema',
@@ -486,7 +487,7 @@ if( function_exists('acf_add_options_page') ) {
 		'update_button' => __('Atualizar', 'acf'),
 		'updated_message' => __("Opções do tema atualizado", 'acf'),
 	));
-		
+
 }
 
 function remove_pages_from_search() {

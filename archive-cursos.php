@@ -25,13 +25,11 @@ get_header();
         <div class="col-sm">
           <ul id="filters" class="list-inline text-center mb-5">
 
-            <a class="filters__btn btn active btn-lg btn-outline-light ms-lg-2 border-gray-light"
-              onclick="filterSelection('all')">Todos</a>
             <a class="filters__btn btn btn-lg btn-outline-light ms-lg-2 border-gray-light"
               onclick="filterSelection('odontopediatria-premium')">
               Odontopediatria Premium
             </a>
-            <a class="filters__btn btn btn-lg btn-outline-light ms-lg-2 border-gray-light"
+            <a id="odonto-plus" class="filters__btn btn active btn-lg btn-outline-light ms-lg-2 border-gray-light"
               onclick="filterSelection('odontopediatria-plus')">
               Odontopediatria Plus
               <i class="fas fa-plus-circle"></i>
@@ -81,20 +79,20 @@ get_header();
                 <h3><?php echo $post_terms[0]->name; ?></h3>
                 <div class="line"></div>
                 <p><?php the_title(); ?></p>
-                <span class="time">
-                  <?php
-                    if( have_rows('course_length') ):
-                      while( have_rows('course_length') ): the_row();
-                      $hour = get_sub_field('hour');
-                      $minutes = get_sub_field('minutes');
-                        if($hour) {
-                          echo '<i class="far fa-clock" aria-hidden="true"></i> ' . $hour . 'h' . $minutes . '' ;
-                        }
-                      endwhile;
-                    endif;
-                  ?>
-                </span>
               </div>
+              <span class="time">
+                <?php
+                  if( have_rows('course_length') ):
+                    while( have_rows('course_length') ): the_row();
+                    $hour = get_sub_field('hour');
+                    $minutes = get_sub_field('minutes');
+                      if($hour) {
+                        echo '<i class="far fa-clock" aria-hidden="true"></i> ' . $hour . 'h' . $minutes . '' ;
+                      }
+                    endwhile;
+                  endif;
+                ?>
+              </span>
             </a>
           </div> <!-- // card-curso -->
         </div>

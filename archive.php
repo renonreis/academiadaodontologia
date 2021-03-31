@@ -19,8 +19,8 @@ get_header();
           <div class="ui-title py-3 py-md-4 py-lg-5">
             <header class="page-header">
               <?php
-								the_archive_title( '<h1 class="ui-title-main page-title">', '</h1>' );	
-							  the_archive_description( '<div class="text-white archive-description">', '</div>' ); 
+								the_archive_title( '<h1 class="ui-title-main page-title">', '</h1>' );
+							  the_archive_description( '<div class="text-white archive-description">', '</div>' );
               ?>
             </header><!-- .page-header -->
           </div>
@@ -43,8 +43,6 @@ get_header();
                 get_template_part( 'template-parts/content', 'archive' );
 
               endwhile;
-
-              the_posts_navigation();
 
             else :
 

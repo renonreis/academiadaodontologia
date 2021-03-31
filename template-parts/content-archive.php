@@ -40,8 +40,7 @@ $author_id = get_the_author_meta( 'ID' );
         <div class="flex-grow-1">
           <ul class="list-inline mb-0">
             <li class="list-inline-item">
-              <img src="<?php echo get_avatar_url($user->ID, ['size' => '55']); ?>" class="border border-1 rounded-circle border-primary"
-                width="55px" height="55px" alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
+              <?php echo get_avatar( get_the_author_meta( 'ID' ), 55, '', '', array('class' => 'author__thumb border border-2 rounded-circle border-primary') ); ?>
             </li>
             <li class="list-inline-item author">
               <?php echo get_the_author(); ?>
@@ -50,7 +49,7 @@ $author_id = get_the_author_meta( 'ID' );
         </div>
         <div class="align-self-center">
           <span class="text-muted">
-            <time  class="ff-secondary fw-light"  datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished">
+            <time class="ff-secondary fw-light" datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished">
               <?php echo get_the_date(); ?>
             </time>
           </span>

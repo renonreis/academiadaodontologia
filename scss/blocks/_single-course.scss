@@ -17,7 +17,6 @@
     transition: all 0.2s linear;
     bottom: 0;
   }
-
   .info-text {
     color: #979797;
     font-family: "Raleway", sans-serif;
@@ -32,6 +31,7 @@
       font-size: 14px;
     }
   }
+
   .card-course-content .time {
     @media (min-width: 1024px) {
       margin-top: 25px;
@@ -72,6 +72,21 @@
     @media (min-width: 1024px) {
       font-size: 4.375rem;
     }
+  }
+}
+
+.info-text {
+  color: #979797;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: 768px) {
+    font-size: 13px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 14px;
   }
 }
 

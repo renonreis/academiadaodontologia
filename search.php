@@ -30,7 +30,7 @@ get_header();
       </div>
       <div class="row">
         <div class="col-lg-8 mb-md-0 mb-3">
-          <div class="row row-cols-1 row-cols-lg-2 g-3" data-masonry='{"percentPosition": false }'>
+          <div class="row row-cols-1 row-cols-lg-2 g-3">
             <?php
               /* Start the Loop */
               while ( have_posts() ) :

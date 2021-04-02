@@ -13,7 +13,7 @@ $author_id = get_the_author_meta( 'ID' );
 ?>
 <div class="col">
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <div class="card card-post rounded-0 border-0 p-0 h-100" data-aos="fade-up">
+    <div class="card card-post rounded-0 border-0 p-0 h-100">
       <div class="card-header border-0 p-0">
         <a href="<?php echo get_permalink(); ?>" class="text-decoration-none up-link">
           <img class="img-thumbnail img-fluid  border-0 rounded-0 p-0 "

@@ -19,7 +19,7 @@ get_header();
   <section class="hero" style="background-image: url(<?php echo wp_get_attachment_image_url( 145, '' ); ?>">
     <div class="overlay"></div>
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/Mariane-Makinf-of-VERSAO-1-MINUTO.mp4"
+      <source src="http://v2.academiadaodontologia.com.br/wp-content/uploads/2021/03/academia-odonto-novo.mp4"
         type="video/mp4">
     </video>
     <div class="container">
@@ -49,7 +49,7 @@ get_header();
             <li>
               <div>
                 <div class>
-                  <span class="fs-2">+22</span> <span class="fs-3">cursos</span>
+                  <span class="fs-2">15</span> <span class="fs-3">cursos</span>
                 </div>
               </div>
             </li>
@@ -63,7 +63,7 @@ get_header();
             <li>
               <div>
                 <div>
-                  <span class="fs-2">540</span> <span class="fs-3">horas/aula</span>
+                  <span class="fs-2">60</span> <span class="fs-3">horas/aula</span>
                 </div>
               </div>
             </li>
@@ -72,9 +72,8 @@ get_header();
         <div class="col-lg-8">
           <div>
             <div class="videoWrapper">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/Do5HAPmcL2c" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+              <iframe src="https://player.vimeo.com/video/525143132?autoplay=1&title=0&byline=0&portrait=0" width="560"
+                height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -98,13 +97,14 @@ get_header();
                 Premium</h5>
               <h6 class="ui-plan__price">R$ <span>129,90</span> /mês</h6>
               <div class="text-center mt-3">
-                <a href="#" class="btn btn-secondary btn-lg text-uppercase fw-bold py-3 px-5">Assinar
+                <a href="https://cursos.academiadaodontologia.com.br/course/view.php?id=32" target="_blank"
+                  class="btn btn-secondary btn-lg text-uppercase fw-bold py-3 px-5">Assinar
                   Premium</a>
                 <p class="ff-secondary mt-2 mb-0">* Plano anual total R$ 1.558,80</p>
               </div>
               <ul class="ui-plan__list list-group list-group-flush">
                 <li class="list-group-item">
-                  <i class="mx-2 far fa-check-circle text-black-50"></i> Acesso imediato a + de 22 cursos
+                  <i class="mx-2 far fa-check-circle text-black-50"></i> Acesso imediato a 14 cursos
                 </li>
                 <li class="list-group-item">
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Plano de ensino personalizado
@@ -148,13 +148,14 @@ get_header();
                 Plus <span><i class="fas fa-plus-circle text-primary"></i></span></h5>
               <h6 class="ui-plan__price">R$ <span>137,80</span> /mês</h6>
               <div class="text-center mt-3">
-                <a href="#" class="btn btn-primary btn-lg text-uppercase fw-bold py-3 px-5">Assinar
+                <a href="Cariostático em Odontopediatria" target="_blank"
+                  class="btn btn-primary btn-lg text-uppercase fw-bold py-3 px-5">Assinar
                   Plus</a>
                 <p class="ff-secondary mt-2 mb-0">* Plano anual total R$ 1.653,60</p>
               </div>
               <ul class="ui-plan__list list-group list-group-flush">
                 <li class="list-group-item">
-                  <i class="mx-2 far fa-check-circle text-black-50"></i> Acesso imediato a + de 22 cursos
+                  <i class="mx-2 far fa-check-circle text-black-50"></i> Acesso imediato a 15 cursos
                 </li>
                 <li class="list-group-item">
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Plano de ensino personalizado
@@ -249,20 +250,20 @@ get_header();
                 <h3 title="<?php echo $post_terms[0]->name; ?>"><?php echo $post_terms[0]->name; ?></h3>
                 <div class="line"></div>
                 <p><?php the_title(); ?></p>
-                <span class="time">
-                  <?php
-                    if( have_rows('course_length') ):
-                      while( have_rows('course_length') ): the_row();
-                      $hour = get_sub_field('hour');
-                      $minutes = get_sub_field('minutes');
-                        if($hour) {
-                          echo '<i class="far fa-clock" aria-hidden="true"></i> ' . $hour . 'h' . $minutes . '' ;
-                        }
-                      endwhile;
-                    endif;
-                  ?>
-                </span>
               </div>
+              <span class="time">
+                <?php
+                  if( have_rows('course_length') ):
+                    while( have_rows('course_length') ): the_row();
+                    $hour = get_sub_field('hour');
+                    $minutes = get_sub_field('minutes');
+                      if($hour) {
+                        echo '<i class="far fa-clock" aria-hidden="true"></i> ' . $hour . 'h' . $minutes . '' ;
+                      }
+                    endwhile;
+                  endif;
+                ?>
+              </span>
             </a>
           </div> <!-- // card-curso -->
         </div>

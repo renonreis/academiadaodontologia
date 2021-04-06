@@ -11262,7 +11262,7 @@ footer h2, footer .h2 {
 	justify-content: space-between;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
 	.card-course_all_height {
 		min-height: 380px;
 	}

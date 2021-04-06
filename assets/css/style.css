@@ -11259,8 +11259,13 @@ footer h2, footer .h2 {
 	display: flex;
 	transition: all 0.2s linear;
 	flex-direction: column;
-	min-height: 380px;
 	justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+	.card-course_all_height {
+		min-height: 380px;
+	}
 }
 
 .card-course_all_height:hover {

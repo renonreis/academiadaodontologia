@@ -1,25 +1,14 @@
 <?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package academiadaodontologia
- */
+	/* Template Name: Home */
+	get_header();
 
-get_header();
 ?>
 
 <main id="main" class="site-main">
   <section class="hero" style="background-image: url(<?php echo wp_get_attachment_image_url( 145, '' ); ?>">
     <div class="overlay"></div>
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="http://v2.academiadaodontologia.com.br/wp-content/uploads/2021/03/academia-odonto-novo.mp4"
+      <source src="https://www.academiadaodontologia.com.br/wp-content/uploads/2021/04/Academia_home_novo_v03.mp4"
         type="video/mp4">
     </video>
     <div class="container">
@@ -97,17 +86,13 @@ get_header();
                 Premium</h5>
               <h6 class="ui-plan__price">R$ <span>129,90</span> /mês</h6>
               <div class="text-center mt-3">
-                <a href="https://cursos.academiadaodontologia.com.br/course/view.php?id=32" target="_blank"
-                  class="btn btn-secondary btn-lg text-uppercase fw-bold py-3 px-5">Assinar
+                <a href="https://cursos.academiadaodontologia.com.br/course/view.php?id=32" class="btn btn-secondary btn-lg text-uppercase fw-bold py-3 px-5">Assinar
                   Premium</a>
                 <p class="ff-secondary mt-2 mb-0">* Plano anual total R$ 1.558,80</p>
               </div>
               <ul class="ui-plan__list list-group list-group-flush">
                 <li class="list-group-item">
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Acesso imediato a 14 cursos
-                </li>
-                <li class="list-group-item">
-                  <i class="mx-2 far fa-check-circle text-black-50"></i> Plano de ensino personalizado
                 </li>
                 <li class="list-group-item">
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Private Class agendadas – 30 min
@@ -125,10 +110,7 @@ get_header();
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Cursos novos mensais
                 </li>
                 <li class="list-group-item">
-                  <i class="mx-2 far fa-check-circle text-black-50"></i> Visulizações ilimitadas das aulas
-                </li>
-                <li class="list-group-item">
-                  <i class="mx-2 far fa-check-circle text-black-50"></i> Material impresso exclusivo
+                  <i class="mx-2 far fa-check-circle text-black-50"></i> Visualizações ilimitadas das aulas
                 </li>
               </ul>
               <div class="pt-4 text-center">
@@ -146,19 +128,15 @@ get_header();
             <div class="d-flex flex-column">
               <h5 class="ui-plan__title card-title text-uppercase text-center mt-4">Odontopediatria <br>
                 Plus <span><i class="fas fa-plus-circle text-primary"></i></span></h5>
-              <h6 class="ui-plan__price">R$ <span>137,80</span> /mês</h6>
+              <h6 class="ui-plan__price">R$ <span>169,90</span> /mês</h6>
               <div class="text-center mt-3">
-                <a href="Cariostático em Odontopediatria" target="_blank"
-                  class="btn btn-primary btn-lg text-uppercase fw-bold py-3 px-5">Assinar
+                <a href="https://cursos.academiadaodontologia.com.br/course/view.php?id=33" class="btn btn-primary btn-lg text-uppercase fw-bold py-3 px-5">Assinar
                   Plus</a>
-                <p class="ff-secondary mt-2 mb-0">* Plano anual total R$ 1.653,60</p>
+                <p class="ff-secondary mt-2 mb-0">* Plano anual total R$ 2.038,80</p>
               </div>
               <ul class="ui-plan__list list-group list-group-flush">
                 <li class="list-group-item">
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Acesso imediato a 15 cursos
-                </li>
-                <li class="list-group-item">
-                  <i class="mx-2 far fa-check-circle text-black-50"></i> Plano de ensino personalizado
                 </li>
                 <li class="list-group-item">
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Private Class agendadas – 30 min
@@ -176,10 +154,7 @@ get_header();
                   <i class="mx-2 far fa-check-circle text-black-50"></i> Cursos novos mensais
                 </li>
                 <li class="list-group-item">
-                  <i class="mx-2 far fa-check-circle text-black-50"></i> Visulizações ilimitadas das aulas
-                </li>
-                <li class="list-group-item">
-                  <i class="mx-2 far fa-check-circle text-black-50"></i> Material impresso exclusivo
+                  <i class="mx-2 far fa-check-circle text-black-50"></i> Visualizações ilimitadas das aulas
                 </li>
                 <li class="list-group-item text-primary">
                   <i class="mx-2 fas fa-plus-circle"></i> Acesso ao curso de sedação medicamentosa
@@ -279,129 +254,23 @@ get_header();
       </div>
     </div>
   </section>
-  <section class="py-5 bg-dark">
-    <div class="container pt-5">
-      <div class="row">
-        <div class="ui-title pb-3 pb-lg-5">
-          <h2 class="ui-title-main">O que dizem nossos alunos</h2>
-        </div>
-      </div> <!-- //row -->
-      <!-- //container -->
-    </div>
-    <div class="container-fluid pb-5">
-      <div class="row">
-        <?php
-          $i = 0;
-					$args = array(
-					'numberposts'	=> -1,
-					'posts_per_page'=> 10,
-					'post_type'		=> 'depoimentos',
-					);
-					$the_query = new WP_Query( $args );
-        ?>
-        <div id="carouselTestimonial" data-bs-interval="false"
-          class="ui-carousel carousel slide _carousel-fade text-white" data-bs-ride="carousel">
-          <ol class="carousel-indicators">
-            <?php if( $the_query->have_posts() ): ?>
-            <?php while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); ?>
-            <li data-bs-target="#carouselTestimonial" data-bs-slide-to="<?php echo $i;?>"
-              class="<?php if($i == 0) echo 'active';?>"></li>
-            <?php $i++; endwhile; endif; ?>
-          </ol>
-          <div class="carousel-inner">
-            <?php $i = 0; if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID(); ?>
-            <div class="carousel-item <?php if($i == 0) echo 'active';?>">
-              <div class="row justify-content-center align-items-center align-content-center m-auto">
-                <div class="picture-person__container col-12 col-lg-auto justify-content-center">
-                  <div class="picture-person m-auto"
-                    style="background-image: url(<?php the_field('testimonial_thumb'); ?>">
-                  </div>
-                </div>
-                <div class="col">
-                  <?php $testimonials = get_field('testimonial_info'); if( $testimonials ): ?>
-                  <figure class="ms-md-5">
-                    <blockquote class="blockquote">
-                      <p><?php echo esc_html( $testimonials['testimonial_text'] ); ?></p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer mt-lg-4 text-light">
-                      <strong class="fs-6">
-                        <?php echo esc_html( $testimonials['testimonial_author'] ); ?>
-                      </strong>
-                      <cite class="ms-3" title="Source Title">
-                        <?php echo esc_html( $testimonials['testimonial_description'] ); ?>
-                      </cite>
-                    </figcaption>
-                  </figure>
-                  <?php endif; ?>
-                </div>
-              </div>
-            </div>
-            <?php $i++; endwhile; ?>
-            <a class="carousel-control-prev" href="#carouselTestimonial" role="button" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Voltar</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselTestimonial" role="button" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Próximo</span>
-            </a>
-            <?php endif; wp_reset_query(); ?>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="banner-info banner-info--center position-relative py-5">
-    <div class="container">
-      <div class="row py-4">
-        <div>
-          <h2>A comodidade do Ensino On-line aliada à interação com o professor possível no Ensino Presencial.</h2>
-          <a href="#escolha-o-seu-plano" class="btn btn-lg btn-outline-light stretched-link">Comece agora</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  
+  <?php get_template_part( 'template-parts/components/testimonials' ); ?>
+
+  <?php get_template_part( 'template-parts/components/banner' ); ?>
+
   <section class="mt-5 py-5">
     <div class="container">
       <div class="row">
         <div class="col-sm">
           <div class="ui-title">
             <h2 class="ui-title-main">Perguntas frequentes</h2>
-          </div>
-          <div class="ui-accordion accordion" id="accordionFaq">
-            <?php
-              $i = 0;
-              $args = array(
-              'numberposts'	=> -1,
-              'posts_per_page'=> 10,
-              'post_type'		=> 'faq',
-              'orderby' => 'date',
-              'order'     => 'ASC',
-              );
-              $the_query = new WP_Query( $args );
-              if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); $id = get_the_ID();
-            ?>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading-<?php echo $i; ?>">
-                <button class="accordion-button text-start collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapse-<?php echo $i; ?>" aria-expanded="true"
-                  aria-controls="collapse-<?php echo $i; ?>">
-                  <?php the_field('question'); ?>
-                </button>
-              </h2>
-              <div id="collapse-<?php echo $i; ?>" class="accordion-collapse collapse"
-                aria-labelledby="heading-<?php echo $i; ?>" data-bs-parent="#accordionFaq">
-                <div class="accordion-body">
-                  <p>
-                    <?php the_field('answer'); ?>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <?php $i++; endwhile; endif; wp_reset_query(); ?>
-          </div>
+          </div>          
         </div>
       </div>
+
+      <?php get_template_part( 'template-parts/components/faq' ); ?>
+
     </div>
   </section>
 </main><!-- #main -->

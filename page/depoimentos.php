@@ -1,18 +1,7 @@
 <?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package academiadaodontologia
- */
+	/* Template Name: Depoimentos */
+	get_header();
 
-get_header();
 ?>
 
 <main id="main" class="site-main">
@@ -106,17 +95,9 @@ get_header();
       </div> <!-- //row -->
     </div> <!-- //container-->
   </section>
-  <section class="banner-info banner-info--center position-relative py-5">
-    <div class="container">
-      <div class="row py-4">
-        <div>
-          <h2>A comodidade do Ensino On-line aliada à interação com o professor possível no Ensino Presencial.</h2>
-          <a href="<?php echo get_home_url(); ?>/#escolha-o-seu-plano"
-            class="btn btn-lg btn-outline-light stretched-link">Comece agora</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  
+  <?php get_template_part( 'template-parts/components/banner' ); ?>
+  
 </main><!-- #main -->
 
 <?php

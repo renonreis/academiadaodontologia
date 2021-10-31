@@ -100,17 +100,9 @@ get_header();
       </div><!-- //col -->
     </div> <!-- //container-->
   </section>
-  <section class="banner-info banner-info--center position-relative py-5">
-    <div class="container">
-      <div class="row">
-        <div>
-          <h2>A comodidade do Ensino On-line aliada à interação com o professor possível no Ensino Presencial.</h2>
-          <a href="<?php echo get_home_url(); ?>/#escolha-o-seu-plano"
-            class="btn btn-lg btn-outline-light stretched-link">Comece agora</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  
+  <?php get_template_part( 'template-parts/components/banner' ); ?>
+  
 </main><!-- #main -->
 
 <?php

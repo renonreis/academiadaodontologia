@@ -74,15 +74,9 @@ $author_id = get_the_author_meta( 'ID' );
         </div>
         <!--//col-12-->
       </div> <!-- //row-->
-      <section class="row">
-        <div class="banner-info banner-info--center position-relative py-5">
-          <div class="col py-3">
-            <h2>A comodidade do Ensino On-line aliada à interação com o professor possível no Ensino Presencial.</h2>
-            <a href="<?php echo get_home_url(); ?>/#escolha-o-seu-plano"
-              class="btn btn-lg btn-outline-light stretched-link">Comece agora</a>
-          </div>
-        </div>
-      </section>
+      
+      <?php get_template_part( 'template-parts/components/banner' ); ?>
+      
       <section class="row bg-white justify-content-center">
         <div class="col-12 col-lg-10">
           <div class=" row py-5  text-dark g-0  overflow-hidden flex-md-row position-relative">
@@ -154,7 +148,7 @@ $author_id = get_the_author_meta( 'ID' );
           setup_postdata($post);
         ?>
         <div class="col">
-          <div class="card card-post rounded-0 border-0 p-0 h-100" data-aos="fade-up">
+          <div class="card card-post rounded-0 border-0 p-0 h-100">
             <div class="card-header border-0 p-0">
               <a href="<?php echo get_permalink(); ?>" class="text-decoration-none up-link">
                 <img class="img-thumbnail img-fluid  border-0 rounded-0 p-0 "
@@ -181,10 +175,8 @@ $author_id = get_the_author_meta( 'ID' );
               <div class="flex-grow-1">
                 <ul class="list-inline mb-0">
                   <li class="list-inline-item">
-                    <img src="<?php echo get_avatar_url($user->ID, ['size' => '55']); ?>"
-                      class="border border-1 rounded-circle border-primary" width="55px" height="55px"
-                      alt="<?php echo get_the_author_meta( 'display_name', $author_id ); ?>">
-                  </li>
+				    <?php echo get_avatar( get_the_author_meta( 'ID' ), 55, '', '', array('class' => 'author__thumb border border-2 rounded-circle border-primary') ); ?>
+				  </li>
                   <li class="list-inline-item author">
                     <?php echo get_the_author(); ?>
                   </li>

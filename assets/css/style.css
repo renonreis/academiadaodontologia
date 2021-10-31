@@ -11774,6 +11774,7 @@ footer h2, footer .h2 {
 	color: var(--bs-primary);
 	font-family: "Raleway", sans-serif;
 	font-weight: 300;
+	font-size: 2.5rem;
 }
 
 .entry-header .author__name {
@@ -11808,7 +11809,7 @@ footer h2, footer .h2 {
 @media (min-width: 576px) {
 	.entry-content, .content-entry {
 		padding: 1rem 3rem 3rem 3rem;
-		font-size: 1.25rem;
+	/*	font-size: 1.25rem;*/
 	}
 }
 
@@ -11912,6 +11913,16 @@ footer h2, footer .h2 {
 	margin: 0;
 }
 
+.entry-content figure.wp-block-image{
+	background-color:white;
+}
+
+.wp-block-image figure{
+	margin: 0;
+	background-color:white;
+}
+
+
 .entry-content .wp-block-image figcaption, .content-entry .wp-block-image figcaption {
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
@@ -11925,7 +11936,7 @@ footer h2, footer .h2 {
 
 @media (min-width: 768px) {
 	.entry-content p, .content-entry p {
-		font-size: 1.25rem;
+		/*font-size: 1.25rem;*/
 	}
 }
 
@@ -12645,6 +12656,10 @@ aside.blog-sidebar .wpforms-container-full.form-newsletter .wpforms-form .wpform
 aside.blog-sidebar .wpforms-container-full.form-newsletter .wpforms-form .wpforms-submit-container .wpforms-submit {
 	margin: 0;
 	width: 100%;
+}
+
+.mauticform_wrapper .mauticform-label{
+	font-size:1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

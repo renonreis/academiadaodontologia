@@ -1,18 +1,7 @@
 <?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package academiadaodontologia
- */
+	/* Template Name: Quem Somos */
+	get_header();
 
-get_header();
 ?>
 
 <main id="main" class="site-main">
@@ -54,6 +43,35 @@ get_header();
         </div>
       </div>
       <div class="row mb-5">
+        <div class="col-12">
+          <div class="row text-light g-0  rounded overflow-hidden flex-md-row mb-5 shadow-sm position-relative">
+            <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
+              <img width="112" class="border-0 rounded-circle"
+                src="<?php echo wp_get_attachment_image_url( 1059, '' ); ?>" alt="">
+            </div>
+            <div class="col p-4 pt-1 ps-2 ps-lg-5 d-flex flex-column position-static">
+              <h3 class="fs-4 fw-bolder">Adriana Cunha Correia</h3>
+              <div class="fw-lighter author__descripion">
+                <p>
+                  Mestre em Odontopediatria - FOA/UNESP<br>
+					Doutora em Ciências Odontológicas - FOA/UNESP<br>
+					Pós-doutora em Microbiologia - FOA/UNESP<br>
+					Capacitação e Habilitação para o uso da Sedação Consciente com Óxido Nitroso<br>
+					Capacitação em Saúde Baseada em Evidências - IEP<br>
+					Instrutora de Suporte Básico de Vida - IBRAPH<br>
+					Clínica Privada
+                </p>
+              </div>
+              <ul class="list-inline fs-5">
+                <li class="list-inline-item">
+                  <a href="https://www.instagram.com/odontologiasemmedo/" target="_blank" class="text-light">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> <!-- //col-->
         <div class="col-12">
           <div class="row text-light g-0  rounded overflow-hidden flex-md-row mb-5 shadow-sm position-relative">
             <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
@@ -236,24 +254,45 @@ Membro da 5ª Câmara de Ética Odontológica do Conselho Regional de Odontologi
           <div class="row text-light g-0  rounded overflow-hidden flex-md-row mb-5 shadow-sm position-relative">
             <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
               <img width="112" class="border-0 rounded-circle"
-                src="<?php echo wp_get_attachment_image_url( 1059, '' ); ?>" alt="">
+                src="<?php echo wp_get_attachment_image_url( 1389, '' ); ?>" alt="">
             </div>
             <div class="col p-4 pt-1 ps-2 ps-lg-5 d-flex flex-column position-static">
-              <h3 class="fs-4 fw-bolder">Adriana Cunha Correia</h3>
+              <h3 class="fs-4 fw-bolder">Fernando Adriani</h3>
               <div class="fw-lighter author__descripion">
                 <p>
-                  Mestre em Odontopediatria - FOA/UNESP<br>
-					Doutora em Ciências Odontológicas - FOA/UNESP<br>
-					Pós-doutora em Microbiologia - FOA/UNESP<br>
-					Capacitação e Habilitação para o uso da Sedação Consciente com Óxido Nitroso<br>
-					Capacitação em Saúde Baseada em Evidências - IEP<br>
-					Instrutora de Suporte Básico de Vida - IBRAPH<br>
-					Clínica Privada
+                  Graduação em Odontologia Universidade Federal de Santa Catarina<br>
+					Aperfeiçoamento em Cirurgia Oral Menor Universidade Federal de Santa Catarina<br>
+					Especialização em Periodontia Universidade Federal de Santa Catarina<br>
+					Aperfeiçoamento em Estética do Sorriso Instituto Proffel<br>
+					Habilitado em Sedação Consciente com Óxido Nitroso Associação Brasileira de Odontologia<br>
+					Aperfeiçoamento em Implantodontia Associação Brasileira de Odontologia<br>
+					Especialização em Implantodontia Associação Brasileira Cirurgião Dentista<br>
+					Residência em Implantodontia e Periodontia University of Florida Health<br>
+					Mestrado em Periodontia Universidade de Guarulhos
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- //col-->
+        <div class="col-12">
+          <div class="row text-light g-0  rounded overflow-hidden flex-md-row mb-5 shadow-sm position-relative">
+            <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
+              <img width="112" class="border-0 rounded-circle"
+                src="<?php echo wp_get_attachment_image_url( 1106, '' ); ?>" alt="">
+            </div>
+            <div class="col p-4 pt-1 ps-2 ps-lg-5 d-flex flex-column position-static">
+              <h3 class="fs-4 fw-bolder">Gabrielle Branco Rauber</h3>
+              <div class="fw-lighter author__descripion">
+                <p>
+                  Cirurgiã Dentista - UPF/RS<br>
+					Mestrado e Doutorado em Dentística - UFSC/SC<br>
+					Professora dos cursos de imersão e especialização em Dentística da ABCD/Florianópolis<br>
+					Autora e Colaboradora de Artigos Científicos nacionais e internacionais
                 </p>
               </div>
               <ul class="list-inline fs-5">
                 <li class="list-inline-item">
-                  <a href="https://www.instagram.com/odontologiasemmedo/" target="_blank" class="text-light">
+                  <a href="https://www.instagram.com/gabriellebr/" target="_blank" class="text-light">
                     <i class="fab fa-instagram"></i>
                   </a>
                 </li>
@@ -304,62 +343,10 @@ Membro da 5ª Câmara de Ética Odontológica do Conselho Regional de Odontologi
           <div class="row text-light g-0  rounded overflow-hidden flex-md-row mb-5 shadow-sm position-relative">
             <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
               <img width="112" class="border-0 rounded-circle"
-                src="<?php echo wp_get_attachment_image_url( 1106, '' ); ?>" alt="">
-            </div>
-            <div class="col p-4 pt-1 ps-2 ps-lg-5 d-flex flex-column position-static">
-              <h3 class="fs-4 fw-bolder">Professora Gabrielle Branco Rauber</h3>
-              <div class="fw-lighter author__descripion">
-                <p>
-                  Cirurgiã Dentista - UPF/RS<br>
-					Mestrado e Doutorado em Dentística - UFSC/SC<br>
-					Professora dos cursos de imersão e especialização em Dentística da ABCD/Florianópolis<br>
-					Autora e Colaboradora de Artigos Científicos nacionais e internacionais
-                </p>
-              </div>
-              <ul class="list-inline fs-5">
-                <li class="list-inline-item">
-                  <a href="https://www.instagram.com/gabriellebr/" target="_blank" class="text-light">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div> <!-- //col-->
-		<div class="col-12">
-          <div class="row text-light g-0  rounded overflow-hidden flex-md-row mb-5 shadow-sm position-relative">
-            <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
-              <img width="112" class="border-0 rounded-circle"
-                src="<?php echo wp_get_attachment_image_url( 1076, '' ); ?>" alt="">
-            </div>
-            <div class="col p-4 pt-1 ps-2 ps-lg-5 d-flex flex-column position-static">
-              <h3 class="fs-4 fw-bolder">Professora Mariane Cardoso</h3>
-              <div class="fw-lighter author__descripion">
-                <p>
-                  Especialista, Mestre e Doutora em Odontopediatria - UFSC/SC<br>
-					Pós-doutorado em Odontologia - FOB-USP/SP<br>
-					Professora de Graduação - UFSC/SC<br>
-					Professora de Pós-Graduação do Programa de Pós-Graduação em Odontologia - UFSC/SC<br>
-                </p>
-              </div>
-              <ul class="list-inline fs-5">
-                <li class="list-inline-item ms-3">
-                  <a href="https://www.instagram.com/mariane.cardoso.odp.ufsc/" target="_blank" class="text-light">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div> <!-- //col-->
-        <div class="col-12">
-          <div class="row text-light g-0  rounded overflow-hidden flex-md-row mb-5 shadow-sm position-relative">
-            <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
-              <img width="112" class="border-0 rounded-circle"
                 src="<?php echo wp_get_attachment_image_url( 1009, '' ); ?>" alt="">
             </div>
             <div class="col p-4 pt-1 ps-2 ps-lg-5 d-flex flex-column position-static">
-              <h3 class="fs-4 fw-bolder">Professor Marcelo Tavares</h3>
+              <h3 class="fs-4 fw-bolder">Marcelo Tavares</h3>
               <div class="fw-lighter author__descripion">
                 <p>
                   Bacharel em Design pela UFSC<br>
@@ -380,10 +367,37 @@ Membro da 5ª Câmara de Ética Odontológica do Conselho Regional de Odontologi
           <div class="row text-light g-0  rounded overflow-hidden flex-md-row mb-5 shadow-sm position-relative">
             <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
               <img width="112" class="border-0 rounded-circle"
+                src="<?php echo wp_get_attachment_image_url( 1076, '' ); ?>" alt="">
+            </div>
+            <div class="col p-4 pt-1 ps-2 ps-lg-5 d-flex flex-column position-static">
+              <h3 class="fs-4 fw-bolder">Mariane Cardoso</h3>
+              <div class="fw-lighter author__descripion">
+                <p>
+                  Especialista, Mestre e Doutora em Odontopediatria - UFSC/SC<br>
+					Pós-doutorado em Odontologia - FOB-USP/SP<br>
+					Professora de Graduação - UFSC/SC<br>
+					Professora de Pós-Graduação do Programa de Pós-Graduação em Odontologia - UFSC/SC<br>
+                </p>
+              </div>
+              <ul class="list-inline fs-5">
+                <li class="list-inline-item ms-3">
+                  <a href="https://www.instagram.com/mariane.cardoso.odp.ufsc/" target="_blank" class="text-light">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> <!-- //col-->
+        
+		<div class="col-12">
+          <div class="row text-light g-0  rounded overflow-hidden flex-md-row mb-5 shadow-sm position-relative">
+            <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
+              <img width="112" class="border-0 rounded-circle"
                 src="<?php echo wp_get_attachment_image_url( 1095, '' ); ?>" alt="">
             </div>
             <div class="col p-4 pt-1 ps-2 ps-lg-5 d-flex flex-column position-static">
-              <h3 class="fs-4 fw-bolder">Professora Micaela Cardoso</h3>
+              <h3 class="fs-4 fw-bolder">Micaela Cardoso</h3>
               <div class="fw-lighter author__descripion">
                 <p>
                   Especialista em Odontopediatria pelo HRAC/USP Centrinho (Bauru-SP)<br>
@@ -408,7 +422,7 @@ Membro da 5ª Câmara de Ética Odontológica do Conselho Regional de Odontologi
                 src="<?php echo wp_get_attachment_image_url( 1086, '' ); ?>" alt="">
             </div>
             <div class="col p-4 pt-1 ps-2 ps-lg-5 d-flex flex-column position-static">
-              <h3 class="fs-4 fw-bolder">Professora Michele Bolan</h3>
+              <h3 class="fs-4 fw-bolder">Michele Bolan</h3>
               <div class="fw-lighter author__descripion">
                 <p>
                   Especialista, Mestre e Doutora em Odontopediatria - UFSC/SC<br>
@@ -427,30 +441,7 @@ Membro da 5ª Câmara de Ética Odontológica do Conselho Regional de Odontologi
             </div>
           </div>
         </div> <!-- //col-->
-		  <div class="col-12">
-          <div class="row text-light g-0  rounded overflow-hidden flex-md-row mb-5 shadow-sm position-relative">
-            <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
-              <img width="112" class="border-0 rounded-circle"
-                src="<?php echo wp_get_attachment_image_url( 1389, '' ); ?>" alt="">
-            </div>
-            <div class="col p-4 pt-1 ps-2 ps-lg-5 d-flex flex-column position-static">
-              <h3 class="fs-4 fw-bolder">Fernando Adriani</h3>
-              <div class="fw-lighter author__descripion">
-                <p>
-                  Graduação em Odontologia Universidade Federal de Santa Catarina<br>
-					Aperfeiçoamento em Cirurgia Oral Menor Universidade Federal de Santa Catarina<br>
-					Especialização em Periodontia Universidade Federal de Santa Catarina<br>
-					Aperfeiçoamento em Estética do Sorriso Instituto Proffel<br>
-					Habilitado em Sedação Consciente com Óxido Nitroso Associação Brasileira de Odontologia<br>
-					Aperfeiçoamento em Implantodontia Associação Brasileira de Odontologia<br>
-					Especialização em Implantodontia Associação Brasileira Cirurgião Dentista<br>
-					Residência em Implantodontia e Periodontia University of Florida Health<br>
-					Mestrado em Periodontia Universidade de Guarulhos
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- //col-->
+		  
 		  <div class="col-12">
           <div class="row text-light g-0  rounded overflow-hidden flex-md-row mb-5 shadow-sm position-relative">
             <div class="col-lg-auto col-12 text-center d-lg-block mb-3">
@@ -476,7 +467,7 @@ Membro da 5ª Câmara de Ética Odontológica do Conselho Regional de Odontologi
                 src="<?php echo wp_get_attachment_image_url( 1390, '' ); ?>" alt="">
             </div>
             <div class="col p-4 pt-1 ps-2 ps-lg-5 d-flex flex-column position-static">
-              <h3 class="fs-4 fw-bolder">Fga. Sibeli Weschenfelder de Andrade</h3>
+              <h3 class="fs-4 fw-bolder">Sibeli Weschenfelder de Andrade</h3>
               <div class="fw-lighter author__descripion">
                 <p>
                   Graduação em Fonoaudiologia UNIVALI 1995<br>

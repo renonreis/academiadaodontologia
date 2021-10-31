@@ -1,5 +1,5 @@
 <section class="py-5 bg-dark">
-  <div class="container pt-5">
+  <div class="container">
     <div class="row">
       <div class="ui-title pb-3 pb-lg-5">
         <h2 class="ui-title-main">O que dizem nossos alunos</h2>

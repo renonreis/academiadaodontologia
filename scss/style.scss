@@ -146,3 +146,152 @@ aside.blog-sidebar {
     }
   }
 }
+
+.campanhas {
+  .btn-lg {
+    font-size: 20px !important;
+    min-width: 350px !important;
+  }
+
+  .btn-courses {
+    &.premium {
+      a {
+        background-color: #623779;
+        border: 2px solid #623779;
+        &:hover {
+          background-color: #754e8b;
+          border-color: #754e8b;
+        }
+        &.mensal {
+          background-color: transparent;
+          &:hover {
+            border-color: #754e8b;
+          }
+        }
+      }
+    }
+  }
+  .btn-courses.description {
+    a {
+      min-width: auto !important;
+      max-width: 260px !important;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  .price {
+    font-size: 24px;
+    font-weight: 100;
+    span {
+      font-size: 36px;
+    }
+  }
+
+  .line--small {
+    height: 1px;
+    margin-bottom: 15px;
+    max-width: 220px;
+    &.premium {
+      background-color: #623779;
+    }
+    &.plus {
+      background: var(--bs-primary);
+    }
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .box {
+    p {
+      max-width: 255px;
+      margin: 0 auto;
+    }
+    svg {
+      fill: #ffffff;
+      margin-bottom: 25px;
+      max-width: 90px;
+    }
+  }
+
+  table {
+    margin-top: 4px;
+    svg {
+      max-width: 26px;
+    }
+    thead {
+      tr {
+        background-color: transparent !important;
+        th {
+          border-color: #202020 !important;
+          border-bottom: 5px solid #202020 !important;
+        }
+        .tb-premium {
+          padding: 0;
+          width: 275px;
+          strong {
+            background-color: #623779;
+            display: block;
+            font-size: 20px;
+            line-height: 25px;
+            padding: 20px 32px;
+            text-transform: uppercase;
+            vertical-align: middle;
+            width: 275px;
+          }
+        }
+        .tb-plus {
+          padding: 0;
+          width: 305px;
+          position: relative;
+          strong {
+            background: #e71d7c;
+            display: block;
+            font-size: 20px;
+            line-height: 30px;
+            padding: 20px 32px;
+            text-transform: uppercase;
+            vertical-align: middle;
+            width: 305px;
+            span {
+              font-size: 30px;
+            }
+            &:after {
+              content: url(../images/selo.png);
+              pointer-events: none;
+              position: absolute;
+              right: 11px;
+              top: -4px;
+            }
+          }
+        }
+      }
+    }
+    tr {
+      &:nth-child(odd) {
+        background-color: #313131;
+      }
+      &:nth-child(even) {
+        background-color: #2b2b2b;
+      }
+    }
+    & > :not(:first-child) {
+      border-top: 0 !important;
+    }
+    & > :not(caption) > * > * {
+      border-color: #202020;
+      border-width: 0 5px 1px;
+      padding: 12px 32px;
+    }
+  }
+
+  &.cursos {
+    h2 {
+      font-size: 42px;
+      font-weight: 100;
+      text-transform: uppercase;
+    }
+  }
+}

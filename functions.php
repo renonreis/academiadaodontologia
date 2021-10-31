@@ -235,6 +235,28 @@ function custom_post_type() {
 		)
 	);
 
+	register_post_type('campanhas',
+		array(
+			'labels'      => array(
+					'name'          => __( 'Campanhas', 'textdomain' ),
+					'singular_name' => __( 'Campanhas', 'textdomain' ),
+			),
+			'exclude_from_search' =>	true,
+			'has_archive' => false,
+			'menu_icon' => 'dashicons-cart',
+			'menu_position'	=> 50,
+			'post_type' => 'campanhas',
+			'public'      => true,
+			'publicly_queryable'  => true,
+			'rewrite' => array("slug" => "/lp", "with_front" => false),
+			'supports' => array(
+				'title',
+				'editor',
+				'thumbnail',
+			)
+		)
+	);
+
 	register_post_type('cursos',
 		array(
 			'labels'      => array(
@@ -495,3 +517,9 @@ function remove_pages_from_search() {
 	$wp_post_types['page']->exclude_from_search = true;
 }
 add_action('init', 'remove_pages_from_search');
+
+// MOVE O YOAST ABAIXO DO ACF
+function yoasttobottom() {
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoasttobottom');

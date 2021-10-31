@@ -60,8 +60,7 @@
 
 .card-course {
   min-height: 600px;
-  // margin-bottom: 20px;
-  border-radius: 0;
+  border-radius: 10px;
   text-align: center;
   background: #171717;
   color: #fff;
@@ -173,6 +172,7 @@
 
   &::before {
     content: "";
+    border-radius: 10px;
     height: 100%;
     width: 100%;
     position: absolute;

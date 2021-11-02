@@ -318,6 +318,9 @@ aside.blog-sidebar {
     color: #ffffff;
     left: -50px;
     right: auto;
+    @media screen and (max-width: 959px) {
+      display: none;
+    }
   }
 
   .swiper-button-next,
@@ -325,5 +328,8 @@ aside.blog-sidebar {
     color: #ffffff;
     right: -50px;
     left: auto;
+    @media screen and (max-width: 959px) {
+      display: none;
+    }
   }
 }

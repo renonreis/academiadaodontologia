@@ -13363,11 +13363,25 @@ aside.blog-sidebar .wpforms-container-full.form-newsletter .wpforms-form .wpform
 	right: auto;
 }
 
+@media screen and (max-width: 959px) {
+	.campanhas .swiper-button-prev,
+	.campanhas .swiper-rtl .swiper-button-next {
+		display: none;
+	}
+}
+
 .campanhas .swiper-button-next,
 .campanhas .swiper-rtl .swiper-button-prev {
 	color: #ffffff;
 	right: -50px;
 	left: auto;
+}
+
+@media screen and (max-width: 959px) {
+	.campanhas .swiper-button-next,
+	.campanhas .swiper-rtl .swiper-button-prev {
+		display: none;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */

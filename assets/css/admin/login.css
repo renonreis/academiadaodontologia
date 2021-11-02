@@ -1,0 +1,40 @@
+.login {
+	background-color: #ffffff;
+}
+
+.login h1 a {
+	background-image: url(../../images/cropped-favicon-180x180.png);
+	background-position: center;
+	background-size: contain;
+	width: 100%;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+	border-color: #e71d7c;
+	box-shadow: 0 0 0 1px #e71d7c;
+}
+
+.login .button.wp-hide-pw .dashicons {
+	color: #e71d7c;
+}
+
+.login .button-primary {
+	background: #e71d7c;
+	border-color: #e71d7c;
+}
+
+.login .button-primary:hover {
+	background: #e71d7c;
+	border-color: #e71d7c;
+}
+
+p#nav a,
+p#backtoblog a,
+a.privacy-policy-link {
+	color: #000000 !important;
+}
+
+/*# sourceMappingURL=login.css.map */
+
+/*# sourceMappingURL=login.css.map */

@@ -10773,7 +10773,7 @@ fieldset:disabled .btn {
 }
 
 .ui-accordion {
-	font-family: 'Raleway', sans-serif;
+	font-family: "Raleway", sans-serif;
 }
 
 .ui-accordion--testimonial {
@@ -10797,6 +10797,7 @@ fieldset:disabled .btn {
 }
 
 .ui-accordion .accordion-button {
+	background: #0000;
 	font-size: 18px;
 	font-weight: 700;
 	border: 0;

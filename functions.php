@@ -164,6 +164,11 @@ function academiadaodontologia_scripts() {
 add_action( 'wp_enqueue_scripts', 'academiadaodontologia_scripts' );
 
 /**
+ * Functions Admin.
+ */
+require get_template_directory() . '/inc/admin.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

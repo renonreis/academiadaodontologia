@@ -1,47 +1,42 @@
-.ui-accordion{
-    font-family: 'Raleway', sans-serif;
+.ui-accordion {
+  font-family: "Raleway", sans-serif;
 
-    &--testimonial{
-        color: #fff;
+  &--testimonial {
+    color: #fff;
+  }
+  .accordion-item {
+    background-color: #131313;
+    margin-bottom: 10px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 6px;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+
+  .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+
+  .accordion-button {
+    background: #0000;
+    font-size: 18px;
+    font-weight: 700;
+    border: 0;
+    color: #fff;
+    padding: 1.5rem 2rem;
+
+    &:not(.collapsed) {
+      background-color: transparent;
     }
-    .accordion-item{
-        background-color: #131313;
-        margin-bottom: 10px;
-        color: #fff;
-        border-bottom: 1px solid rgba(255,255,255, 0.25);
-        border-radius: 6px;
-    }
-
-    .accordion-button:not(.collapsed)::after {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-     }
-
-    .accordion-button::after { 
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-    }
-
-
-
-
-
-    .accordion-button{ 
-        font-size: 18px;
-        font-weight: 700;
-        border: 0;
-        color: #fff;
-        padding: 1.5rem 2rem;
-
-        &:not(.collapsed){
-            background-color: transparent;   
-        }
-    }
-     .accordion-body{ 
-        color: #cccccc;
-        font-size: 18px;
-        line-height: 1.6;
-        // padding-top: 0;
-        padding: 1rem 2rem 2rem 2rem;
-    }
- 
+  }
+  .accordion-body {
+    color: #cccccc;
+    font-size: 18px;
+    line-height: 1.6;
+    // padding-top: 0;
+    padding: 1rem 2rem 2rem 2rem;
+  }
 }
-

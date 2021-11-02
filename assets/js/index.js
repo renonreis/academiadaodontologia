@@ -120,14 +120,16 @@ document.addEventListener("DOMContentLoaded", function() {
   const counter = document.querySelector('.swiper-counter')
 	const currentCount = `<span class="count">4 / ${total}<span/>`
 
-	counter.innerHTML = currentCount
+	if(counter)
+		counter.innerHTML = currentCount
 
 	swiper.on('slideChangeTransitionEnd', function () {		
 		let current = 1
 		current = document.querySelector('.swiper-slide-active').id
 		console.log(current)
 
-		return counter.innerHTML = `<span class="count">${parseInt(current) + 3} / ${total}<span/>`
+		if(counter)
+			return counter.innerHTML = `<span class="count">${parseInt(current) + 3} / ${total}<span/>`
 		 
 	});
 })

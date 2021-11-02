@@ -146,6 +146,7 @@ function academiadaodontologia_scripts() {
 	wp_enqueue_style( 'academiadaodontologia-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'academiadaodontologia-theme-style', get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION );
 	wp_enqueue_style( 'aos-style', 'https://unpkg.com/aos@2.3.1/dist/aos.css', array(), _S_VERSION );
+	wp_enqueue_style( 'swiper-css', 'https://unpkg.com/swiper@7/swiper-bundle.min.css', array(), _S_VERSION );
 	wp_style_add_data( 'academiadaodontologia-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'academiadaodontologia-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
@@ -153,6 +154,7 @@ function academiadaodontologia_scripts() {
 	wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'masonry-layout', 'https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'swiper-js', 'https://unpkg.com/swiper@7/swiper-bundle.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'academiadaodontologia-js', get_template_directory_uri() . '/assets/js/index.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -253,7 +255,7 @@ function custom_post_type() {
 				'title',
 				'editor',
 				'thumbnail',
-			)
+			)			
 		)
 	);
 
@@ -274,7 +276,8 @@ function custom_post_type() {
 				'title',
 				'editor',
 				'thumbnail',
-			)
+			),
+			'taxonomies' => array( 'categoria-cursos' )
 		)
 	);
 

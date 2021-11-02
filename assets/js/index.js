@@ -104,3 +104,30 @@ if ( window.location.pathname == '/cursos/' ) {
 	}
 }
 
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 4,
+	slidesPerGroup: 4,
+	spaceBetween: 24,
+  loop: false,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+	const total = document.querySelectorAll('.swiper-slide').length
+  const counter = document.querySelector('.swiper-counter')
+	const currentCount = `<span class="count">4 / ${total}<span/>`
+
+	counter.innerHTML = currentCount
+
+	swiper.on('slideChangeTransitionEnd', function () {		
+		let current = 1
+		current = document.querySelector('.swiper-slide-active').id
+		console.log(current)
+
+		return counter.innerHTML = `<span class="count">${parseInt(current) + 3} / ${total}<span/>`
+		 
+	});
+})

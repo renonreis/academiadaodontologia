@@ -294,4 +294,36 @@ aside.blog-sidebar {
       text-transform: uppercase;
     }
   }
+
+  .relative {
+    position: relative;
+  }
+
+  .btn-table {
+    td {
+      background: #202020;
+    }
+    .btn {
+      min-width: 260px !important;
+      margin: 0;
+    }
+  }
+
+  .swiper {
+    height: 600px;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    color: #ffffff;
+    left: -50px;
+    right: auto;
+  }
+
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    color: #ffffff;
+    right: -50px;
+    left: auto;
+  }
 }

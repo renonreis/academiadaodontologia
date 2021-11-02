@@ -13338,4 +13338,35 @@ aside.blog-sidebar .wpforms-container-full.form-newsletter .wpforms-form .wpform
 	text-transform: uppercase;
 }
 
+.campanhas .relative {
+	position: relative;
+}
+
+.campanhas .btn-table td {
+	background: #202020;
+}
+
+.campanhas .btn-table .btn {
+	min-width: 260px !important;
+	margin: 0;
+}
+
+.campanhas .swiper {
+	height: 600px;
+}
+
+.campanhas .swiper-button-prev,
+.campanhas .swiper-rtl .swiper-button-next {
+	color: #ffffff;
+	left: -50px;
+	right: auto;
+}
+
+.campanhas .swiper-button-next,
+.campanhas .swiper-rtl .swiper-button-prev {
+	color: #ffffff;
+	right: -50px;
+	left: auto;
+}
+
 /*# sourceMappingURL=style.css.map */

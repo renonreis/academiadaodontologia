@@ -1,3 +1,7 @@
+<?php 
+
+$plus_premium = get_field('plus_premium');
+?>
 <div class="table-responsive">
   <table class="table text-center text-white">
     <thead>
@@ -63,6 +67,19 @@
         <td class="opacity-25"><?php get_template_part( 'template-parts/svg/times-circle' ); ?></td>
         <td><?php get_template_part( 'template-parts/svg/check-circle' ); ?></td>
       </tr>
+      <?php if($plus_premium == 'premium') { ?>
+        <tr class="btn-table">
+          <td></td>   
+          <td></td>
+          <td>
+            <div class="btn-courses">
+              <a href="<?php echo get_site_url(); ?>/#escolha-o-seu-plano" class="btn btn-lg btn-primary">
+                Saiba mais
+              </a>
+            </div>
+          </td>
+        </tr>
+      <?php } ?>
     </tbody>
   </table>
 </div>

@@ -64,7 +64,7 @@ if( $plus_premium == 'plus' ) {
         <div class="col-lg-4 mb-5">
           <p class="price">R$ <span><?php echo $valor_mensal; ?></span> / mês*</p>
           <div class="btn-courses description premium">
-            <a href="<?php echo get_field('link_botao_assinar '); ?>" class="btn btn-lg btn-primary px-4">
+            <a href="<?php echo get_field('link_botao_assinar'); ?>" class="btn btn-lg btn-primary px-4">
               Assinar agora
             </a>
           </div>

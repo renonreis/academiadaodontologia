@@ -12,13 +12,8 @@ get_header();
 $post_terms = get_the_terms( get_the_ID(), 'curso_category' );
 
 $valor_mensal = get_field('valor_mensal_curso');
-$valor_anual = get_field('valor_anual_curso');
 
 $format_price_mensal = str_replace(",", ".", $valor_mensal);
-$format_price_anual = str_replace(",", ".", $valor_anual);
-
-$anual_price = $format_price_mensal * 12;
-$anual_price_total = $format_price_anual * 12;
 
 $plus_premium = get_field('plus_premium');
 

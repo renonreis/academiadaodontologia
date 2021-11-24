@@ -260,7 +260,7 @@ function custom_post_type() {
 				'title',
 				'editor',
 				'thumbnail',
-			)			
+			)
 		)
 	);
 
@@ -533,11 +533,11 @@ function yoasttobottom() {
 add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
 
 // Save Json ACF Config
-function my_acf_json_save_point( $path, $title ) {
-    $path = get_stylesheet_directory() . '/assets/acf-json/' . $title . ''; 
-    return $path;    
+function my_acf_json_save_point( $path ) {
+    $path = get_stylesheet_directory() . '/assets/acf-json/';
+    return $path;
 }
-add_filter('acf/settings/save_json', 'my_acf_json_save_point'); 
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
 
 add_filter('acf/settings/load_json', 'my_acf_json_load_point');
 

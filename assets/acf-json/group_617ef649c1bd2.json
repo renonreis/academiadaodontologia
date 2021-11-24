@@ -65,33 +65,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_617ef82c54fef",
-            "label": "Valor anual do Curso",
-            "name": "valor_anual_curso",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_617ef6ba5483a",
-                        "operator": "==",
-                        "value": "premium"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_617ef68e54839",
             "label": "Link do botão Assinar Agora",
             "name": "link_botao_assinar",
@@ -99,54 +72,6 @@
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_617ef90589aa8",
-            "label": "Link do botão Assinar Mensal",
-            "name": "link_botao_assinar_mensal",
-            "type": "url",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_617ef6ba5483a",
-                        "operator": "==",
-                        "value": "premium"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_617ef92389aa9",
-            "label": "Link do botão Assinar Anual",
-            "name": "link_botao_assinar_anual",
-            "type": "url",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_617ef6ba5483a",
-                        "operator": "==",
-                        "value": "premium"
-                    }
-                ]
-            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -175,5 +100,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1635873531
+    "show_in_rest": 0,
+    "modified": 1637792347
 }

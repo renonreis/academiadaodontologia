@@ -38,7 +38,7 @@ if( $plus_premium == 'plus' ) {
         <div class="ui-title pb-0 w-100">
           <h2 class="ui-title-main"><?php the_title(); ?></h2>
           <p class="fs-3 fw-bold text-uppercase">
-            <?php 
+            <?php
               if( $plus_premium == 'plus' ) {
                 echo 'Plus';
               } else {
@@ -46,13 +46,13 @@ if( $plus_premium == 'plus' ) {
               }
             ?>
           </p>
-          <?php 
+          <?php
             if( $plus_premium == 'plus' ) { ?>
               <div class="line--small mx-auto plus"></div>
             <?php } else { ?>
               <div class="line--small mx-auto premium"></div>
-            <?php } ?>          
-          <p class="description mb-5"><?php echo get_field('descricao'); ?></p>          
+            <?php } ?>
+          <p class="description mb-5"><?php echo get_field('descricao'); ?></p>
         </div>
       </div>
       <?php if( get_field('plus_premium') == 'plus' ) { ?>
@@ -63,28 +63,19 @@ if( $plus_premium == 'plus' ) {
               Assinar agora
             </a>
           </div>
-          <p>* Plano anual total R$ <?php echo str_replace(".", ",", $anual_price); ?></p>
+          <p>*Economize até 17% no Plano anual.</p>
         </div>
       <?php } else { ?>
         <div class="col-lg-4 mb-5">
           <p class="price">R$ <span><?php echo $valor_mensal; ?></span> / mês*</p>
           <div class="btn-courses description premium">
-            <a href="<?php echo get_field('link_botao_assinar_mensal'); ?>" class="btn btn-lg btn-primary px-4 mensal">
+            <a href="<?php echo get_field('link_botao_assinar '); ?>" class="btn btn-lg btn-primary px-4">
               Assinar agora
             </a>
           </div>
-          <p>* Plano anual total R$ <?php echo str_replace(".", ",", $anual_price); ?></p>
+          <p>*Economize até 17% no Plano anual.</p>
         </div>
-        <div class="col-lg-4   mb-5">
-          <p class="price">R$ <span><?php echo $valor_anual; ?></span> / mês*</p>
-          <div class="btn-courses description premium">
-            <a href="<?php echo get_field('link_botao_assinar_anual'); ?>" class="btn btn-lg btn-primary px-4">
-              Assinar agora
-            </a>
-          </div>
-          <p>* Plano anual total R$ <?php echo str_replace(".", ",", $anual_price_total); ?></p>
-        </div>
-      <?php } ?>      
+      <?php } ?>
     </div>
   </div>
 </section>
@@ -97,31 +88,31 @@ if( $plus_premium == 'plus' ) {
           <?php get_template_part( 'template-parts/svg/garantia' ); ?>
           <p>Não gostou? <strong>Devolução integral</strong> do valor pago em até 7 dias.</p>
         </div>
-      </div>        
+      </div>
       <div class="col-lg-4 mb-5">
         <div class="box">
           <?php get_template_part( 'template-parts/svg/atendimento' ); ?>
           <p>Agende seu <strong>atendimento personalizado</strong> com um de nossos professores.</p>
         </div>
-      </div>        
+      </div>
       <div class="col-lg-4 mb-5">
         <div class="box">
           <?php get_template_part( 'template-parts/svg/aovivo' ); ?>
           <p>Aulas semanais <strong>AO VIVO</strong> com discussão de casos clínicos.</p>
         </div>
-      </div>        
+      </div>
       <div class="col-lg-4 mb-5">
         <div class="box">
           <?php get_template_part( 'template-parts/svg/certificado' ); ?>
           <p><strong>Certificado de conclusão</strong> de curso.</p>
         </div>
-      </div>        
+      </div>
       <div class="col-lg-4 mb-5">
         <div class="box">
           <?php get_template_part( 'template-parts/svg/novos' ); ?>
           <p>Todo mês um <strong>novo curso</strong> no ar.</p>
         </div>
-      </div>        
+      </div>
       <div class="col-lg-4 mb-5">
         <div class="box">
           <?php get_template_part( 'template-parts/svg/material' ); ?>
@@ -136,7 +127,7 @@ if( $plus_premium == 'plus' ) {
   <div class="container">
     <div class="row">
       <div class="col">
-        <?php get_template_part( 'template-parts/components/table' ); ?>          
+        <?php get_template_part( 'template-parts/components/table' ); ?>
       </div>
     </div>
   </div>
@@ -147,8 +138,8 @@ if( $plus_premium == 'plus' ) {
     <div class="row text-center text-white">
       <div class="col-md-12">
         <h2 class="mb-3">
-          Cursos do plano 
-          <?php 
+          Cursos do plano
+          <?php
             if( $plus_premium == 'plus' ) {
               echo 'Plus';
             } else {
@@ -228,7 +219,7 @@ if( $plus_premium == 'plus' ) {
             <?php endwhile; endif; wp_reset_query(); ?>
           </div>
         </div>
-        
+
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
